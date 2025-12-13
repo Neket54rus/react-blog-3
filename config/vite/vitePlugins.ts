@@ -1,0 +1,18 @@
+import react from '@vitejs/plugin-react'
+import type { PluginOption } from 'vite'
+import svgr from 'vite-plugin-svgr'
+import tsconfigPaths from 'vite-tsconfig-paths'
+
+export const vitePlugins = (): PluginOption[] => [
+    react(),
+    tsconfigPaths(),
+    svgr({
+        svgrOptions: {
+            exportType: 'default',
+            ref: true,
+            svgo: false,
+            titleProp: true,
+        },
+        include: '**/*.svg?react',
+    }),
+]

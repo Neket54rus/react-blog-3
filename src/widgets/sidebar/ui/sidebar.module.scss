@@ -1,0 +1,31 @@
+.sidebar {
+    height: calc(100vh - var(--navbar-height));
+    width: 300px;
+    background: var(--inverted-bg-color);
+    position: relative;
+    transition: width 0.2s;
+    padding: 20px 30px;
+
+    &.collapsed {
+        width: 80px;
+    }
+
+    &CollapseBtn {
+        position: absolute;
+        right: -32px;
+        bottom: 32px;
+    }
+
+    &Swithcers {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: calc(100% - 60px);
+
+        &.collapsed {
+            flex-direction: column;
+        }
+    }
+}

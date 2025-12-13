@@ -1,0 +1,15 @@
+.mainNavigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &Item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &Icon {
+            fill: var(--inverted-secondary-color);
+        }
+    }
+}

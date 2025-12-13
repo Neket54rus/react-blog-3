@@ -1,0 +1,3 @@
+* подумать 100 раз про app/providers/router куда его чо кого
+* порешать с vite build
+* добавить i18n в stories
