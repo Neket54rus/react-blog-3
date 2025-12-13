@@ -15,6 +15,9 @@ const config: Config = {
         '\\.svg': '<rootDir>/config/jest/svgFileMock.ts',
         '\\.svg\\?react$': '<rootDir>/config/jest/jestEmptyComponent.tsx',
     },
+    globals: {
+        __IS_DEV__: true,
+    },
 }
 
 export default config
