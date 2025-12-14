@@ -4,5 +4,7 @@
     "Произошла непредвиденная ошибка": "Something went wrong",
     "Главная": "Home",
     "О нас": "About",
-    "Войти": "Login"
+    "Войти": "Login",
+    "Введите имя пользователя": "Enter username",
+    "Введите пароль": "Enter password"
 }

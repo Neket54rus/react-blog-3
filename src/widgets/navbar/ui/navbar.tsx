@@ -1,9 +1,10 @@
 import { useState, type JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import { LoginModal } from 'widgets/login-modal'
+
 import { classNames } from 'shared/lib/class-names'
 import { Button, ButtonTheme } from 'shared/ui/button'
-import { Modal } from 'shared/ui/modal/modal'
 
 import classes from './navbar.module.scss'
 
@@ -34,12 +35,10 @@ export const Navbar = (props: NavbarProps): JSX.Element => {
             >
                 {t('Войти')}
             </Button>
-            <Modal
+            <LoginModal
                 isOpen={authorizationModalOpen}
                 onClose={closeAutorizationModal}
-            >
-                <h1>Авторизация</h1>
-            </Modal>
+            />
         </div>
     )
 }

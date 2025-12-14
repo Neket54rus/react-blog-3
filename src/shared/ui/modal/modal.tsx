@@ -19,18 +19,22 @@ interface ModalProps {
     isOpen?: boolean
     onClose?: () => void
     className?: string
+    lazy?: boolean
 }
 
-export const Modal = (props: ModalProps): JSX.Element => {
-    const { children, isOpen = false, onClose, className } = props
+export const Modal = (props: ModalProps): JSX.Element | null => {
+    const { children, isOpen = false, onClose, className, lazy } = props
 
+    const [isOpened, setIsOpened] = useState(false)
     const [isClosing, setIsClosing] = useState(false)
-    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+    const [isMounded, setIsMounted] = useState(false)
+    const openedTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+    const closingTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const closeHandler = useCallback((): void => {
         if (onClose) {
             setIsClosing(true)
-            timerRef.current = setTimeout(() => {
+            closingTimerRef.current = setTimeout(() => {
                 onClose()
                 setIsClosing(false)
             }, 300)
@@ -52,6 +56,18 @@ export const Modal = (props: ModalProps): JSX.Element => {
 
     useEffect(() => {
         if (isOpen) {
+            setIsMounted(true)
+            openedTimerRef.current = setTimeout(() => {
+                setIsOpened(true)
+            })
+        } else {
+            setIsMounted(false)
+            setIsOpened(false)
+        }
+    }, [isOpen])
+
+    useEffect(() => {
+        if (isOpen) {
             document.body.style.overflow = 'hidden'
             document.addEventListener('keydown', handlerEscKey)
         }
@@ -63,13 +79,22 @@ export const Modal = (props: ModalProps): JSX.Element => {
 
     useEffect(
         () => (): void => {
-            if (timerRef.current) {
-                clearTimeout(timerRef.current)
-                timerRef.current = null
+            if (closingTimerRef.current) {
+                clearTimeout(closingTimerRef.current)
+                closingTimerRef.current = null
+            }
+
+            if (openedTimerRef.current) {
+                clearTimeout(openedTimerRef.current)
+                openedTimerRef.current = null
             }
         },
         [],
     )
+
+    if (!isMounded && lazy) {
+        return null
+    }
 
     return (
         <Portal>
@@ -83,7 +108,7 @@ export const Modal = (props: ModalProps): JSX.Element => {
                 <div className={classes.modalOverlay} onClick={closeHandler}>
                     <div
                         className={classNames(classes.modalContent, {
-                            [classes.opened]: isOpen,
+                            [classes.opened]: isOpened,
                             [classes.closing]: isClosing,
                         })}
                         onClick={onContentClick}
