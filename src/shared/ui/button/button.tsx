@@ -18,6 +18,7 @@ export const Button = (props: ButtonProps): JSX.Element => {
         size = ButtonSize.M,
         children,
         className,
+        disabled = false,
         ...otherProps
     } = props
 
@@ -27,9 +28,11 @@ export const Button = (props: ButtonProps): JSX.Element => {
                 classes.button,
                 {
                     [classes.square]: square,
+                    [classes.disabled]: disabled,
                 },
                 [className, classes[theme], classes[size]],
             )}
+            disabled={disabled}
             {...otherProps}
         >
             {children}

@@ -1,12 +1,10 @@
-import { useState, type JSX } from 'react'
-import { useTranslation } from 'react-i18next'
+import { type JSX } from 'react'
+import { useSelector } from 'react-redux'
 
-import { LoginModal } from 'widgets/login-modal'
+import { getUserAuthData } from 'entities/user'
 
-import { classNames } from 'shared/lib/class-names'
-import { Button, ButtonTheme } from 'shared/ui/button'
-
-import classes from './navbar.module.scss'
+import { NavbarWithAuthorization } from './navbar-with-authorization'
+import { NavbarWithoutAuthorization } from './navbar-without-authorization'
 
 interface NavbarProps {
     className?: string
@@ -15,30 +13,11 @@ interface NavbarProps {
 export const Navbar = (props: NavbarProps): JSX.Element => {
     const { className } = props
 
-    const { t } = useTranslation()
+    const authData = useSelector(getUserAuthData)
 
-    const [authorizationModalOpen, setAuthorizationModalOpen] = useState(false)
-
-    const openAutorizationModal = (): void => {
-        setAuthorizationModalOpen(true)
-    }
-
-    const closeAutorizationModal = (): void => {
-        setAuthorizationModalOpen(false)
-    }
-
-    return (
-        <div className={classNames(classes.navbar, {}, [className])}>
-            <Button
-                onClick={openAutorizationModal}
-                theme={ButtonTheme.CLEAR_INVERTED}
-            >
-                {t('Войти')}
-            </Button>
-            <LoginModal
-                isOpen={authorizationModalOpen}
-                onClose={closeAutorizationModal}
-            />
-        </div>
+    return authData ? (
+        <NavbarWithAuthorization className={className} />
+    ) : (
+        <NavbarWithoutAuthorization className={className} />
     )
 }

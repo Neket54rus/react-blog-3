@@ -1,6 +1,7 @@
 import path from 'path'
 import { fileURLToPath } from 'url'
 
+import cors from 'cors'
 import express from 'express'
 import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
@@ -18,6 +19,14 @@ await db.read()
 // === app ===
 const app = express()
 app.use(express.json())
+
+// === CORS ===
+app.use(
+    cors({
+        origin: 'http://localhost:3000',
+        credential: true,
+    }),
+)
 
 // === delay middleware (1s) ===
 app.use(async (_req, _res, next) => {

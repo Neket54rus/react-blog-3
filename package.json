@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "port=3000 vite",
-    "start:dev:server": "node ./json-server/index.js",
+    "start:dev:server": "node ./server/index.js",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
@@ -84,6 +84,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.1",
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
     "i18next": "^25.7.1",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",

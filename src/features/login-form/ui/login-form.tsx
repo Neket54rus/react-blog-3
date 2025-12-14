@@ -1,9 +1,15 @@
-import { useState, type JSX } from 'react'
+import { useCallback, type JSX } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { classNames } from 'shared/lib/class-names'
 import { Button, ButtonTheme } from 'shared/ui/button'
 import { Input } from 'shared/ui/input'
+import { ColorText, SizeText, Text } from 'shared/ui/text'
+
+import { getLoginState } from '../model/selectors/get-login-state'
+import { loginByUsername } from '../model/services/login-by-username/login-by-username'
+import { loginActions } from '../model/slice/login-slice'
 
 import classes from './login-form.module.scss'
 
@@ -15,21 +21,32 @@ export const LoginForm = (props: LoginFormProps): JSX.Element => {
     const { className } = props
 
     const { t } = useTranslation()
+    const dispatch = useDispatch()
+    const { username, password, error, isLoading } = useSelector(getLoginState)
 
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+    const onChangeUsername = useCallback(
+        (value: string): void => {
+            dispatch(loginActions.setUsername(value))
+        },
+        [dispatch],
+    )
 
-    const onChangeUsername = (value: string): void => {
-        setUsername(value)
-    }
+    const onChangePassword = useCallback(
+        (value: string): void => {
+            dispatch(loginActions.setPassword(value))
+        },
+        [dispatch],
+    )
 
-    const onChangePassword = (value: string): void => {
-        setPassword(value)
-    }
+    const onLogin = useCallback((): void => {
+        dispatch(loginByUsername({ username, password })) //TODO
+    }, [dispatch, password, username])
 
     return (
         <div className={classNames(classes.loginForm, {}, [className])}>
             <div className={classes.loginFormInputs}>
+                <Text size={SizeText.L}>{t('Форма авторизации')}</Text>
+                {error && <Text color={ColorText.ERROR}>{error}</Text>}
                 <Input
                     value={username}
                     onChange={onChangeUsername}
@@ -45,6 +62,8 @@ export const LoginForm = (props: LoginFormProps): JSX.Element => {
             <Button
                 className={classes.loginFormAuthBtn}
                 theme={ButtonTheme.OUTLINE}
+                onClick={onLogin}
+                disabled={isLoading}
             >
                 {t('Войти')}
             </Button>

@@ -36,6 +36,19 @@ export const InvertedPrimaryDark: Story = {
     },
 }
 
+export const DisabletPrimary: Story = {
+    args: {
+        disabled: true,
+    },
+}
+
+export const DisabledPrimaryDark: Story = {
+    decorators: [ThemeDecorator(Theme.DARK)],
+    args: {
+        disabled: true,
+    },
+}
+
 export const Outline: Story = {
     args: {
         theme: ButtonTheme.OUTLINE,

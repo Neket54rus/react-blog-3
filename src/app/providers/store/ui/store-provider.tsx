@@ -1,12 +1,13 @@
 import { type JSX, type ReactNode } from 'react'
 import { Provider } from 'react-redux'
 
-import { type StateSchema } from './config/state-schema'
+import type { StateSchema } from 'shared/lib/store/state-schema'
+
 import { createReduxStore } from './config/store'
 
 interface StoreProviderProps {
     children: ReactNode
-    initialState?: StateSchema // | Partial<StateSchema>
+    initialState?: StateSchema
 }
 
 export const StoreProvider = (props: StoreProviderProps): JSX.Element => {
