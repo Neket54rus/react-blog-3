@@ -1,7 +1,0 @@
-* подумать 100 раз про app/providers/router куда его чо кого
-* порешать с vite build
-* добавить i18n в stories
-* Написать везде тесты и сторибуки
-* написать правильный сторибук для Navbar
-* нужно решить что делать со store-provider, так как он импортируется в store-decorator
-* вот тут TODO решить src/features/login-form/ui/login-form.tsx
