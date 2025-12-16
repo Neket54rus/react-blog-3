@@ -16,7 +16,7 @@ export class TestAsyncThunk<Return, Arg, RejectedValue> {
         this.actionCreator = actionCreator
         this.dispatch = jest.fn()
         this.getState = jest.fn()
-    } 
+    }
 
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     async callThunk(arg: Arg) {
