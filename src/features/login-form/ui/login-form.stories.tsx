@@ -4,7 +4,7 @@ import { StoreDecorator } from 'shared/config/storybook/store-decorator/store-de
 import { ThemeDecorator } from 'shared/config/storybook/theme-decorator/theme-decorator'
 import { Theme } from 'shared/lib/theme'
 
-import { LoginForm } from './login-form'
+import LoginForm from './login-form'
 
 const meta: Meta<typeof LoginForm> = {
     title: 'features/login-form',

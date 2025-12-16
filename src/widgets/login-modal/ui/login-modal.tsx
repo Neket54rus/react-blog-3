@@ -1,8 +1,9 @@
-import { type JSX } from 'react'
+import { Suspense, type JSX } from 'react'
 
 import { LoginForm } from 'features/login-form'
 
 import { Modal } from 'shared/ui/modal/modal'
+import { Spinner } from 'shared/ui/spinner'
 
 interface LoginFormProps {
     isOpen: boolean
@@ -15,7 +16,9 @@ export const LoginModal = (props: LoginFormProps): JSX.Element => {
 
     return (
         <Modal className={className} isOpen={isOpen} onClose={onClose} lazy>
-            <LoginForm />
+            <Suspense fallback={<Spinner />}>
+                <LoginForm />
+            </Suspense>
         </Modal>
     )
 }

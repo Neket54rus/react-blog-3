@@ -1,22 +1,32 @@
 import { configureStore, type ReducersMapObject } from '@reduxjs/toolkit'
 
-import { loginReducer } from 'features/login-form'
-
 import { userReducer } from 'entities/user'
 
 import type { StateSchema } from 'shared/lib/store/state-schema'
 
+import { createReducerManager } from './reducer-manager'
+
 export const createReduxStore = (
     initialState?: StateSchema,
-): ReturnType<typeof configureStore> => {
+    asyncReducers?: Partial<ReducersMapObject<StateSchema>>,
+): ReturnType<typeof configureStore<StateSchema>> => {
     const rootReducers: ReducersMapObject<StateSchema> = {
+        ...asyncReducers,
         user: userReducer,
-        loginForm: loginReducer,
     }
 
-    return configureStore<StateSchema>({
-        reducer: rootReducers,
+    const reducerManager = createReducerManager(rootReducers)
+
+    const store = configureStore<StateSchema>({
+        reducer: reducerManager.reduce,
         devTools: __IS_DEV__,
         preloadedState: initialState,
     })
+
+    // @ts-expect-error TODO
+    store.reducerManager = reducerManager
+
+    return store
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch']
