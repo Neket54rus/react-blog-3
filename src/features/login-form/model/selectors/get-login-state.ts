@@ -9,5 +9,5 @@ const defaultState: LoginSchema = {
     error: undefined,
 }
 
-export const getLoginState = (state: StateSchema): LoginSchema =>
+export const getLoginState = (state: Partial<StateSchema>): LoginSchema =>
     state.loginForm || defaultState
