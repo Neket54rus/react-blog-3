@@ -7,11 +7,13 @@ import type {
 
 import type { LoginSchema } from 'features/login-form'
 
+import type { ProfileSchema } from 'entities/profile'
 import type { UserSchema } from 'entities/user'
 
 export interface StateSchema {
     user: UserSchema
     loginForm?: LoginSchema
+    profile?: ProfileSchema
 }
 
 export interface ReducerManager {

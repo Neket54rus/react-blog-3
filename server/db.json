@@ -29,5 +29,15 @@
             "username": "admin",
             "password": "admin"
         }
-    ]
+    ],
+    "profile": {
+        "firstName": "Nikita",
+        "lastName": "Evdokimov",
+        "age": 24,
+        "currency": "RUB",
+        "country": "Russia",
+        "city": "Novosibirsk",
+        "username": "admin",
+        "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+    }
 }

@@ -1,11 +1,11 @@
-import { type JSX, useState } from 'react'
+import { type JSX, useCallback, useState } from 'react'
 
+import { CollapsButton } from 'features/collaps-button'
 import { LangSwitcher } from 'features/lang-switcher'
 import { MainNavigation } from 'features/main-navigation'
 import { ThemeSwitcher } from 'features/theme-switcher'
 
 import { classNames } from 'shared/lib/class-names'
-import { Button, ButtonSize, ButtonTheme } from 'shared/ui/button'
 
 import classes from './sidebar.module.scss'
 
@@ -18,9 +18,9 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
 
     const [collapsed, setCollapsed] = useState(false)
 
-    const onToggle = (): void => {
+    const onToggle = useCallback((): void => {
         setCollapsed((prev) => !prev)
-    }
+    }, [])
 
     return (
         <div
@@ -32,16 +32,11 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
             )}
         >
             <MainNavigation short={collapsed} />
-            <Button
-                data-testid="sidebar-toggle"
+            <CollapsButton
                 className={classes.sidebarCollapseBtn}
                 onClick={onToggle}
-                theme={ButtonTheme.BACKGROUND_INVERTED}
-                size={ButtonSize.L}
-                square
-            >
-                {collapsed ? '>' : '<'}
-            </Button>
+                collapsed={collapsed}
+            />
             <div
                 className={classNames(classes.sidebarSwithcers, {
                     [classes.collapsed]: collapsed,

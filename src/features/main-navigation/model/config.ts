@@ -1,8 +1,17 @@
+import type { FunctionComponent, SVGAttributes } from 'react'
+
 import AboutIcon from 'shared/assets/icons/about.svg?react'
 import HomeIcon from 'shared/assets/icons/home.svg?react'
+import ProfileIcon from 'shared/assets/icons/profile.svg?react'
 import { RoutePath } from 'shared/routes'
 
-export const mainNavigationItems = [
+interface MainNavigationItem {
+    to: string
+    text: string
+    Icon: FunctionComponent<SVGAttributes<SVGElement>>
+}
+
+export const mainNavigationItems: MainNavigationItem[] = [
     {
         to: RoutePath.main,
         text: 'Главная',
@@ -12,5 +21,10 @@ export const mainNavigationItems = [
         to: RoutePath.about,
         text: 'О нас',
         Icon: AboutIcon,
+    },
+    {
+        to: RoutePath.profile,
+        text: 'Профиль',
+        Icon: ProfileIcon,
     },
 ]

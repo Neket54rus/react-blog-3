@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, JSX } from 'react'
+import { type ButtonHTMLAttributes, type JSX } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
 

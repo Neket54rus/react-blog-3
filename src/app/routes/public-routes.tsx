@@ -3,6 +3,7 @@ import { type RouteObject } from 'react-router'
 import { AboutPage } from 'pages/AboutPage'
 import { MainPage } from 'pages/MainPage'
 import { NotFoundPage } from 'pages/not-found-page'
+import { ProfilePage } from 'pages/profile-page'
 
 import { PageLayout } from 'widgets/layout'
 
@@ -20,6 +21,10 @@ export const publicRoutes: RouteObject[] = [
             {
                 path: RoutePath[AppRoutes.ABOUT],
                 element: <AboutPage />,
+            },
+            {
+                path: RoutePath[AppRoutes.PROFILE],
+                element: <ProfilePage />,
             },
             {
                 path: RoutePath[AppRoutes.NOT_FOUND],

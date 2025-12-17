@@ -1,4 +1,4 @@
-import { type JSX } from 'react'
+import { memo, type JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { Button } from 'shared/ui/button'
@@ -7,7 +7,7 @@ interface LangSwitcherProps {
     className?: string
 }
 
-export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
+export const LangSwitcher = memo((props: LangSwitcherProps): JSX.Element => {
     const { className } = props
 
     const { t, i18n } = useTranslation()
@@ -21,4 +21,4 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
             {t('Язык')}
         </Button>
     )
-}
+})

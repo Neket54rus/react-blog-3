@@ -1,4 +1,4 @@
-import { type JSX } from 'react'
+import { memo, type JSX } from 'react'
 
 import darkIcon from 'shared/assets/icons/theme-dark.svg'
 import lightIcon from 'shared/assets/icons/theme-light.svg'
@@ -12,7 +12,7 @@ interface ThemeSwitcherProps {
     className?: string
 }
 
-export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
+export const ThemeSwitcher = memo((props: ThemeSwitcherProps): JSX.Element => {
     const { className } = props
 
     const { theme, toggleTheme } = useTheme()
@@ -29,4 +29,4 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps): JSX.Element => {
             )}
         </Button>
     )
-}
+})
