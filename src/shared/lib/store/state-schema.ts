@@ -4,6 +4,8 @@ import type {
     Reducer,
     ReducersMapObject,
 } from '@reduxjs/toolkit'
+import type { AxiosInstance } from 'axios'
+import type { NavigateOptions, To } from 'react-router'
 
 import type { LoginSchema } from 'features/login-form'
 
@@ -26,4 +28,14 @@ export interface ReducerManager {
 export type StateSchemaKey = keyof StateSchema
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
     reducerManager: ReducerManager
+}
+
+export interface ThunkExtraArg {
+    api: AxiosInstance
+    navigate: (to: To, options?: NavigateOptions) => void
+}
+
+export interface ThunkConfig<T> {
+    rejectValue: T
+    extra: ThunkExtraArg
 }

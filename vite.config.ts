@@ -15,10 +15,12 @@ const config = ({ mode }: { mode: string }): UserConfig => {
         build: BUILD_PATHS.BUILD,
     }
     const port = env.port || BUILD_DEFAULTS.PORT
+    const apiUrl = env.apiUrl || BUILD_DEFAULTS.API
 
     const options: BuildOptions = {
         paths,
         port,
+        apiUrl,
     }
 
     return defineConfig(viteConfig(options))

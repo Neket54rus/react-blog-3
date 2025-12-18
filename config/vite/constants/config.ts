@@ -6,4 +6,5 @@ export const BUILD_PATHS = {
 
 export const BUILD_DEFAULTS = {
     PORT: 3000,
+    API: 'http://localhost:8000',
 } as const

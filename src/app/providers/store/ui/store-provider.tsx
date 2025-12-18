@@ -1,5 +1,5 @@
 import { type ReducersMapObject } from '@reduxjs/toolkit'
-import { type JSX, type ReactNode } from 'react'
+import { type JSX, type ReactNode, useMemo } from 'react'
 import { Provider } from 'react-redux'
 
 import type { StateSchema } from 'shared/lib/store/state-schema'
@@ -15,7 +15,10 @@ interface StoreProviderProps {
 export const StoreProvider = (props: StoreProviderProps): JSX.Element => {
     const { children, initialState, asyncReducers } = props
 
-    const store = createReduxStore(initialState, asyncReducers)
+    const store = useMemo(
+        () => createReduxStore(initialState, asyncReducers),
+        [initialState, asyncReducers],
+    )
 
     return <Provider store={store}>{children}</Provider>
 }

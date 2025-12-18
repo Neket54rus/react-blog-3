@@ -28,6 +28,7 @@ const config: StorybookConfig = {
             ],
             define: {
                 __IS_DEV__: JSON.stringify(true),
+                __API__: JSON.stringify(''),
             },
         }),
 }

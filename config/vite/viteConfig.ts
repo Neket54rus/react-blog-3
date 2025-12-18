@@ -25,6 +25,7 @@ export const viteConfig = (options: BuildOptions): UserConfig => {
         },
         define: {
             __IS_DEV__: JSON.stringify(true),
+            __API__: JSON.stringify(''),
         },
     }
 }
