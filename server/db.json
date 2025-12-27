@@ -1,43 +1,43 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "a title",
-            "views": 100
-        },
-        {
-            "id": "2",
-            "title": "another title",
-            "views": 200
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "text": "a comment about post 1",
-            "postId": "1"
-        },
-        {
-            "id": "2",
-            "text": "another comment about post 1",
-            "postId": "1"
-        }
-    ],
-    "users": [
-        {
-            "id": 1,
-            "username": "admin",
-            "password": "admin"
-        }
-    ],
-    "profile": {
-        "firstName": "Nikita",
-        "lastName": "Evdokimov",
-        "age": 24,
-        "currency": "RUB",
-        "country": "Russia",
-        "city": "Novosibirsk",
-        "username": "admin",
-        "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
+  "profile": {
+    "firstName": "Nikita12",
+    "lastName": "Evdokimov",
+    "age": 24,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Novosibirsk",
+    "username": "admin",
+    "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+  }
 }

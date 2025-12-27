@@ -1,5 +1,5 @@
 import type { Reducer } from '@reduxjs/toolkit'
-import { useEffect, type JSX, type ReactNode } from 'react'
+import { useLayoutEffect, type JSX, type ReactNode } from 'react'
 import { useStore } from 'react-redux'
 
 import type {
@@ -26,7 +26,7 @@ export const DynamicModuleLoader = (
     const dispatch = useAppDispatch()
     const store = useStore() as ReduxStoreWithManager
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         Object.entries(reducers).forEach(([name, reducer]) => {
             store.reducerManager.add(name as StateSchemaKey, reducer)
             dispatch({ type: `@INIT ${name} reducer` })

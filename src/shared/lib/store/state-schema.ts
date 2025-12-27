@@ -7,6 +7,7 @@ import type {
 import type { AxiosInstance } from 'axios'
 import type { NavigateOptions, To } from 'react-router'
 
+import type { EditProfileSchema } from 'features/edit-profile'
 import type { LoginSchema } from 'features/login-form'
 
 import type { ProfileSchema } from 'entities/profile'
@@ -16,6 +17,7 @@ export interface StateSchema {
     user: UserSchema
     loginForm?: LoginSchema
     profile?: ProfileSchema
+    editProfile?: EditProfileSchema
 }
 
 export interface ReducerManager {
@@ -38,4 +40,5 @@ export interface ThunkExtraArg {
 export interface ThunkConfig<T> {
     rejectValue: T
     extra: ThunkExtraArg
+    state: StateSchema
 }

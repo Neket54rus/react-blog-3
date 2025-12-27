@@ -71,4 +71,9 @@
     &.size_xl {
         font: var(--font-xl);
     }
+
+    &.red {
+        color: var(--error);
+        border: 1px solid var(--error);
+    }
 }

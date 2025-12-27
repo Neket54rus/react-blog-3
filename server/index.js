@@ -75,6 +75,17 @@ app.post('/users', async (req, res) => {
     res.status(201).json(req.body)
 })
 
+app.get('/profile', (_req, res) => {
+    res.json(db.data.profile)
+})
+
+app.put('/profile', async (req, res) => {
+    // Просто заменяем весь профиль на то, что пришло
+    db.data.profile = req.body
+    await db.write()
+    res.json(db.data.profile)
+})
+
 // === start ===
 app.listen(8000, () => {
     console.log('Express + LowDB server is running on port 8000')

@@ -12,4 +12,3 @@ export const StoreUpdater = (): JSX.Element | null => {
 
     return null
 }
-

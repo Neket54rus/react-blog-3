@@ -1,0 +1,18 @@
+.editProfileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid var(--inverted-bg-color);
+    padding: 20px;
+
+    &Loading,
+    &Error,
+    &NoData {
+        align-items: center;
+    }
+
+    &Input {
+        border: 1px solid var(--primary-color);
+        padding: 10px 14px;
+    }
+}

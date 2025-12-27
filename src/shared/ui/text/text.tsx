@@ -1,4 +1,4 @@
-import { type JSX } from 'react'
+import { memo, type JSX } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
 
@@ -12,7 +12,7 @@ interface TextProps {
     className?: string
 }
 
-export const Text = (props: TextProps): JSX.Element => {
+export const Text = memo((props: TextProps): JSX.Element => {
     const {
         children,
         color = ColorText.PRIMARY,
@@ -31,4 +31,4 @@ export const Text = (props: TextProps): JSX.Element => {
             {children}
         </p>
     )
-}
+})

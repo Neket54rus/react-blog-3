@@ -1,0 +1,35 @@
+.profileInfo {
+    display: flex;
+    gap: 20px;
+    border: 2px solid var(--inverted-bg-color);
+    padding: 20px;
+
+    &Loading,
+    &Error,
+    &NoData {
+        justify-content: center;
+    }
+
+    &Avatar {
+        width: 124px;
+        height: 124px;
+        border-radius: 100%;
+        border: 1px solid var(--primary-color);
+    }
+
+    &Fields {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &Text {
+        border: 1px solid var(--primary-color);
+        padding: 10px 14px;
+
+        &.readonly {
+            opacity: 0.6;
+        }
+    }
+}

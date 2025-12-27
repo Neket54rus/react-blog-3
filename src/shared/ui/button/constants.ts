@@ -4,6 +4,7 @@ export const ButtonTheme = {
     OUTLINE: 'outline',
     BACKGROUND: 'background',
     BACKGROUND_INVERTED: 'background_inverted',
+    RED: 'red',
 } as const
 
 export type ButtonTheme = (typeof ButtonTheme)[keyof typeof ButtonTheme]
