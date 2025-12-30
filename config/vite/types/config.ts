@@ -1,4 +1,4 @@
-import { BUILD_PROJECT } from '../constants/config'
+import { type BUILD_PROJECT } from '../constants/config'
 
 export type BuildProject = (typeof BUILD_PROJECT)[keyof typeof BUILD_PROJECT]
 

@@ -1,6 +1,6 @@
 import { memo, useMemo, type JSX } from 'react'
-import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 
 import { getUserAuthData } from 'entities/user'
 

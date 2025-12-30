@@ -16,10 +16,9 @@ const ProfilePage = memo((): JSX.Element => {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        console.log(__IS_DEV__)
-        // if (__PROJECT__ !== 'storybook') {
-        dispatch(fetchProfileData())
-        // }
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData())
+        }
     }, [dispatch])
 
     return (
