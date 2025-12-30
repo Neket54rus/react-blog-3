@@ -4,7 +4,7 @@ import type { BuildOptions } from './types/config'
 import { vitePlugins } from './vitePlugins'
 
 export const viteConfig = (options: BuildOptions): UserConfig => {
-    const { paths, port } = options
+    const { paths, port, project } = options
 
     return {
         plugins: vitePlugins(),
@@ -26,6 +26,7 @@ export const viteConfig = (options: BuildOptions): UserConfig => {
         define: {
             __IS_DEV__: JSON.stringify(true),
             __API__: JSON.stringify(''),
+            __PROJECT: JSON.stringify(project),
         },
     }
 }

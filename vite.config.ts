@@ -1,6 +1,10 @@
 import { defineConfig, loadEnv, type UserConfig } from 'vite'
 
-import { BUILD_DEFAULTS, BUILD_PATHS } from './config/vite/constants/config'
+import {
+    BUILD_DEFAULTS,
+    BUILD_PATHS,
+    BUILD_PROJECT,
+} from './config/vite/constants/config'
 import type {
     BuildEnv,
     BuildOptions,
@@ -21,6 +25,7 @@ const config = ({ mode }: { mode: string }): UserConfig => {
         paths,
         port,
         apiUrl,
+        project: BUILD_PROJECT.FRONTEND,
     }
 
     return defineConfig(viteConfig(options))

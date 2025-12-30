@@ -1,5 +1,7 @@
 import { type RouteObject } from 'react-router'
 
+import { RequireAuth } from 'app/providers/router/ui/require-auth'
+
 import { AboutPage } from 'pages/AboutPage'
 import { MainPage } from 'pages/MainPage'
 import { NotFoundPage } from 'pages/not-found-page'
@@ -23,8 +25,12 @@ export const publicRoutes: RouteObject[] = [
                 element: <AboutPage />,
             },
             {
-                path: RoutePath[AppRoutes.PROFILE],
-                element: <ProfilePage />,
+                path: RoutePath.profile,
+                element: (
+                    <RequireAuth>
+                        <ProfilePage />
+                    </RequireAuth>
+                ),
             },
             {
                 path: RoutePath[AppRoutes.NOT_FOUND],

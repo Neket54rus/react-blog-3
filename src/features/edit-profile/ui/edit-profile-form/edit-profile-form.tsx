@@ -11,6 +11,7 @@ import { Select } from 'shared/ui/select'
 import { Spinner } from 'shared/ui/spinner'
 import { ColorText, SizeText, Text } from 'shared/ui/text'
 
+import { ValidatePorfileError } from '../../model/config/profile.constants'
 import { getEditProfileState } from '../../model/selectors/get-readonly/get-edit-profile-state'
 import { editProfileAction } from '../../model/slices/edit-profile-slice'
 
@@ -30,11 +31,19 @@ const country = Object.values(Country).map((val) => ({
     content: val,
 }))
 
+const validateErrorText = {
+    [ValidatePorfileError.INCORRECT_USER_DATA]:
+        'Не корректные данные пользователя',
+    [ValidatePorfileError.NO_DATA]: 'Нет данных',
+    [ValidatePorfileError.SERVER_ERROR]: 'Ошибка сервера',
+}
+
 export const EditProfileForm = memo(
     (props: EditProfileFormProps): JSX.Element => {
         const { className } = props
 
-        const { form, isLoading, error } = useSelector(getEditProfileState)
+        const { form, isLoading, error, validateError } =
+            useSelector(getEditProfileState)
 
         const dispatch = useAppDispatch()
 
@@ -160,6 +169,11 @@ export const EditProfileForm = memo(
             <div
                 className={classNames(classes.editProfileForm, {}, [className])}
             >
+                {validateError?.map((error) => (
+                    <Text key={error} color={ColorText.ERROR}>
+                        {validateErrorText[error]}
+                    </Text>
+                ))}
                 <Input
                     value={form.firstName || ''}
                     className={classes.editProfileFormInput}

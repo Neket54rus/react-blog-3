@@ -93,6 +93,16 @@ export default defineConfig([
                     ],
                     pathGroups: [
                         {
+                            pattern: 'app/**',
+                            group: 'internal',
+                            position: 'after',
+                        },
+                        {
+                            pattern: 'pages/**',
+                            group: 'internal',
+                            position: 'after',
+                        },
+                        {
                             pattern: 'widgets/**',
                             group: 'internal',
                             position: 'after',

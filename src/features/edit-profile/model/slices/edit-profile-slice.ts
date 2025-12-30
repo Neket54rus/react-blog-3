@@ -28,21 +28,22 @@ export const edtiProfileSlice = createSlice({
         },
         resetForm: (state) => {
             state.form = undefined
+            state.validateError = undefined
         },
     },
     extraReducers: (builder) => {
         builder.addCase(updateProfileData.pending, (state) => {
             state.isLoading = true
-            state.error = undefined
+            state.validateError = undefined
         })
         builder.addCase(updateProfileData.fulfilled, (state) => {
             state.isLoading = false
             state.readonly = true
-            state.error = undefined
+            state.validateError = undefined
         })
         builder.addCase(updateProfileData.rejected, (state, action) => {
             state.isLoading = false
-            state.error = action.payload
+            state.validateError = action.payload
         })
     },
 })

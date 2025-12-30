@@ -5,10 +5,11 @@ import HomeIcon from 'shared/assets/icons/home.svg?react'
 import ProfileIcon from 'shared/assets/icons/profile.svg?react'
 import { RoutePath } from 'shared/routes'
 
-interface MainNavigationItem {
+export interface MainNavigationItem {
     to: string
     text: string
     Icon: FunctionComponent<SVGAttributes<SVGElement>>
+    authOnly?: boolean
 }
 
 export const mainNavigationItems: MainNavigationItem[] = [
@@ -26,5 +27,6 @@ export const mainNavigationItems: MainNavigationItem[] = [
         to: RoutePath.profile,
         text: 'Профиль',
         Icon: ProfileIcon,
+        authOnly: true,
     },
 ]

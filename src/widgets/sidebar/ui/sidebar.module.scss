@@ -5,6 +5,7 @@
     position: relative;
     transition: width 0.2s;
     padding: 20px 30px;
+    flex-shrink: 0;
 
     &.collapsed {
         width: 80px;
