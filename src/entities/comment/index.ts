@@ -1,0 +1,6 @@
+export type { Comment, CommentsSchema } from './model/types/comment.types'
+export { CommentCard } from './ui/comment-card/comment-card'
+export { CommnetsList } from './ui/comments-list/comments-list'
+export { fetchCommentsByArticleId } from './model/services/fetch-comments-by-article-id/fetch-comments-by-article-id'
+export { getCommentsState } from './model/selectors/get-comments-state'
+export { commentsReducer } from './model/slice/comments'

@@ -1,0 +1,9 @@
+.commentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &Error {
+        justify-content: center;
+    }
+}

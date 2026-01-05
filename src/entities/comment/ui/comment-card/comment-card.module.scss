@@ -1,0 +1,13 @@
+.comment {
+    padding: 12px 16px;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &Header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}

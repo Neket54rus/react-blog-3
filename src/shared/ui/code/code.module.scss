@@ -1,0 +1,15 @@
+.code {
+    border: 1px solid var(--primary-color);
+    padding: 16px 32px;
+    max-height: 500px;
+
+    &Copy {
+        margin-left: auto;
+
+        &Icon {
+            & > path {
+                stroke: var(--primary-color);
+            }
+        }
+    }
+}

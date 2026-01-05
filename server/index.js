@@ -86,6 +86,42 @@ app.put('/profile', async (req, res) => {
     res.json(db.data.profile)
 })
 
+app.get('/articles/:id', (req, res) => {
+    const id = req.params.id
+    const article = db.data.articles?.find((a) => a.id === id)
+
+    if (!article) {
+        return res.status(404).json({ message: 'Статья не найдена' })
+    }
+
+    res.json(article)
+})
+
+app.get('/comments/:id', (req, res) => {
+    const articleId = req.params.id
+    const comments =
+        db.data.comments?.filter((c) => c.articleId === articleId) || []
+
+    if (comments.length === 0) {
+        return res.json([])
+    }
+
+    // Обогащаем комментарии данными пользователя
+    const enrichedComments = comments.map((comment) => {
+        const user = db.data.users.find((u) => u.username === comment.userId)
+
+        // Возвращаем полный объект с user вместо userId
+        return {
+            id: comment.id,
+            text: comment.text,
+            articleId: comment.articleId,
+            user: user || null, // Полный объект пользователя
+        }
+    })
+
+    res.json(enrichedComments)
+})
+
 // === start ===
 app.listen(8000, () => {
     console.log('Express + LowDB server is running on port 8000')

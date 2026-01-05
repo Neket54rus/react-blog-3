@@ -1,0 +1,10 @@
+.icon {
+    &.secondary {
+        fill: var(--secondary-color);
+    }
+
+    &.inverted_secondary {
+        fill: var(--inverted-secondary-color);
+        stroke: var(--inverted-secondary-color);
+    }
+}

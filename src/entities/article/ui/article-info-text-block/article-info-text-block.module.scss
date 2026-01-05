@@ -1,0 +1,9 @@
+.articleInfoTextBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    &Text {
+        text-indent: 40px;
+    }
+}

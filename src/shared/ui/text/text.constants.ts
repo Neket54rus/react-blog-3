@@ -9,6 +9,7 @@ export type ColorText = (typeof ColorText)[keyof typeof ColorText]
 export const SizeText = {
     M: 'size_m',
     L: 'size_l',
+    XL: 'size_xl',
 }
 
 export type SizeText = (typeof SizeText)[keyof typeof SizeText]

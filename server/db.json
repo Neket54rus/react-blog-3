@@ -11,23 +11,48 @@
       "views": 200
     }
   ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "a comment about post 1",
-      "postId": "1"
-    },
-    {
-      "id": "2",
-      "text": "another comment about post 1",
-      "postId": "1"
-    }
-  ],
   "users": [
     {
       "id": 1,
       "username": "admin",
-      "password": "admin"
+      "password": "admin",
+      "role": "ADMIN",
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": 2,
+      "username": "user456",
+      "password": "user456",
+      "role": "USER",
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": 3,
+      "username": "user789",
+      "password": "user789",
+      "role": "USER",
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": 4,
+      "username": "user101",
+      "password": "user101",
+      "role": "USER",
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": 5,
+      "username": "user202",
+      "password": "user202",
+      "role": "USER",
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "id": 6,
+      "username": "user303",
+      "password": "user303",
+      "role": "USER",
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
     }
   ],
   "profile": {
@@ -39,5 +64,159 @@
     "city": "Novosibirsk",
     "username": "admin",
     "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
-  }
+  },
+  "articles": [
+    {
+      "id": "1",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "type": ["IT", "JavaScript", "Программирование"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "type": ["IT", "TypeScript", "Программирование"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "type": ["IT", "React", "Frontend"],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "Отличная статья для начинающих! Хотелось бы больше примеров кода.",
+      "articleId": "1",
+      "userId": "admin"
+    },
+    {
+      "id": "2",
+      "text": "TypeScript реально спас наш проект на 100к строк кода!",
+      "articleId": "2",
+      "userId": "user456"
+    },
+    {
+      "id": "3",
+      "text": "А когда будет статья про React hooks?",
+      "articleId": "3",
+      "userId": "user789"
+    },
+    {
+      "id": "4",
+      "text": "Можно добавить сравнение с Flow?",
+      "articleId": "2",
+      "userId": "user101"
+    },
+    {
+      "id": "5",
+      "text": "Первый пример очень понятный, спасибо!",
+      "articleId": "1",
+      "userId": "user202"
+    },
+    {
+      "id": "6",
+      "text": "React действительно упрощает разработку сложных интерфейсов.",
+      "articleId": "3",
+      "userId": "user303"
+    }
+  ]
 }

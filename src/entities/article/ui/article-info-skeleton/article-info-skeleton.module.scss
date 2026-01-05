@@ -1,0 +1,15 @@
+.articleInfoSekeleton {
+    &Header {
+        margin: 0 auto;
+        margin-bottom: 38px;
+    }
+
+    &Title {
+        margin-bottom: 16px;    
+    }
+
+    &SubTitle,
+    &Text {
+        margin-bottom: 28px;
+    }
+}

@@ -3,27 +3,31 @@ import { type RouteObject } from 'react-router'
 import { RequireAuth } from 'app/providers/router/ui/require-auth'
 
 import { AboutPage } from 'pages/AboutPage'
+import { ArticlePage } from 'pages/article-page'
+import { ArticlesPage } from 'pages/articles-page'
 import { MainPage } from 'pages/MainPage'
 import { NotFoundPage } from 'pages/not-found-page'
 import { ProfilePage } from 'pages/profile-page'
 
 import { PageLayout } from 'widgets/layout'
 
-import { AppRoutes, RoutePath } from 'shared/routes'
+import { RoutePath } from 'shared/routes'
 
 export const publicRoutes: RouteObject[] = [
     {
         element: <PageLayout />,
         children: [
+            // public routes
             {
-                path: RoutePath[AppRoutes.MAIN],
+                path: RoutePath.main,
                 index: true,
                 element: <MainPage />,
             },
             {
-                path: RoutePath[AppRoutes.ABOUT],
+                path: RoutePath.about,
                 element: <AboutPage />,
             },
+            // private routes
             {
                 path: RoutePath.profile,
                 element: (
@@ -33,7 +37,24 @@ export const publicRoutes: RouteObject[] = [
                 ),
             },
             {
-                path: RoutePath[AppRoutes.NOT_FOUND],
+                path: RoutePath.articles,
+                element: (
+                    <RequireAuth>
+                        <ArticlesPage />
+                    </RequireAuth>
+                ),
+            },
+            {
+                path: `${RoutePath.article_detail}:id`,
+                element: (
+                    <RequireAuth>
+                        <ArticlePage />
+                    </RequireAuth>
+                ),
+            },
+            // 404
+            {
+                path: RoutePath.not_found,
                 element: <NotFoundPage />,
             },
         ],

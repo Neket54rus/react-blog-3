@@ -1,0 +1,46 @@
+.articleInfo {
+    min-height: 100%;
+    margin-bottom: 40px;
+
+    &Error,
+    &NoData {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &Avatar {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    &SubTitle {
+        margin-bottom: 10px;
+    }
+
+    &Views {
+        margin-bottom: 5px;
+    }
+
+    &CreateAt {
+        margin-bottom: 40px;
+    }
+
+    &Views,
+    &CreateAt {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        &Icon {
+            fill: var(--secondary-color);
+        }
+    }
+
+    &Blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}

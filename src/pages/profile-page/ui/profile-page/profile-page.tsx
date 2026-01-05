@@ -6,11 +6,19 @@ import { EditProfileControls, editProfileReducer } from 'features/edit-profile'
 
 import { fetchProfileData, profileReducer } from 'entities/profile'
 
-import { DynamicModuleLoader } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
+import {
+    DynamicModuleLoader,
+    type ReducersList,
+} from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { Text, SizeText } from 'shared/ui/text'
 
 import classes from './profile-page.module.scss'
+
+const reducers: ReducersList = {
+    profile: profileReducer,
+    editProfile: editProfileReducer,
+}
 
 const ProfilePage = memo((): JSX.Element => {
     const dispatch = useAppDispatch()
@@ -22,13 +30,7 @@ const ProfilePage = memo((): JSX.Element => {
     }, [dispatch])
 
     return (
-        <DynamicModuleLoader
-            reducers={{
-                profile: profileReducer,
-                editProfile: editProfileReducer,
-            }}
-            removeAfterUnmount
-        >
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classes.profilePage}>
                 <div className={classes.profilePageHeader}>
                     <Text size={SizeText.L}>Профиль</Text>

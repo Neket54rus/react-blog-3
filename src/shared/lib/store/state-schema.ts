@@ -10,6 +10,8 @@ import type { NavigateOptions, To } from 'react-router'
 import type { EditProfileSchema } from 'features/edit-profile'
 import type { LoginSchema } from 'features/login-form'
 
+import type { ArticleSchema } from 'entities/article'
+import type { CommentsSchema } from 'entities/comment'
 import type { ProfileSchema } from 'entities/profile'
 import type { UserSchema } from 'entities/user'
 
@@ -18,6 +20,8 @@ export interface StateSchema {
     loginForm?: LoginSchema
     profile?: ProfileSchema
     editProfile?: EditProfileSchema
+    article?: ArticleSchema
+    articleComments?: CommentsSchema
 }
 
 export interface ReducerManager {
