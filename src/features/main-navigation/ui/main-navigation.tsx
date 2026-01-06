@@ -25,7 +25,7 @@ export const MainNavigation = memo(
 
         const navigationItems = useMemo(
             () =>
-                mainNavigationItems
+                mainNavigationItems(authData?.username)
                     .filter((item) => !item.authOnly || authData)
                     .map((item) => (
                         <Link

@@ -24,47 +24,99 @@
       "username": "user456",
       "password": "user456",
       "role": "USER",
-      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+      "avatar": "https://images.steamusercontent.com/ugc/2500136102387952269/DA33149893C16078DBF9C160BBE713C2355B708E/?imw=512&amp;imh=512&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
     },
     {
       "id": 3,
       "username": "user789",
       "password": "user789",
       "role": "USER",
-      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+      "avatar": "https://i.pinimg.com/originals/cf/a4/c2/cfa4c21d0ac2d99e77c8f67370344f52.png"
     },
     {
       "id": 4,
       "username": "user101",
       "password": "user101",
       "role": "USER",
-      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+      "avatar": "https://i.pinimg.com/736x/8c/15/ba/8c15baea113a8d65350a43e682ea0813.jpg"
     },
     {
       "id": 5,
       "username": "user202",
       "password": "user202",
       "role": "USER",
-      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+      "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
     },
     {
       "id": 6,
       "username": "user303",
       "password": "user303",
       "role": "USER",
-      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+      "avatar": "https://avatars.mds.yandex.net/i?id=4e446df953d8ad9e4217feb88ca2f931_l-5433602-images-thumbs&n=13"
     }
   ],
-  "profile": {
-    "firstName": "Nikita12",
-    "lastName": "Evdokimov",
-    "age": 24,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Novosibirsk",
-    "username": "admin",
-    "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
-  },
+  "profiles": [
+    {
+      "firstName": "Nikita",
+      "lastName": "Evdokimov",
+      "age": 24,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Novosibirsk",
+      "username": "admin",
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "firstName": "Иван",
+      "lastName": "Петров",
+      "age": 28,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Novosibirsk",
+      "username": "user456",
+      "avatar": "https://images.steamusercontent.com/ugc/2500136102387952269/DA33149893C16078DBF9C160BBE713C2355B708E/?imw=512&amp;imh=512&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
+    },
+    {
+      "firstName": "Анна",
+      "lastName": "Смирнова",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Novosibirsk",
+      "username": "user789",
+      "avatar": "https://i.pinimg.com/originals/cf/a4/c2/cfa4c21d0ac2d99e77c8f67370344f52.png"
+    },
+    {
+      "firstName": "Дмитрий",
+      "lastName": "Иванов",
+      "age": 32,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Novosibirsk",
+      "username": "user101",
+      "avatar": "https://i.pinimg.com/736x/8c/15/ba/8c15baea113a8d65350a43e682ea0813.jpg"
+    },
+    {
+      "firstName": "Елена",
+      "lastName": "Кузнецова",
+      "age": 29,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Novosibirsk",
+      "username": "user202",
+      "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+    },
+    {
+      "firstName": "Михаил",
+      "lastName": "Соколов",
+      "age": 35,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Novosibirsk",
+      "username": "user303",
+      "avatar": "https://avatars.mds.yandex.net/i?id=4e446df953d8ad9e4217feb88ca2f931_l-5433602-images-thumbs&n=13"
+    }
+  ],
   "articles": [
     {
       "id": "1",
@@ -74,7 +126,11 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
       "views": 1245,
       "createdAt": "15.01.2025",
-      "type": ["IT", "JavaScript", "Программирование"],
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -112,7 +168,11 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
       "views": 892,
       "createdAt": "22.01.2025",
-      "type": ["IT", "TypeScript", "Программирование"],
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -150,7 +210,11 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
       "views": 1567,
       "createdAt": "01.02.2025",
-      "type": ["IT", "React", "Frontend"],
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -217,6 +281,12 @@
       "text": "React действительно упрощает разработку сложных интерфейсов.",
       "articleId": "3",
       "userId": "user303"
+    },
+    {
+      "id": 7,
+      "text": "test",
+      "articleId": "1",
+      "userId": "admin"
     }
   ]
 }

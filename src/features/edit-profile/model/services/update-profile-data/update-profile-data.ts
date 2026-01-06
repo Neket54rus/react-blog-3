@@ -10,9 +10,9 @@ import { getEditProfileState } from '../../selectors/get-readonly/get-edit-profi
 
 export const updateProfileData = createAsyncThunk<
     Profile,
-    void,
+    string,
     ThunkConfig<ValidatePorfileError[]>
->('profile/updateProfileData', async (_, thunkApi) => {
+>('profile/updateProfileData', async (profileId, thunkApi) => {
     const { extra, rejectWithValue, getState, dispatch } = thunkApi
 
     const { form } = getEditProfileState(getState())
@@ -24,7 +24,10 @@ export const updateProfileData = createAsyncThunk<
     }
 
     try {
-        const { data } = await extra.api.put<Profile>('profile', form)
+        const { data } = await extra.api.put<Profile>(
+            `profile/${profileId}`,
+            form,
+        )
 
         if (!data) {
             throw new Error()

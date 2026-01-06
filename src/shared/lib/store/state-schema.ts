@@ -7,6 +7,7 @@ import type {
 import type { AxiosInstance } from 'axios'
 import type { NavigateOptions, To } from 'react-router'
 
+import type { AddCommentFormSchema } from 'features/add-comment-form'
 import type { EditProfileSchema } from 'features/edit-profile'
 import type { LoginSchema } from 'features/login-form'
 
@@ -22,6 +23,7 @@ export interface StateSchema {
     editProfile?: EditProfileSchema
     article?: ArticleSchema
     articleComments?: CommentsSchema
+    addCommentForm?: AddCommentFormSchema
 }
 
 export interface ReducerManager {

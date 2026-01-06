@@ -1,6 +1,8 @@
 import { memo } from 'react'
+import { Link } from 'react-router'
 
 import { classNames } from 'shared/lib/class-names'
+import { RoutePath } from 'shared/routes'
 import { Avatar } from 'shared/ui/avatar'
 import { Text } from 'shared/ui/text'
 
@@ -18,10 +20,13 @@ export const CommentCard = memo((props: CommentProps) => {
 
     return (
         <div className={classNames(classes.comment, {}, [className])}>
-            <div className={classes.commentHeader}>
+            <Link
+                to={`${RoutePath.profile}${comment.user.username}`}
+                className={classes.commentHeader}
+            >
                 <Avatar size={30} src={comment.user.avatar} />
                 <Text>{comment.user.username}</Text>
-            </div>
+            </Link>
             <Text>{comment.text}</Text>
         </div>
     )

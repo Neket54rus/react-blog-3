@@ -75,15 +75,31 @@ app.post('/users', async (req, res) => {
     res.status(201).json(req.body)
 })
 
-app.get('/profile', (_req, res) => {
-    res.json(db.data.profile)
+app.get('/profile/:id', (req, res) => {
+    const id = req.params.id
+    const profile = db.data.profiles?.find((p) => p.username === id)
+
+    if (!profile) {
+        res.status(404).json({ message: 'Профиль не найден' })
+    }
+
+    res.json(profile)
 })
 
-app.put('/profile', async (req, res) => {
-    // Просто заменяем весь профиль на то, что пришло
-    db.data.profile = req.body
+app.put('/profile/:id', async (req, res) => {
+    db.data.profiles = db.data.profiles.map((p) => {
+        if (p.username === req.params.id) {
+            return {
+                ...p,
+                ...req.body,
+            }
+        }
+
+        return p
+    })
+
     await db.write()
-    res.json(db.data.profile)
+    res.json(db.data.profiles.find((p) => p.username === req.params.id))
 })
 
 app.get('/articles/:id', (req, res) => {
@@ -120,6 +136,64 @@ app.get('/comments/:id', (req, res) => {
     })
 
     res.json(enrichedComments)
+})
+
+// Добавьте этот маршрут после других маршрутов, перед app.listen
+
+// Сохранение нового комментария
+app.post('/comments', async (req, res) => {
+    const { text, articleId, userId } = req.body
+
+    // Проверяем обязательные поля
+    if (!text || !articleId || !userId) {
+        return res.status(400).json({
+            message: 'Необходимо указать text, articleId и userId',
+        })
+    }
+
+    // Проверяем, существует ли статья
+    const article = db.data.articles?.find((a) => a.id === articleId)
+    if (!article) {
+        return res.status(404).json({
+            message: 'Статья не найдена',
+        })
+    }
+
+    // Проверяем, существует ли пользователь (по username)
+    const user = db.data.users?.find((u) => u.username === userId)
+    if (!user) {
+        return res.status(404).json({
+            message: 'Пользователь не найден',
+        })
+    }
+
+    // Создаем новый комментарий
+    const newComment = {
+        id: (db.data.comments?.length || 0) + 1, // Генерируем ID
+        text,
+        articleId,
+        userId,
+    }
+
+    // Инициализируем массив комментариев, если его нет
+    if (!db.data.comments) {
+        db.data.comments = []
+    }
+
+    // Добавляем комментарий
+    db.data.comments.push(newComment)
+    await db.write()
+
+    // Возвращаем созданный комментарий с пользователем
+    res.status(201).json({
+        ...newComment,
+        user: {
+            id: user.id,
+            username: user.username,
+            role: user.role,
+            avatar: user.avatar,
+        },
+    })
 })
 
 // === start ===

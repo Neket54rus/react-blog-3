@@ -1,10 +1,13 @@
 import { memo, useEffect, type JSX } from 'react'
+import { useSelector } from 'react-redux'
+import { useParams } from 'react-router'
 
 import { ProfileCard } from 'widgets/profile-card'
 
 import { EditProfileControls, editProfileReducer } from 'features/edit-profile'
 
 import { fetchProfileData, profileReducer } from 'entities/profile'
+import { getUserAuthData } from 'entities/user'
 
 import {
     DynamicModuleLoader,
@@ -23,18 +26,22 @@ const reducers: ReducersList = {
 const ProfilePage = memo((): JSX.Element => {
     const dispatch = useAppDispatch()
 
+    const { id } = useParams<{ id: string }>()
+
+    const authData = useSelector(getUserAuthData)
+
     useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData())
+        if (id && __PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData(id))
         }
-    }, [dispatch])
+    }, [dispatch, id])
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classes.profilePage}>
                 <div className={classes.profilePageHeader}>
                     <Text size={SizeText.L}>Профиль</Text>
-                    <EditProfileControls />
+                    {authData?.username === id && <EditProfileControls />}
                 </div>
                 <ProfileCard />
             </div>

@@ -1,6 +1,11 @@
-import { memo } from 'react'
+import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
+
+import {
+    AddCommentForm,
+    addCommentFormReducer,
+} from 'features/add-comment-form'
 
 import {
     ArticleInfo,
@@ -23,11 +28,14 @@ import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initia
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { SizeText, Text } from 'shared/ui/text'
 
+import { addCommentForArticle } from '../model/services/add-comment-for-article/add-comment-for-article'
+
 import classes from './article-page.module.scss'
 
 const reducers: ReducersList = {
     article: articleReducer,
     articleComments: commentsReducer,
+    addCommentForm: addCommentFormReducer,
 }
 
 const ArticlePage = memo(() => {
@@ -53,6 +61,13 @@ const ArticlePage = memo(() => {
         }
     })
 
+    const onSendComment = useCallback(
+        (text: string) => {
+            dispatch(addCommentForArticle(text))
+        },
+        [dispatch],
+    )
+
     if (!id) {
         return <div>Статья не найдена</div>
     }
@@ -70,6 +85,7 @@ const ArticlePage = memo(() => {
             >
                 Комментарии:
             </Text>
+            <AddCommentForm onSendComment={onSendComment} />
             <CommnetsList
                 comments={comments}
                 isLoading={isLoadingComments}

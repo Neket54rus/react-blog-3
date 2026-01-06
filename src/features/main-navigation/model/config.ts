@@ -13,7 +13,9 @@ export interface MainNavigationItem {
     authOnly?: boolean
 }
 
-export const mainNavigationItems: MainNavigationItem[] = [
+export const mainNavigationItems = (
+    username?: string,
+): MainNavigationItem[] => [
     {
         to: RoutePath.main,
         text: 'Главная',
@@ -24,12 +26,16 @@ export const mainNavigationItems: MainNavigationItem[] = [
         text: 'О нас',
         Icon: AboutIcon,
     },
-    {
-        to: RoutePath.profile,
-        text: 'Профиль',
-        Icon: ProfileIcon,
-        authOnly: true,
-    },
+    ...(username
+        ? [
+              {
+                  to: `${RoutePath.profile}${username}`,
+                  text: 'Профиль',
+                  Icon: ProfileIcon,
+                  authOnly: true,
+              },
+          ]
+        : []),
     {
         to: RoutePath.articles,
         text: 'Статьи',

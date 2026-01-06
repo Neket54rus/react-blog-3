@@ -1,5 +1,6 @@
 import { memo, useCallback, type JSX } from 'react'
 import { useSelector } from 'react-redux'
+import { useParams } from 'react-router'
 
 import { getProfileState } from 'entities/profile'
 
@@ -28,6 +29,8 @@ export const EditProfileControls = memo(
 
         const dispatch = useAppDispatch()
 
+        const { id } = useParams<{ id: string }>()
+
         const onEnableEdit = useCallback(() => {
             dispatch(editProfileAction.setReadonly(false))
 
@@ -42,8 +45,10 @@ export const EditProfileControls = memo(
         }, [dispatch])
 
         const onSave = useCallback(() => {
-            dispatch(updateProfileData())
-        }, [dispatch])
+            if (id) {
+                dispatch(updateProfileData(id))
+            }
+        }, [dispatch, id])
 
         return readonly ? (
             <Button

@@ -29,7 +29,7 @@ export const publicRoutes: RouteObject[] = [
             },
             // private routes
             {
-                path: RoutePath.profile,
+                path: `${RoutePath.profile}:id`,
                 element: (
                     <RequireAuth>
                         <ProfilePage />

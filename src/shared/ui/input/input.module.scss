@@ -36,6 +36,21 @@
         cursor: not-allowed;
     }
 
+    &.clear {
+        border: none;
+        padding: 0;
+
+        &:hover {
+            border-color: none;
+            box-shadow: none;
+        }
+
+        &:focus {
+            border-color: none;
+            box-shadow: none;
+        }
+    }
+
     // Responsive adjustments
     @media (max-width: 768px) {
         padding: 10px 14px;
