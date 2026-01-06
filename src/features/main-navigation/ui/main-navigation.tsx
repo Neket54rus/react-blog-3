@@ -7,7 +7,7 @@ import { getUserAuthData } from 'entities/user'
 import { classNames } from 'shared/lib/class-names'
 import { Link, LinkTheme } from 'shared/ui/link'
 
-import { mainNavigationItems } from '../model/config'
+import { getMainNavigationItems } from '../model/selectors/get-main-navigation-items'
 
 import classes from './main-navigation.module.scss'
 
@@ -22,10 +22,11 @@ export const MainNavigation = memo(
 
         const { t } = useTranslation()
         const authData = useSelector(getUserAuthData)
+        const mainNavigationItems = useSelector(getMainNavigationItems)
 
         const navigationItems = useMemo(
             () =>
-                mainNavigationItems(authData?.username)
+                mainNavigationItems
                     .filter((item) => !item.authOnly || authData)
                     .map((item) => (
                         <Link
@@ -41,7 +42,7 @@ export const MainNavigation = memo(
                             </div>
                         </Link>
                     )),
-            [short, t, authData],
+            [mainNavigationItems, authData, short, t],
         )
 
         return (
