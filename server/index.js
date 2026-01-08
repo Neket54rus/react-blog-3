@@ -102,6 +102,23 @@ app.put('/profile/:id', async (req, res) => {
     res.json(db.data.profiles.find((p) => p.username === req.params.id))
 })
 
+app.get('/articles', (_req, res) => {
+    const articles = db.data.articles
+
+    const result = articles.map((article) => {
+        const profile = db.data.profiles.find(
+            (p) => p.username === article.authorUsername,
+        )
+
+        return {
+            ...article,
+            author: profile,
+        }
+    })
+
+    res.json(result)
+})
+
 app.get('/articles/:id', (req, res) => {
     const id = req.params.id
     const article = db.data.articles?.find((a) => a.id === id)

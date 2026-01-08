@@ -1,0 +1,20 @@
+.articleList {
+    display: flex;
+    row-gap: 20px;
+
+    &.big {
+        flex-direction: column;
+    }
+
+    &.small {
+        flex-wrap: wrap;
+        column-gap: 80px;
+    }
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

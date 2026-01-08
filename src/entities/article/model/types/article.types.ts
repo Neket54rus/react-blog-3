@@ -1,3 +1,5 @@
+import { type Profile } from 'entities/profile'
+
 import {
     type ArticleType,
     type ArticleBlockType,
@@ -46,6 +48,7 @@ export interface Article {
     createdAt: string
     type: ArticleType[]
     blocks: ArticleBlock[]
+    author: Profile
 }
 
 export interface ArticleSchema {

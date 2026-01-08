@@ -1,0 +1,42 @@
+.articleListItemSmall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    transition: 200ms all;
+    text-decoration: none;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &Header {
+        position: relative;
+
+        &Image {
+            width: 200px;
+            height: 200px;
+        }
+
+        &CreateAt {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    &Body {
+        &Header {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+            &Views {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

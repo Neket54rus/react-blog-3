@@ -1,0 +1,60 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    transition: 200ms all;
+    text-decoration: none;
+
+    &.hover {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+
+    &Header {
+        position: relative;
+
+        &Image {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &CreateAt {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    &Body {
+        width: 100%;
+
+        &Header {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+            &Types {
+                &Text {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    min-width: 0;
+                    flex-shrink: 1;
+                }
+            }
+
+            &Views {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -14,3 +14,10 @@ export const ArticleBlockType = {
 
 export type ArticleBlockType =
     (typeof ArticleBlockType)[keyof typeof ArticleBlockType]
+
+export const ArticleView = {
+    BIG: 'big',
+    SMALL: 'small',
+} as const
+
+export type ArticleView = (typeof ArticleView)[keyof typeof ArticleView]

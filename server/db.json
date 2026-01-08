@@ -126,6 +126,7 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
       "views": 1245,
       "createdAt": "15.01.2025",
+      "authorUsername": "admin",
       "type": [
         "IT",
         "JavaScript",
@@ -144,6 +145,10 @@
             {
               "id": "2",
               "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
             }
           ]
         },
@@ -168,6 +173,7 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
       "views": 892,
       "createdAt": "22.01.2025",
+      "authorUsername": "user101",
       "type": [
         "IT",
         "TypeScript",
@@ -210,6 +216,7 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
       "views": 1567,
       "createdAt": "01.02.2025",
+      "authorUsername": "user202",
       "type": [
         "IT",
         "React",
