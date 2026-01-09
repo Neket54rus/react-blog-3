@@ -15,8 +15,8 @@ import { Select } from 'shared/ui/select'
 import { Spinner } from 'shared/ui/spinner'
 
 import { getArticlesPageState } from '../model/seloctors/get-articles-page-state'
-import { fetchArticles } from '../model/services/fetch-articles'
 import { fetchArticlesNextPage } from '../model/services/fetch-articles-next-page'
+import { initArticlesPage } from '../model/services/init-articles-page'
 import {
     articlesPageActions,
     articlesPageReducer,
@@ -30,18 +30,11 @@ const reducers: ReducersList = {
 
 const ArticlesPage = memo(() => {
     const dispatch = useAppDispatch()
-    const {
-        articles,
-        view,
-        isLoading,
-        page = 1,
-        limit,
-    } = useSelector(getArticlesPageState)
+    const { articles, view, isLoading } = useSelector(getArticlesPageState)
 
     useEffect(() => {
-        dispatch(fetchArticles({ page, limit }))
-        dispatch(articlesPageActions.initState())
-    }, [dispatch, limit, page])
+        dispatch(initArticlesPage())
+    }, [dispatch])
 
     const onChangeView = useCallback(() => {
         dispatch(

@@ -6,6 +6,7 @@ import {
 } from '@reduxjs/toolkit'
 
 import type {
+    MountedReducers,
     ReducerManager,
     StateSchema,
     StateSchemaKey,
@@ -22,7 +23,10 @@ export const createReducerManager = (
 
     let keysToRemove: StateSchemaKey[] = []
 
+    const mountedReducers: MountedReducers = {}
+
     return {
+        getMountedReducers: () => mountedReducers,
         getReducerMap: (): ReducersMapObject<StateSchema> => reducers,
         reduce: (
             state: StateSchema | undefined,
@@ -43,6 +47,7 @@ export const createReducerManager = (
                 return
             }
             reducers[key] = reducer
+            mountedReducers[key] = true
 
             combinedReducer = combineReducers(
                 reducers as ReducersMapObject<StateSchema>,
@@ -54,6 +59,8 @@ export const createReducerManager = (
             }
             delete reducers[key]
             keysToRemove.push(key)
+            mountedReducers[key] = false
+
             combinedReducer = combineReducers(
                 reducers as ReducersMapObject<StateSchema>,
             ) as Reducer<StateSchema>

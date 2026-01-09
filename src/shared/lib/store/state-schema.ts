@@ -29,7 +29,10 @@ export interface StateSchema {
     articlesPage?: ArticlesPageSchema
 }
 
+export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>
+
 export interface ReducerManager {
+    getMountedReducers: () => MountedReducers
     getReducerMap: () => ReducersMapObject<StateSchema>
     reduce: (state: StateSchema | undefined, action: Action) => StateSchema
     add: (key: StateSchemaKey, reducer: Reducer) => void

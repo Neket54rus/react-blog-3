@@ -1,7 +1,6 @@
 import { memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { Spinner } from 'shared/ui/spinner'
 
 import { ArticleView } from '../../../model/constants/article.constants'
 import { type Article } from '../../../model/types/article.types'

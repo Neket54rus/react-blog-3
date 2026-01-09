@@ -22,6 +22,7 @@ export const articlesPageSlice = createSlice({
                 localStorage.getItem('articles_view') || ArticleView.SMALL
             state.view = view as ArticleView
             state.limit = view === ArticleView.BIG ? 5 : 10
+            state._inited = true
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload

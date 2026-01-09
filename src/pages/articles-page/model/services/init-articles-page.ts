@@ -7,17 +7,17 @@ import { articlesPageActions } from '../slice/articles-page-slice'
 
 import { fetchArticles } from './fetch-articles'
 
-export const fetchArticlesNextPage = createAsyncThunk<
+export const initArticlesPage = createAsyncThunk<
     void,
     void,
     ThunkConfig<string>
->('articles-page/fetchArticlesNextPage', (_, thunkApi) => {
+>('articles-page/initArticlesPage', (_, thunkApi) => {
     const { getState, dispatch } = thunkApi
 
-    const { hasMore, page = 1, isLoading } = getArticlesPageState(getState())
+    const { page = 1, limit, _inited } = getArticlesPageState(getState())
 
-    if (hasMore && !isLoading) {
-        dispatch(articlesPageActions.setPage(page + 1))
-        dispatch(fetchArticles({ page: page + 1 }))
+    if (!_inited) {
+        dispatch(fetchArticles({ page, limit }))
+        dispatch(articlesPageActions.initState())
     }
 })
