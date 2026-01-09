@@ -102,21 +102,42 @@ app.put('/profile/:id', async (req, res) => {
     res.json(db.data.profiles.find((p) => p.username === req.params.id))
 })
 
-app.get('/articles', (_req, res) => {
+app.get('/articles', (req, res) => {
+    const page = parseInt(req.query.page) || 1
+    const limit = parseInt(req.query.limit) || 10
+    const offset = (page - 1) * limit
+
     const articles = db.data.articles
 
-    const result = articles.map((article) => {
+    const paginatedArticles = articles.slice(offset, offset + limit)
+
+    const result = paginatedArticles.map((article) => {
         const profile = db.data.profiles.find(
             (p) => p.username === article.authorUsername,
         )
 
         return {
             ...article,
-            author: profile,
+            author: profile || null,
         }
     })
 
-    res.json(result)
+    const totalItems = articles.length
+    const totalPages = Math.ceil(totalItems / limit)
+    const hasNextPage = page < totalPages
+    const hasPrevPage = page > 1
+
+    res.json({
+        items: result,
+        pagination: {
+            page,
+            limit,
+            totalItems,
+            totalPages,
+            hasNextPage,
+            hasPrevPage,
+        },
+    })
 })
 
 app.get('/articles/:id', (req, res) => {

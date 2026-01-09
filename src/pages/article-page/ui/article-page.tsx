@@ -26,6 +26,7 @@ import {
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initial-effect'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
+import { Page } from 'shared/ui/page'
 import { SizeText, Text } from 'shared/ui/text'
 
 import { addCommentForArticle } from '../model/services/add-comment-for-article/add-comment-for-article'
@@ -74,23 +75,25 @@ const ArticlePage = memo(() => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <ArticleInfo
-                article={article}
-                loading={isLoadingArticle}
-                error={errorArticle}
-            />
-            <Text
-                className={classes.articlePageCommentsListTitle}
-                size={SizeText.L}
-            >
-                Комментарии:
-            </Text>
-            <AddCommentForm onSendComment={onSendComment} />
-            <CommnetsList
-                comments={comments}
-                isLoading={isLoadingComments}
-                error={errorComments}
-            />
+            <Page>
+                <ArticleInfo
+                    article={article}
+                    loading={isLoadingArticle}
+                    error={errorArticle}
+                />
+                <Text
+                    className={classes.articlePageCommentsListTitle}
+                    size={SizeText.L}
+                >
+                    Комментарии:
+                </Text>
+                <AddCommentForm onSendComment={onSendComment} />
+                <CommnetsList
+                    comments={comments}
+                    isLoading={isLoadingComments}
+                    error={errorComments}
+                />
+            </Page>
         </DynamicModuleLoader>
     )
 })

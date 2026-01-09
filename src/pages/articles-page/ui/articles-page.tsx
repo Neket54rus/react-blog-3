@@ -10,10 +10,13 @@ import {
     type ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
+import { Page } from 'shared/ui/page'
 import { Select } from 'shared/ui/select'
+import { Spinner } from 'shared/ui/spinner'
 
 import { getArticlesPageState } from '../model/seloctors/get-articles-page-state'
 import { fetchArticles } from '../model/services/fetch-articles'
+import { fetchArticlesNextPage } from '../model/services/fetch-articles-next-page'
 import {
     articlesPageActions,
     articlesPageReducer,
@@ -27,12 +30,18 @@ const reducers: ReducersList = {
 
 const ArticlesPage = memo(() => {
     const dispatch = useAppDispatch()
-    const { articles, view, isLoading } = useSelector(getArticlesPageState)
+    const {
+        articles,
+        view,
+        isLoading,
+        page = 1,
+        limit,
+    } = useSelector(getArticlesPageState)
 
     useEffect(() => {
-        dispatch(fetchArticles())
+        dispatch(fetchArticles({ page, limit }))
         dispatch(articlesPageActions.initState())
-    }, [dispatch])
+    }, [dispatch, limit, page])
 
     const onChangeView = useCallback(() => {
         dispatch(
@@ -42,15 +51,30 @@ const ArticlesPage = memo(() => {
         )
     }, [dispatch, view])
 
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchArticlesNextPage())
+    }, [dispatch])
+
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classes.articlesPageHeader}>
-                <Select label="Сортировать ПО" />
-                {view && (
-                    <CardViewsSwitcher onClick={onChangeView} view={view} />
+            <Page onScrollEnd={onLoadNextPart}>
+                <div className={classes.articlesPageHeader}>
+                    <Select label="Сортировать ПО" />
+                    {view && (
+                        <CardViewsSwitcher onClick={onChangeView} view={view} />
+                    )}
+                </div>
+                <ArticleList
+                    articles={articles}
+                    view={view}
+                    loading={isLoading}
+                />
+                {isLoading && (
+                    <div className={classes.loading}>
+                        <Spinner />
+                    </div>
                 )}
-            </div>
-            <ArticleList articles={articles} view={view} loading={isLoading} />
+            </Page>
         </DynamicModuleLoader>
     )
 })

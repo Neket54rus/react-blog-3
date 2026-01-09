@@ -14,9 +14,7 @@ export const PageLayout = (): JSX.Element => (
         <div className="content-page">
             <Sidebar />
             <Suspense fallback={<PageLoader />}>
-                <div className="page-wrapper">
-                    <Outlet />
-                </div>
+                <Outlet />
             </Suspense>
         </div>
     </>

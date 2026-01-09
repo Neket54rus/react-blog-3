@@ -250,6 +250,1250 @@
           "title": "Архитектура React приложения"
         }
       ]
+    },
+    {
+      "id": "4",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "title": "TypeScript: типизация в мире JavaScript",
+      "subtitle": "Краткий пересказ всего TypeScript",
+      "text": "TypeScript добавляет статическую типизацию к JavaScript, делая код более предсказуемым и удобным для поддержки.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png",
+      "views": 892,
+      "createdAt": "22.01.2025",
+      "authorUsername": "user101",
+      "type": [
+        "IT",
+        "TypeScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Преимущества TypeScript",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "TypeScript помогает обнаруживать ошибки на этапе компиляции, а не во время выполнения программы."
+            },
+            {
+              "id": "2",
+              "text": "Система типов улучшает автодополнение в редакторах кода и делает код самодокументируемым."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример с TypeScript типизацией\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nfunction getUserInfo(user: User): string {\n  return `Пользователь: ${user.name}, Email: ${user.email}`;\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*Dk2pZyw8Y9xrqVtTS4PkHA.png",
+          "title": "TypeScript и JavaScript сравнение"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "title": "React: современный фронтенд-фреймворк",
+      "subtitle": "Краткий пересказ всего React",
+      "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+      "views": 1567,
+      "createdAt": "01.02.2025",
+      "authorUsername": "user202",
+      "type": [
+        "IT",
+        "React",
+        "Frontend"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Компоненты в React",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+            },
+            {
+              "id": "2",
+              "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+          "title": "Архитектура React приложения"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Введение в JavaScript: основы для начинающих",
+      "subtitle": "Краткий пересказ всего JavaScript",
+      "text": "JavaScript - это язык программирования, который делает веб-страницы интерактивными. В этой статье рассмотрим базовые концепции.",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+      "views": 1245,
+      "createdAt": "15.01.2025",
+      "authorUsername": "admin",
+      "type": [
+        "IT",
+        "JavaScript",
+        "Программирование"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Что такое JavaScript?",
+          "paragraphs": [
+            {
+              "id": "1",
+              "text": "JavaScript — это высокоуровневый, интерпретируемый язык программирования, который является одной из основных технологий веб-разработки."
+            },
+            {
+              "id": "2",
+              "text": "Изначально созданный для добавления интерактивности на веб-страницы, сегодня JavaScript используется как на клиентской, так и на серверной стороне."
+            },
+            {
+              "id": "3",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quod asperiores nam laboriosam provident impedit ducimus aspernatur, ad vitae molestiae quasi, hic quos expedita! Non quam velit, ex quaerat nihil animi blanditiis sunt vel odit recusandae autem deleniti architecto dolorum deserunt quibusdam dicta totam, illo ab repudiandae molestiae aperiam excepturi et quisquam aut. Sint consequatur incidunt quae, saepe officia beatae voluptatum iste qui ducimus esse adipisci voluptates ipsa mollitia ab, eligendi quos. Saepe omnis atque, aut autem officia ipsum, quos harum illum aliquam rerum, assumenda nostrum voluptatibus! Enim possimus voluptatum soluta earum ipsa eaque atque, temporibus non modi deserunt! Fuga doloribus ad accusantium laborum itaque repudiandae, velit voluptas neque error nesciunt repellat provident blanditiis vel veritatis libero id molestiae veniam? Hic facere quas explicabo a, sint eveniet adipisci neque. Fugiat sint soluta laudantium ex quos sunt quod recusandae! Autem minus labore ipsam architecto sed dolorum, id non inventore sequi eius excepturi. Nostrum delectus modi vero necessitatibus facere, deserunt quos rerum aut maiores sed quasi alias, iure corrupti veritatis odio debitis, blanditiis fugiat voluptatem velit assumenda. Expedita harum nam quam quas dignissimos quod itaque accusantium exercitationem neque, molestiae illo odit libero fuga voluptas quibusdam, laborum sed repellat ipsa dolore delectus sit consequuntur voluptates dicta. Id quisquam, illum possimus laboriosam consectetur sequi voluptatibus dolorum pariatur aut amet repudiandae. Culpa tenetur voluptate porro, alias blanditiis minus debitis qui temporibus, deserunt voluptatibus explicabo reiciendis eum voluptates impedit, a totam rem nihil sit quia! Facere, doloremque. In repudiandae eligendi nam deserunt pariatur. Deleniti laboriosam libero ut non reprehenderit ad vitae temporibus nobis quisquam cumque. Obcaecati vel neque deserunt consectetur perspiciatis molestias totam, facere earum! Dolorum dicta, numquam eius est culpa, quos soluta consectetur temporibus corrupti inventore nulla, cupiditate eum itaque sint reprehenderit suscipit. Exercitationem numquam cum iste eum expedita ratione dolore soluta architecto, quis ipsam?"
+            }
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "// Пример простой функции на JavaScript\nfunction greet(name) {\n  return `Привет, ${name}!`;\n}\n\nconsole.log(greet('Мир')); // Вывод: Привет, Мир!"
+        },
+        {
+          "id": "3",
+          "type": "IMAGE",
+          "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+          "title": "Логотип JavaScript"
+        }
+      ]
     }
   ],
   "comments": [

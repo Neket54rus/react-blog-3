@@ -17,15 +17,7 @@ interface ArticleListProps {
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const { articles, loading, view = ArticleView.SMALL, className } = props
-
-    if (loading) {
-        return (
-            <div className={classes.loading}>
-                <Spinner />
-            </div>
-        )
-    }
+    const { articles, view = ArticleView.SMALL, className } = props
 
     if (!articles || !articles.length) {
         return

@@ -14,6 +14,7 @@ import {
     type ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
+import { Page } from 'shared/ui/page'
 import { Text, SizeText } from 'shared/ui/text'
 
 import classes from './profile-page.module.scss'
@@ -38,13 +39,13 @@ const ProfilePage = memo((): JSX.Element => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classes.profilePage}>
+            <Page className={classes.profilePage}>
                 <div className={classes.profilePageHeader}>
                     <Text size={SizeText.L}>Профиль</Text>
                     {authData?.username === id && <EditProfileControls />}
                 </div>
                 <ProfileCard />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     )
 })

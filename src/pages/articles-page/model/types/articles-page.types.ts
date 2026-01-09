@@ -5,4 +5,7 @@ export interface ArticlesPageSchema {
     error?: string
     articles?: Article[]
     view?: ArticleView
+    page?: number
+    limit?: number
+    hasMore?: boolean
 }

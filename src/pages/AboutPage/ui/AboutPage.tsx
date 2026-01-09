@@ -1,9 +1,11 @@
 import { type JSX } from 'react'
 
+import { Page } from 'shared/ui/page'
+
 const AboutPage = (): JSX.Element => (
-    <div>
+    <Page>
         <h1>About Page</h1>
-    </div>
+    </Page>
 )
 
 export default AboutPage

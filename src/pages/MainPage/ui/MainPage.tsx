@@ -1,9 +1,11 @@
 import { type JSX } from 'react'
 
+import { Page } from 'shared/ui/page'
+
 const MainPage = (): JSX.Element => (
-    <div>
+    <Page>
         <h1>Main Page</h1>
-    </div>
+    </Page>
 )
 
 export default MainPage
