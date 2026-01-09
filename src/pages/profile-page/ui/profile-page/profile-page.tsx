@@ -2,6 +2,7 @@ import { memo, useEffect, type JSX } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
+import { Page } from 'widgets/page'
 import { ProfileCard } from 'widgets/profile-card'
 
 import { EditProfileControls, editProfileReducer } from 'features/edit-profile'
@@ -14,7 +15,6 @@ import {
     type ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Page } from 'shared/ui/page'
 import { Text, SizeText } from 'shared/ui/text'
 
 import classes from './profile-page.module.scss'

@@ -2,6 +2,8 @@ import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
+import { Page } from 'widgets/page'
+
 import {
     AddCommentForm,
     addCommentFormReducer,
@@ -26,7 +28,6 @@ import {
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initial-effect'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Page } from 'shared/ui/page'
 import { SizeText, Text } from 'shared/ui/text'
 
 import { addCommentForArticle } from '../model/services/add-comment-for-article/add-comment-for-article'

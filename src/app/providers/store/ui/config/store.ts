@@ -1,6 +1,8 @@
 import { configureStore, type ReducersMapObject } from '@reduxjs/toolkit'
 import type { NavigateOptions, To } from 'react-router'
 
+import { UIReducer } from 'features/ui'
+
 import { userReducer } from 'entities/user'
 
 import { $api } from 'shared/api/api'
@@ -36,6 +38,7 @@ export const createReduxStore = (
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
         user: userReducer,
+        UI: UIReducer,
     }
 
     const reducerManager = createReducerManager(rootReducers)

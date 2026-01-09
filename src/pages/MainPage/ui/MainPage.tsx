@@ -1,6 +1,6 @@
 import { type JSX } from 'react'
 
-import { Page } from 'shared/ui/page'
+import { Page } from 'widgets/page'
 
 const MainPage = (): JSX.Element => (
     <Page>

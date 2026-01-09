@@ -1,6 +1,8 @@
 import { memo, useCallback, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
+import { Page } from 'widgets/page'
+
 import { CardViewsSwitcher } from 'features/card-views-switcher'
 
 import { ArticleList, ArticleView } from 'entities/article'
@@ -10,7 +12,6 @@ import {
     type ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Page } from 'shared/ui/page'
 import { Select } from 'shared/ui/select'
 import { Spinner } from 'shared/ui/spinner'
 

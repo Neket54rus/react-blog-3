@@ -12,6 +12,7 @@ import type { ArticlesPageSchema } from 'pages/articles-page'
 import type { AddCommentFormSchema } from 'features/add-comment-form'
 import type { EditProfileSchema } from 'features/edit-profile'
 import type { LoginSchema } from 'features/login-form'
+import type { UISchema } from 'features/ui'
 
 import type { ArticleSchema } from 'entities/article'
 import type { CommentsSchema } from 'entities/comment'
@@ -20,6 +21,7 @@ import type { UserSchema } from 'entities/user'
 
 export interface StateSchema {
     user: UserSchema
+    UI: UISchema
     loginForm?: LoginSchema
     profile?: ProfileSchema
     editProfile?: EditProfileSchema
