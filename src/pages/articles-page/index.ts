@@ -1,2 +1,5 @@
 export { ArticlesPageAsync as ArticlesPage } from './ui/articles-page-async'
 export type { ArticlesPageSchema } from './model/types/articles-page.types'
+export { ArticlesSort } from './model/constants/articles-page.constants'
+export { fetchArticles } from './model/services/fetch-articles'
+export { articlesPageActions } from './model/slice/articles-page-slice'

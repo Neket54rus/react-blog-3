@@ -1,0 +1,12 @@
+.articlesPageFilters {
+    display: grid;
+    grid-template-columns: 350px min-content;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    &Input,
+    &Tabs {
+        grid-column: 1 / 3;
+    }
+}

@@ -103,41 +103,171 @@ app.put('/profile/:id', async (req, res) => {
 })
 
 app.get('/articles', (req, res) => {
-    const page = parseInt(req.query.page) || 1
-    const limit = parseInt(req.query.limit) || 10
-    const offset = (page - 1) * limit
-
-    const articles = db.data.articles
-
-    const paginatedArticles = articles.slice(offset, offset + limit)
-
-    const result = paginatedArticles.map((article) => {
-        const profile = db.data.profiles.find(
-            (p) => p.username === article.authorUsername,
+    try {
+        // Параметры пагинации
+        const page = Math.max(1, parseInt(req.query.page) || 1)
+        const limit = Math.min(
+            100,
+            Math.max(1, parseInt(req.query.limit) || 10),
         )
 
-        return {
-            ...article,
-            author: profile || null,
+        // Параметры сортировки
+        const sortBy = req.query.sortBy || 'createdAt' // title, views, createdAt
+        const sortOrder = req.query.sortOrder || 'desc' // asc, desc
+
+        // Параметр поиска
+        const search = req.query.search || ''
+
+        // Параметр фильтрации по типу
+        const typeParam = req.query.type || ''
+        let selectedTypes = []
+
+        // Обрабатываем параметр type (может быть строкой или массивом)
+        if (typeParam) {
+            if (Array.isArray(typeParam)) {
+                // Если передано несколько типов через массив: ?type=IT&type=JavaScript
+                selectedTypes = typeParam
+                    .map((t) => t.toLowerCase().trim())
+                    .filter((t) => t)
+            } else {
+                // Если передана строка, можно поддерживать несколько типов через запятую: ?type=IT,JavaScript
+                selectedTypes = typeParam
+                    .split(',')
+                    .map((t) => t.toLowerCase().trim())
+                    .filter((t) => t)
+            }
         }
-    })
 
-    const totalItems = articles.length
-    const totalPages = Math.ceil(totalItems / limit)
-    const hasNextPage = page < totalPages
-    const hasPrevPage = page > 1
+        let articles = [...db.data.articles]
 
-    res.json({
-        items: result,
-        pagination: {
-            page,
-            limit,
-            totalItems,
-            totalPages,
-            hasNextPage,
-            hasPrevPage,
-        },
-    })
+        // Применяем поиск по заголовку (регистронезависимый)
+        if (search) {
+            const searchLower = search.toLowerCase()
+            articles = articles.filter((article) =>
+                article.title.toLowerCase().includes(searchLower),
+            )
+        }
+
+        // Применяем фильтрацию по типу
+        if (selectedTypes.length > 0) {
+            articles = articles.filter((article) => {
+                if (!article.type || !Array.isArray(article.type)) {
+                    return false
+                }
+
+                // Преобразуем типы статьи к нижнему регистру для сравнения
+                const articleTypes = article.type.map((t) => t.toLowerCase())
+
+                // Проверяем, что хотя бы один из выбранных типов есть в статье
+                return selectedTypes.some((selectedType) =>
+                    articleTypes.includes(selectedType),
+                )
+            })
+        }
+
+        // Применяем сортировку
+        articles.sort((a, b) => {
+            let aValue, bValue
+
+            // Выбираем поле для сортировки
+            switch (sortBy) {
+                case 'title':
+                    aValue = a.title.toLowerCase()
+                    bValue = b.title.toLowerCase()
+                    break
+                case 'views':
+                    aValue = parseInt(a.views) || 0
+                    bValue = parseInt(b.views) || 0
+                    break
+                case 'createdAt':
+                default:
+                    // Преобразуем дату в timestamp для корректной сортировки
+                    aValue = new Date(
+                        a.createdAt.split('.').reverse().join('-'),
+                    ).getTime()
+                    bValue = new Date(
+                        b.createdAt.split('.').reverse().join('-'),
+                    ).getTime()
+                    break
+            }
+
+            // Определяем порядок сортировки
+            if (sortOrder === 'asc') {
+                if (aValue < bValue) return -1
+                if (aValue > bValue) return 1
+                return 0
+            } else {
+                if (aValue > bValue) return -1
+                if (aValue < bValue) return 1
+                return 0
+            }
+        })
+
+        const totalItems = articles.length
+
+        // Проверяем, если нет данных после поиска
+        if (totalItems === 0) {
+            return res.json({
+                items: [],
+                pagination: {
+                    page: 1,
+                    limit,
+                    totalItems: 0,
+                    totalPages: 0,
+                    hasNextPage: false,
+                    hasPrevPage: false,
+                    type: selectedTypes,
+                },
+            })
+        }
+
+        const offset = (page - 1) * limit
+        const totalPages = Math.ceil(totalItems / limit)
+
+        // Проверяем существование запрашиваемой страницы
+        if (page > totalPages) {
+            return res.status(400).json({
+                error: `Page ${page} does not exist. Total pages: ${totalPages}`,
+                totalPages,
+                page,
+                limit,
+            })
+        }
+
+        // Получаем пагинированные статьи
+        const paginatedArticles = articles.slice(offset, offset + limit)
+
+        // Добавляем информацию об авторах
+        const result = paginatedArticles.map((article) => {
+            const profile = db.data.profiles?.find(
+                (p) => p.username === article.authorUsername,
+            )
+
+            return {
+                ...article,
+                author: profile || null,
+            }
+        })
+
+        res.json({
+            items: result,
+            pagination: {
+                page,
+                limit,
+                totalItems,
+                totalPages,
+                hasNextPage: page < totalPages,
+                hasPrevPage: page > 1,
+                sortBy,
+                sortOrder,
+                search,
+                type: selectedTypes, // Возвращаем примененные фильтры
+            },
+        })
+    } catch (error) {
+        console.error('Error fetching articles:', error)
+        res.status(500).json({ error: 'Internal server error' })
+    }
 })
 
 app.get('/articles/:id', (req, res) => {

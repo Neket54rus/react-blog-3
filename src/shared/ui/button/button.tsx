@@ -9,6 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     theme?: ButtonTheme
     square?: boolean
     size?: ButtonSize
+    active?: boolean
 }
 
 export const Button = (props: ButtonProps): JSX.Element => {
@@ -19,6 +20,7 @@ export const Button = (props: ButtonProps): JSX.Element => {
         children,
         className,
         disabled = false,
+        active = false,
         ...otherProps
     } = props
 
@@ -29,6 +31,7 @@ export const Button = (props: ButtonProps): JSX.Element => {
                 {
                     [classes.square]: square,
                     [classes.disabled]: disabled,
+                    [classes.active]: active,
                 },
                 [className, classes[theme], classes[size]],
             )}

@@ -7,12 +7,12 @@ import { UIActions, getUIScrollByPath } from 'features/ui'
 import { classNames } from 'shared/lib/class-names'
 import { useInfiniteScroll } from 'shared/lib/hooks/use-infinite-scroll/use-infinite-scroll'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initial-effect'
+import { useThrottle } from 'shared/lib/hooks/use-throttle/use-throttle'
 import { type StateSchema } from 'shared/lib/store/state-schema'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { ColorText, SizeText, Text } from 'shared/ui/text'
 
 import classes from './page.module.scss'
-import { useThrottle } from 'shared/lib/hooks/use-throttle/use-throttle'
 
 interface PageProps {
     children?: ReactNode
@@ -38,7 +38,6 @@ export const Page = memo((props: PageProps) => {
     })
 
     const onScroll = useThrottle((event: UIEvent<HTMLDivElement>): void => {
-        console.log('scroll')
         dispath(
             UIActions.setScrollPosition({
                 path: pathname,
@@ -68,7 +67,9 @@ export const Page = memo((props: PageProps) => {
             onScroll={onScroll}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd && (
+                <div ref={triggerRef} className={classes.pageTrigger} />
+            )}
         </section>
     )
 })

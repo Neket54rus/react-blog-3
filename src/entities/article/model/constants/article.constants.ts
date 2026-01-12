@@ -1,4 +1,4 @@
-const ArticleType = {
+export const ArticleType = {
     IT: 'IT',
     JAVA_SCRIPT: 'JavaScript',
     PROGRAMMING: 'Программирование',

@@ -8,3 +8,13 @@
     cursor: pointer;
     outline: none;
 }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.label {
+    text-wrap: nowrap;
+}

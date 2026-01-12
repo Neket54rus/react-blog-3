@@ -1,7 +1,10 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
-import { ArticleView } from 'entities/article'
+import { type ArticleType, ArticleView } from 'entities/article'
 
+import type { SortOrder } from 'shared/types/types'
+
+import { type ArticlesSort } from '../constants/articles-page.constants'
 import { fetchArticles } from '../services/fetch-articles'
 import type { ArticlesPageSchema } from '../types/articles-page.types'
 
@@ -27,18 +30,43 @@ export const articlesPageSlice = createSlice({
         setPage: (state, action: PayloadAction<number>) => {
             state.page = action.payload
         },
+        setOrder: (state, action: PayloadAction<SortOrder>) => {
+            state.order = action.payload
+        },
+        setSort: (state, action: PayloadAction<ArticlesSort>) => {
+            state.sort = action.payload
+        },
+        setSearch: (state, action: PayloadAction<string>) => {
+            state.search = action.payload
+        },
+        setType: (state, action: PayloadAction<ArticleType>) => {
+            if (action.payload == state.type) {
+                state.type = undefined
+            } else {
+                state.type = action.payload
+            }
+        },
     },
     extraReducers: (builder) => {
-        builder.addCase(fetchArticles.pending, (state) => {
+        builder.addCase(fetchArticles.pending, (state, action) => {
             state.isLoading = true
             state.error = undefined
+
+            if (action.meta.arg.replace) {
+                state.articles = []
+            }
         })
         builder.addCase(fetchArticles.fulfilled, (state, action) => {
             state.isLoading = false
-            state.articles = state.articles
-                ? [...state.articles, ...action.payload.items]
-                : action.payload.items
             state.hasMore = action.payload.pagination.hasNextPage
+
+            if (!action.meta.arg.replace) {
+                state.articles = state.articles
+                    ? [...state.articles, ...action.payload.items]
+                    : action.payload.items
+            } else {
+                state.articles = action.payload.items
+            }
         })
         builder.addCase(fetchArticles.rejected, (state, action) => {
             state.isLoading = false
