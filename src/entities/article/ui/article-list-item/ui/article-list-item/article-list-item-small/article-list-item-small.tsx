@@ -1,24 +1,18 @@
-import { memo } from 'react'
-import { Link } from 'react-router'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
-import ViewIcon from 'shared/assets/icons/view.svg?react'
-import { classNames } from 'shared/lib/class-names'
 import { RoutePath } from 'shared/routes'
-import { Icon } from 'shared/ui/icon'
-import { Text } from 'shared/ui/text'
+import { Card } from 'shared/ui/card'
 
 import type { Article } from '../../../../../model/types/article.types'
-
-import classes from './article-list-item-small.module.scss'
-import { Card } from 'shared/ui/card'
 
 interface ArticleListItemSmallProps {
     article?: Article
     className?: string
+    target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleListItemSmall = memo((props: ArticleListItemSmallProps) => {
-    const { article, className } = props
+    const { article, className, target } = props
 
     if (!article) {
         return
@@ -32,10 +26,11 @@ export const ArticleListItemSmall = memo((props: ArticleListItemSmallProps) => {
             to={`${RoutePath.article_detail}${article.id}`}
             createAt={createdAt}
             views={views.toString()}
-            // title={title}
+            title={title}
             image={img}
             types={type}
             hover
+            target={target}
         />
     )
 })

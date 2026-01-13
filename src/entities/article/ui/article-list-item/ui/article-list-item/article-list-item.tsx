@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
 
@@ -13,10 +13,11 @@ interface ArticleListItemProps {
     article?: Article
     view?: ArticleView
     className?: string
+    target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const { article, view = ArticleView.SMALL, className } = props
+    const { article, view = ArticleView.SMALL, className, target } = props
 
     if (!article) {
         return
@@ -30,7 +31,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     classes[view],
                 ])}
             >
-                <ArticleListItemBig article={article} />
+                <ArticleListItemBig article={article} target={target} />
             </div>
         )
     }
@@ -42,7 +43,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 classes[view],
             ])}
         >
-            <ArticleListItemSmall article={article} />
+            <ArticleListItemSmall article={article} target={target} />
         </div>
     )
 })

@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
 
@@ -13,10 +13,11 @@ interface ArticleListProps {
     loading?: boolean
     view?: ArticleView
     className?: string
+    target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const { articles, view = ArticleView.SMALL, className } = props
+    const { articles, view = ArticleView.SMALL, className, target } = props
 
     if (!articles || !articles.length) {
         return
@@ -34,6 +35,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     key={article.id}
                     article={article}
                     view={view}
+                    target={target}
                 />
             ))}
         </div>

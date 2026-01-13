@@ -4,4 +4,4 @@ import { initialState } from '../slice/comments'
 import type { CommentsSchema } from '../types/comment.types'
 
 export const getCommentsState = (state: StateSchema): CommentsSchema =>
-    state.articleComments || initialState
+    state.articlePage?.articleComments || initialState

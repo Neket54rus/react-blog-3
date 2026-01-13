@@ -1,4 +1,4 @@
-import { type CSSProperties, memo } from 'react'
+import { type CSSProperties, type HTMLAttributeAnchorTarget, memo } from 'react'
 import { Link } from 'react-router'
 
 import ViewIcon from 'shared/assets/icons/view.svg?react'
@@ -16,10 +16,11 @@ import classes from './article-list-item-big.module.scss'
 interface ArticleListItemBigProps {
     article?: Article
     className?: string
+    target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleListItemBig = memo((props: ArticleListItemBigProps) => {
-    const { article, className } = props
+    const { article, className, target } = props
 
     if (!article) {
         return
@@ -81,7 +82,10 @@ export const ArticleListItemBig = memo((props: ArticleListItemBigProps) => {
             <Text className={classes.articleListItemBigText}>{textBlock}</Text>
             <div className={classes.articleListItemBigFooter}>
                 <Button theme={ButtonTheme.OUTLINE}>
-                    <Link to={`${RoutePath.article_detail}${article.id}`}>
+                    <Link
+                        to={`${RoutePath.article_detail}${article.id}`}
+                        target={target}
+                    >
                         Читать далее...
                     </Link>
                 </Button>

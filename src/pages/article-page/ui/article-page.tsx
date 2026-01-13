@@ -4,19 +4,18 @@ import { useParams } from 'react-router'
 
 import { Page } from 'widgets/page'
 
-import {
-    AddCommentForm,
-    addCommentFormReducer,
-} from 'features/add-comment-form'
+import { AddCommentForm } from 'features/add-comment-form'
 
 import {
     ArticleInfo,
-    articleReducer,
+    ArticleList,
+    articlePageReducer,
     fetchArticleById,
+    fetchArticlesRecommendationById,
+    getArticlesRecommendationState,
     getArticleState,
 } from 'entities/article'
 import {
-    commentsReducer,
     CommnetsList,
     fetchCommentsByArticleId,
     getCommentsState,
@@ -35,9 +34,7 @@ import { addCommentForArticle } from '../model/services/add-comment-for-article/
 import classes from './article-page.module.scss'
 
 const reducers: ReducersList = {
-    article: articleReducer,
-    articleComments: commentsReducer,
-    addCommentForm: addCommentFormReducer,
+    articlePage: articlePageReducer,
 }
 
 const ArticlePage = memo(() => {
@@ -55,11 +52,16 @@ const ArticlePage = memo(() => {
         isLoading: isLoadingComments,
         error: errorComments,
     } = useSelector(getCommentsState)
+    const {
+        data: articlesRecommendation,
+        isLoading: isLoadingArticlesRecommendation,
+    } = useSelector(getArticlesRecommendationState)
 
     useInitialEffect(() => {
         if (id) {
             dispatch(fetchArticleById(id))
             dispatch(fetchCommentsByArticleId(id))
+            dispatch(fetchArticlesRecommendationById())
         }
     })
 
@@ -81,6 +83,12 @@ const ArticlePage = memo(() => {
                     article={article}
                     loading={isLoadingArticle}
                     error={errorArticle}
+                />
+                <Text size={SizeText.L}>Рекомендуем:</Text>
+                <ArticleList
+                    articles={articlesRecommendation}
+                    loading={isLoadingArticlesRecommendation}
+                    target="_blank"
                 />
                 <Text
                     className={classes.articlePageCommentsListTitle}

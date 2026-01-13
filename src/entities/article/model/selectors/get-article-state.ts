@@ -4,4 +4,4 @@ import { initialState } from '../slice/article-slice'
 import { type ArticleSchema } from '../types/article.types'
 
 export const getArticleState = (state: StateSchema): ArticleSchema =>
-    state.article || initialState
+    state.articlePage?.article || initialState

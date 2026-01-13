@@ -9,13 +9,11 @@ import type { NavigateOptions, To } from 'react-router'
 
 import type { ArticlesPageSchema } from 'pages/articles-page'
 
-import type { AddCommentFormSchema } from 'features/add-comment-form'
 import type { EditProfileSchema } from 'features/edit-profile'
 import type { LoginSchema } from 'features/login-form'
 import type { UISchema } from 'features/ui'
 
-import type { ArticleSchema } from 'entities/article'
-import type { CommentsSchema } from 'entities/comment'
+import type { ArticlePageSchema } from 'entities/article'
 import type { ProfileSchema } from 'entities/profile'
 import type { UserSchema } from 'entities/user'
 
@@ -25,10 +23,8 @@ export interface StateSchema {
     loginForm?: LoginSchema
     profile?: ProfileSchema
     editProfile?: EditProfileSchema
-    article?: ArticleSchema
-    articleComments?: CommentsSchema
-    addCommentForm?: AddCommentFormSchema
     articlesPage?: ArticlesPageSchema
+    articlePage?: ArticlePageSchema
 }
 
 export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>

@@ -1,4 +1,4 @@
-import { type ElementType, memo } from 'react'
+import { type ElementType, type HTMLAttributeAnchorTarget, memo } from 'react'
 import { Link, type To } from 'react-router'
 
 import ViewIcon from 'shared/assets/icons/view.svg?react'
@@ -18,6 +18,7 @@ interface CardProps {
     title?: string
     hover?: boolean
     className?: string
+    target?: HTMLAttributeAnchorTarget
 }
 
 export const Card = memo((props: CardProps) => {
@@ -30,6 +31,7 @@ export const Card = memo((props: CardProps) => {
         title,
         hover = false,
         className,
+        target,
     } = props
 
     const Tag = (to ? Link : 'div') as ElementType
@@ -38,7 +40,7 @@ export const Card = memo((props: CardProps) => {
             className,
         ]),
     }
-    const tagProps = to ? { ...commonProps, to } : commonProps
+    const tagProps = to ? { ...commonProps, to, target } : commonProps
 
     return (
         <Tag {...tagProps}>
