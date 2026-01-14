@@ -5,7 +5,9 @@ import { useDispatch } from 'react-redux'
 import { userActions } from 'entities/user'
 
 import { classNames } from 'shared/lib/class-names'
+import { RoutePath } from 'shared/routes'
 import { Button, ButtonTheme } from 'shared/ui/button'
+import { Link, LinkTheme } from 'shared/ui/link'
 
 import classes from '../navbar.module.scss'
 
@@ -27,6 +29,9 @@ export const NavbarWithAuthorization = (
 
     return (
         <div className={classNames(classes.navbar, {}, [className])}>
+            <Link to={RoutePath.article_create} theme={LinkTheme.SECONDARY}>
+                Создать статью
+            </Link>
             <Button onClick={logout} theme={ButtonTheme.CLEAR_INVERTED}>
                 {t('Выйти')}
             </Button>

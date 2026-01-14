@@ -49,6 +49,7 @@ export interface Article {
     type: ArticleType[]
     blocks: ArticleBlock[]
     author: Profile
+    authorUsername: string
 }
 
 export interface ArticleSchema {

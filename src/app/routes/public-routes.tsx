@@ -3,6 +3,7 @@ import { type RouteObject } from 'react-router'
 import { RequireAuth } from 'app/providers/router/ui/require-auth'
 
 import { AboutPage } from 'pages/AboutPage'
+import { ArticleCreatePage } from 'pages/article-create-page'
 import { ArticlePage } from 'pages/article-page'
 import { ArticlesPage } from 'pages/articles-page'
 import { MainPage } from 'pages/MainPage'
@@ -49,6 +50,22 @@ export const publicRoutes: RouteObject[] = [
                 element: (
                     <RequireAuth>
                         <ArticlePage />
+                    </RequireAuth>
+                ),
+            },
+            {
+                path: `${RoutePath.article_create}`,
+                element: (
+                    <RequireAuth>
+                        <ArticleCreatePage />
+                    </RequireAuth>
+                ),
+            },
+            {
+                path: `${RoutePath.article_edit}:id/edit`,
+                element: (
+                    <RequireAuth>
+                        <ArticleCreatePage />
                     </RequireAuth>
                 ),
             },

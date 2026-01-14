@@ -31,6 +31,7 @@ import { SizeText, Text } from 'shared/ui/text'
 
 import { addCommentForArticle } from '../model/services/add-comment-for-article/add-comment-for-article'
 
+import { ArticlePageHeader } from './article-page-header/article-page-header'
 import classes from './article-page.module.scss'
 
 const reducers: ReducersList = {
@@ -79,6 +80,7 @@ const ArticlePage = memo(() => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page>
+                <ArticlePageHeader />
                 <ArticleInfo
                     article={article}
                     loading={isLoadingArticle}
