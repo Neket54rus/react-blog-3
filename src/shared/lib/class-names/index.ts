@@ -1,1 +1,1 @@
-export { classNames } from './class-names'
+export { classNames, type Mods } from './class-names'

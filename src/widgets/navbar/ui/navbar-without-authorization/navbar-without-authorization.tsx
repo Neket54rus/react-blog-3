@@ -8,6 +8,7 @@ import { loginActions } from 'features/login-form'
 
 import { classNames } from 'shared/lib/class-names'
 import { Button, ButtonTheme } from 'shared/ui/button'
+import { Flex, FlexAlign, FlexJustify } from 'shared/ui/stack'
 
 import classes from '../navbar.module.scss'
 
@@ -35,7 +36,12 @@ export const NavbarWithoutAuthorization = (
     }
 
     return (
-        <div className={classNames(classes.navbar, {}, [className])}>
+        <Flex
+            className={classNames(classes.navbar, {}, [className])}
+            align={FlexAlign.CENTER}
+            justify={FlexJustify.END}
+            fullWidth
+        >
             <Button
                 onClick={openAutorizationModal}
                 theme={ButtonTheme.CLEAR_INVERTED}
@@ -46,6 +52,6 @@ export const NavbarWithoutAuthorization = (
                 isOpen={authorizationModalOpen}
                 onClose={closeAutorizationModal}
             />
-        </div>
+        </Flex>
     )
 }

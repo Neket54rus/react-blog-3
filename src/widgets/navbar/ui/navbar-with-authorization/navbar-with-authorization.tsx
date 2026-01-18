@@ -8,6 +8,7 @@ import { classNames } from 'shared/lib/class-names'
 import { RoutePath } from 'shared/routes'
 import { Button, ButtonTheme } from 'shared/ui/button'
 import { Link, LinkTheme } from 'shared/ui/link'
+import { Flex, FlexAlign, FlexJustify } from 'shared/ui/stack'
 
 import classes from '../navbar.module.scss'
 
@@ -28,13 +29,19 @@ export const NavbarWithAuthorization = (
     }, [dispatch])
 
     return (
-        <div className={classNames(classes.navbar, {}, [className])}>
+        <Flex
+            className={classNames(classes.navbar, {}, [className])}
+            align={FlexAlign.CENTER}
+            justify={FlexJustify.END}
+            gap={15}
+            fullWidth
+        >
             <Link to={RoutePath.article_create} theme={LinkTheme.SECONDARY}>
                 Создать статью
             </Link>
             <Button onClick={logout} theme={ButtonTheme.CLEAR_INVERTED}>
                 {t('Выйти')}
             </Button>
-        </div>
+        </Flex>
     )
 }

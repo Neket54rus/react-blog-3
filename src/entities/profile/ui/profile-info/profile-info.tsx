@@ -3,6 +3,7 @@ import { memo, type JSX } from 'react'
 import { classNames } from 'shared/lib/class-names'
 import { Avatar } from 'shared/ui/avatar'
 import { Spinner } from 'shared/ui/spinner'
+import { VStack } from 'shared/ui/stack'
 import { ColorText, SizeText, Text } from 'shared/ui/text'
 
 import { type Profile } from '../../model/types/profile'
@@ -66,7 +67,7 @@ export const ProfileInfo = memo((props: ProfileInfoProps): JSX.Element => {
     return (
         <div className={classNames(classes.profileInfo, {}, [className])}>
             <Avatar src={profile.avatar} />
-            <div className={classes.profileInfoFields}>
+            <VStack className={classes.profileInfoFields} gap={10} fullWidth>
                 <div
                     className={classNames(classes.profileInfoText, {
                         [classes.readonly]: readonly,
@@ -123,7 +124,7 @@ export const ProfileInfo = memo((props: ProfileInfoProps): JSX.Element => {
                 >
                     <Text>{profile.avatar || 'Не установлено'}</Text>
                 </div>
-            </div>
+            </VStack>
         </div>
     )
 })

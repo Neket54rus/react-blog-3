@@ -4,12 +4,11 @@ import { useSelector } from 'react-redux'
 
 import { getUserAuthData } from 'entities/user'
 
-import { classNames } from 'shared/lib/class-names'
+import { Icon, IconTheme } from 'shared/ui/icon'
 import { Link, LinkTheme } from 'shared/ui/link'
+import { HStack, VStack } from 'shared/ui/stack'
 
 import { getMainNavigationItems } from '../model/selectors/get-main-navigation-items'
-
-import classes from './main-navigation.module.scss'
 
 interface MainNavigationProps {
     className?: string
@@ -34,23 +33,22 @@ export const MainNavigation = memo(
                             to={item.to}
                             theme={LinkTheme.SECONDARY}
                         >
-                            <div className={classes.mainNavigationItem}>
-                                <item.Icon
-                                    className={classes.mainNavigationItemIcon}
+                            <HStack gap={10}>
+                                <Icon
+                                    src={item.Icon}
+                                    theme={IconTheme.INVERTED_SECONDARY}
                                 />
                                 {!short && t(item.text)}
-                            </div>
+                            </HStack>
                         </Link>
                     )),
             [mainNavigationItems, authData, short, t],
         )
 
         return (
-            <div
-                className={classNames(classes.mainNavigation, {}, [className])}
-            >
+            <VStack className={className} gap={10}>
                 {navigationItems}
-            </div>
+            </VStack>
         )
     },
 )
