@@ -1,12 +1,13 @@
 import { type JSX, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import { userActions } from 'entities/user'
+import { getUserAuthData, userActions } from 'entities/user'
 
 import { classNames } from 'shared/lib/class-names'
 import { RoutePath } from 'shared/routes'
-import { Button, ButtonTheme } from 'shared/ui/button'
+import { Avatar } from 'shared/ui/avatar'
+import { Dropdown } from 'shared/ui/dropdown'
 import { Link, LinkTheme } from 'shared/ui/link'
 import { Flex, FlexAlign, FlexJustify } from 'shared/ui/stack'
 
@@ -23,6 +24,7 @@ export const NavbarWithAuthorization = (
 
     const { t } = useTranslation()
     const dispatch = useDispatch()
+    const authData = useSelector(getUserAuthData)
 
     const logout = useCallback(() => {
         dispatch(userActions.logout())
@@ -39,9 +41,11 @@ export const NavbarWithAuthorization = (
             <Link to={RoutePath.article_create} theme={LinkTheme.SECONDARY}>
                 Создать статью
             </Link>
-            <Button onClick={logout} theme={ButtonTheme.CLEAR_INVERTED}>
-                {t('Выйти')}
-            </Button>
+            <Dropdown
+                trigger={<Avatar src={authData?.avatar} size={30} />}
+                items={[{ content: t('Выйти'), onClick: logout }]}
+                direction="bottomLeft"
+            />
         </Flex>
     )
 }

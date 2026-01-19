@@ -201,7 +201,7 @@ export const EditProfileForm = memo(
                     items={country}
                     onChange={onChangeCountry}
                     value={form.country}
-                    direction="top"
+                    direction="top right"
                 />
                 <Input
                     value={form.city || ''}

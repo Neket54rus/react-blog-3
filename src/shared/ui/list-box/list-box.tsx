@@ -7,6 +7,7 @@ import {
 import { Fragment, memo, type ReactNode } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
+import type { DropDownDirection } from 'shared/types/types'
 
 import { Button, ButtonTheme } from '../button'
 
@@ -17,8 +18,6 @@ interface ListBoxItem {
     content?: ReactNode
     disabled?: boolean
 }
-
-type DropDownDirection = 'top' | 'bottom'
 
 interface ListBoxProps {
     items?: ListBoxItem[]

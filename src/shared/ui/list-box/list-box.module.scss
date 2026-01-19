@@ -15,8 +15,24 @@
         z-index: 10000;
         box-shadow: 4px 4px 8px #d5d5d7;
 
-        &.top {
-            bottom: 100%
+        &.topRight {
+            bottom: 100%;
+            right: 0;
+        }
+
+        &.topLeft {
+            bottom: 100%;
+            left: 0;
+        }
+
+        &.bottomRight {
+            bottom: 0;
+            right: 0;
+        }
+
+        &.bottomLeft {
+            bottom: 0;
+            left: 0;
         }
 
         &Item {

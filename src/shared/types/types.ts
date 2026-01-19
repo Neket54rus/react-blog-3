@@ -5,3 +5,9 @@ export type DeepPartial<T> = T extends object
     : T
 
 export type SortOrder = 'asc' | 'desc'
+
+export type DropDownDirection =
+    | 'topLeft'
+    | 'topRight'
+    | 'bottomLeft'
+    | 'bottomRight'
