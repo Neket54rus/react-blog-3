@@ -1,8 +1,9 @@
-import { type JSX, useCallback } from 'react'
+import { type JSX, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router'
 
-import { getUserAuthData, userActions } from 'entities/user'
+import { getUserAuthData, isUserAdmin, userActions } from 'entities/user'
 
 import { classNames } from 'shared/lib/class-names'
 import { RoutePath } from 'shared/routes'
@@ -23,12 +24,29 @@ export const NavbarWithAuthorization = (
     const { className } = props
 
     const { t } = useTranslation()
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const authData = useSelector(getUserAuthData)
+    const isAdmin = useSelector(isUserAdmin)
 
     const logout = useCallback(() => {
         dispatch(userActions.logout())
     }, [dispatch])
+
+    const dropdownItems = useMemo(
+        () => [
+            ...(isAdmin
+                ? [
+                      {
+                          content: 'Админка',
+                          onClick: () => navigate(RoutePath.admin_panel),
+                      },
+                  ]
+                : []),
+            { content: t('Выйти'), onClick: logout },
+        ],
+        [isAdmin, logout, navigate, t],
+    )
 
     return (
         <Flex
@@ -43,7 +61,7 @@ export const NavbarWithAuthorization = (
             </Link>
             <Dropdown
                 trigger={<Avatar src={authData?.avatar} size={30} />}
-                items={[{ content: t('Выйти'), onClick: logout }]}
+                items={dropdownItems}
                 direction="bottomLeft"
             />
         </Flex>

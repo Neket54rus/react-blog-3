@@ -1,8 +1,10 @@
 import { type RouteObject } from 'react-router'
 
+import { RequireAdmin } from 'app/providers/router/ui/require-admin'
 import { RequireAuth } from 'app/providers/router/ui/require-auth'
 
 import { AboutPage } from 'pages/AboutPage'
+import { AdminPanelPage } from 'pages/admin-panel-page'
 import { ArticleCreatePage } from 'pages/article-create-page'
 import { ArticlePage } from 'pages/article-page'
 import { ArticlesPage } from 'pages/articles-page'
@@ -66,6 +68,17 @@ export const publicRoutes: RouteObject[] = [
                 element: (
                     <RequireAuth>
                         <ArticleCreatePage />
+                    </RequireAuth>
+                ),
+            },
+            // admin routes
+            {
+                path: RoutePath.admin_panel,
+                element: (
+                    <RequireAuth>
+                        <RequireAdmin>
+                            <AdminPanelPage />
+                        </RequireAdmin>
                     </RequireAuth>
                 ),
             },

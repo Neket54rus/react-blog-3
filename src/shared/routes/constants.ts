@@ -6,6 +6,7 @@ export const AppRoutes = {
     ARTICLE_DETAIL: 'article_detail',
     ARTICLE_CREATE: 'article_create',
     ARTICLE_EDIT: 'article_edit',
+    ADMIN_PANEL: 'admin_panel',
     //last
     NOT_FOUND: 'not_found',
 } as const
@@ -20,5 +21,6 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.ARTICLE_DETAIL]: '/articles/', // + :id
     [AppRoutes.ARTICLE_CREATE]: '/articles/create',
     [AppRoutes.ARTICLE_EDIT]: '/articles/', // + :id/edit
+    [AppRoutes.ADMIN_PANEL]: '/admin',
     [AppRoutes.NOT_FOUND]: '*',
 } as const
