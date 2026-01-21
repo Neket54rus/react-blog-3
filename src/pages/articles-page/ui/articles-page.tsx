@@ -46,6 +46,7 @@ const ArticlesPage = memo(() => {
                     articles={articles}
                     view={view}
                     loading={isLoading}
+                    virtualized
                 />
                 {isLoading && (
                     <div className={classes.loading}>

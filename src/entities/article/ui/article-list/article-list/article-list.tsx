@@ -15,10 +15,17 @@ interface ArticleListProps {
     view?: ArticleView
     className?: string
     target?: HTMLAttributeAnchorTarget
+    virtualized?: boolean
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const { articles, view = ArticleView.SMALL, className, target } = props
+    const {
+        articles,
+        view = ArticleView.SMALL,
+        className,
+        target,
+        virtualized,
+    } = props
 
     if (!articles || !articles.length) {
         return
@@ -56,40 +63,42 @@ export const ArticleList = memo((props: ArticleListProps) => {
         )
     }
 
-    return (
-        <WindowScroller
-            scrollElement={document.getElementById('PAGE_ID') as Element}
-        >
-            {({
-                width,
-                height,
-                registerChild,
-                scrollTop,
-                isScrolling,
-                onChildScroll,
-            }) => (
-                <div
-                    ref={registerChild}
-                    className={classNames(classes.articleList, {}, [
-                        className,
-                        classes[view],
-                    ])}
-                >
-                    <List
-                        rowHeight={isBig ? 550 : 360}
-                        rowCount={rowCount}
-                        rowRenderer={rowRender}
-                        width={width ? width - 80 : 700}
-                        height={height ?? 550}
-                        autoHeight
-                        onScroll={onChildScroll}
-                        isScrolling={isScrolling}
-                        scrollTop={scrollTop}
-                    />
-                </div>
-            )}
-        </WindowScroller>
-    )
+    if (virtualized) {
+        return (
+            <WindowScroller
+                scrollElement={document.getElementById('PAGE_ID') as Element}
+            >
+                {({
+                    width,
+                    height,
+                    registerChild,
+                    scrollTop,
+                    isScrolling,
+                    onChildScroll,
+                }) => (
+                    <div
+                        ref={registerChild}
+                        className={classNames(classes.articleList, {}, [
+                            className,
+                            classes[view],
+                        ])}
+                    >
+                        <List
+                            rowHeight={isBig ? 550 : 360}
+                            rowCount={rowCount}
+                            rowRenderer={rowRender}
+                            width={width ? width - 80 : 700}
+                            height={height ?? 550}
+                            autoHeight
+                            onScroll={onChildScroll}
+                            isScrolling={isScrolling}
+                            scrollTop={scrollTop}
+                        />
+                    </div>
+                )}
+            </WindowScroller>
+        )
+    }
 
     return (
         <div
