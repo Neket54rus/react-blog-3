@@ -17,9 +17,12 @@ import type { ArticlePageSchema } from 'entities/article'
 import type { ProfileSchema } from 'entities/profile'
 import type { UserSchema } from 'entities/user'
 
+import { type rtkApi } from 'shared/api/rtkApi'
+
 export interface StateSchema {
     user: UserSchema
     UI: UISchema
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
     loginForm?: LoginSchema
     profile?: ProfileSchema
     editProfile?: EditProfileSchema

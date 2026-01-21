@@ -6,6 +6,7 @@ import { UIReducer } from 'features/ui'
 import { userReducer } from 'entities/user'
 
 import { $api } from 'shared/api/api'
+import { rtkApi } from 'shared/api/rtkApi'
 import type { StateSchema } from 'shared/lib/store/state-schema'
 
 import { createReducerManager } from './reducer-manager'
@@ -39,6 +40,7 @@ export const createReduxStore = (
         ...asyncReducers,
         user: userReducer,
         UI: UIReducer,
+        [rtkApi.reducerPath]: rtkApi.reducer,
     }
 
     const reducerManager = createReducerManager(rootReducers)
@@ -55,7 +57,7 @@ export const createReduxStore = (
                         navigate: navigateWrapper,
                     },
                 },
-            }),
+            }).concat(rtkApi.middleware),
     })
 
     // @ts-expect-error TODO

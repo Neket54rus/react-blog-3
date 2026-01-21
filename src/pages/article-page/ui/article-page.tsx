@@ -2,17 +2,15 @@ import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
+import { ArticleRecommendationList } from 'widgets/article-recommendation-list'
 import { Page } from 'widgets/page'
 
 import { AddCommentForm } from 'features/add-comment-form'
 
 import {
     ArticleInfo,
-    ArticleList,
     articlePageReducer,
     fetchArticleById,
-    fetchArticlesRecommendationById,
-    getArticlesRecommendationState,
     getArticleState,
 } from 'entities/article'
 import {
@@ -40,7 +38,6 @@ const reducers: ReducersList = {
 
 const ArticlePage = memo(() => {
     const dispatch = useAppDispatch()
-
     const { id } = useParams<{ id: string }>()
 
     const {
@@ -53,16 +50,11 @@ const ArticlePage = memo(() => {
         isLoading: isLoadingComments,
         error: errorComments,
     } = useSelector(getCommentsState)
-    const {
-        data: articlesRecommendation,
-        isLoading: isLoadingArticlesRecommendation,
-    } = useSelector(getArticlesRecommendationState)
 
     useInitialEffect(() => {
         if (id) {
             dispatch(fetchArticleById(id))
             dispatch(fetchCommentsByArticleId(id))
-            dispatch(fetchArticlesRecommendationById())
         }
     })
 
@@ -86,12 +78,7 @@ const ArticlePage = memo(() => {
                     loading={isLoadingArticle}
                     error={errorArticle}
                 />
-                <Text size={SizeText.L}>Рекомендуем:</Text>
-                <ArticleList
-                    articles={articlesRecommendation}
-                    loading={isLoadingArticlesRecommendation}
-                    target="_blank"
-                />
+                <ArticleRecommendationList />
                 <Text
                     className={classes.articlePageCommentsListTitle}
                     size={SizeText.L}
