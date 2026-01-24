@@ -1,6 +1,6 @@
-.dropdown {
+.popup {
     position: relative;
-    
+
     &Trigger {
         background: none;
         outline: none;
@@ -11,14 +11,6 @@
     }
 
     &Menu {
-        display: flex;
-        flex-direction: column;
-        background-color: #d5d5d7;
-        position: absolute;
-        z-index: 10000;
-        border-radius: 8px;
-        border: 1px solid var(--primary-color);
-
         &.topRight {
             bottom: 100%;
             right: 0;
@@ -40,14 +32,6 @@
         }
 
         &Item {
-            padding: 10px 25px;
-            width: 100%;
-            border: none;
-            background: none;
-            outline: none;
-            color: var(--primary-color);
-            cursor: pointer;
-
             &.focus {
                 background-color: var(--inverted-primary-color);
             }

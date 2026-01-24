@@ -8,8 +8,9 @@ import { Fragment, memo, type ReactNode } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
 import type { DropDownDirection } from 'shared/types/types'
+import { Button, ButtonTheme } from 'shared/ui/button'
 
-import { Button, ButtonTheme } from '../button'
+import popupClasses from '../../styles/popup.module.scss'
 
 import classes from './list-box.module.scss'
 
@@ -29,30 +30,27 @@ interface ListBoxProps {
 }
 
 export const ListBox = memo((props: ListBoxProps) => {
-    const {
-        items,
-        value,
-        defaultValue,
-        className,
-        direction = 'bottom',
-        onChange,
-    } = props
+    const { items, value, defaultValue, className, direction, onChange } = props
 
     return (
         <HeadlessListBox
-            className={classNames(classes.listBox, {}, [className])}
+            className={classNames(classes.listBox, {}, [
+                className,
+                popupClasses.popup,
+            ])}
             as="div"
             value={value}
             onChange={onChange}
         >
-            <ListboxButton className={classes.listBoxTrigger}>
+            <ListboxButton className={popupClasses.popupTrigger}>
                 <Button theme={ButtonTheme.OUTLINE}>
                     {value || defaultValue || 'Выберите значение'}
                 </Button>
             </ListboxButton>
             <ListboxOptions
                 className={classNames(classes.listBoxOptions, {}, [
-                    classes[direction],
+                    popupClasses.popupMenu,
+                    popupClasses[direction || 'bottomLeft'],
                 ])}
             >
                 {items?.map((item) => (
@@ -67,10 +65,11 @@ export const ListBox = memo((props: ListBoxProps) => {
                                 className={classNames(
                                     classes.listBoxOptionsItem,
                                     {
-                                        [classes.focus]: focus,
+                                        [popupClasses.focus]: focus,
                                         [classes.disabled]:
                                             item.disabled || false,
                                     },
+                                    [popupClasses.popupMenuItem],
                                 )}
                             >
                                 {selected && '!!!'}

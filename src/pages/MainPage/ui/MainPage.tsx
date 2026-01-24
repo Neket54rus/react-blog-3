@@ -2,7 +2,7 @@ import { type JSX } from 'react'
 
 import { Page } from 'widgets/page'
 
-import { ListBox } from 'shared/ui/list-box'
+import { ListBox } from 'shared/ui/popups'
 
 const MainPage = (): JSX.Element => (
     <Page>
@@ -13,6 +13,7 @@ const MainPage = (): JSX.Element => (
                 { value: '2', content: '213', disabled: true },
                 { value: '3', content: '321' },
             ]}
+            direction="bottomRight"
         />
     </Page>
 )

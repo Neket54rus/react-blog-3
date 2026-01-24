@@ -4,6 +4,8 @@ import { Fragment, memo, type ReactNode } from 'react'
 import { classNames } from 'shared/lib/class-names'
 import type { DropDownDirection } from 'shared/types/types'
 
+import popupClasses from '../../styles/popup.module.scss'
+
 import classes from './dropdown.module.scss'
 
 interface DropdownItem {
@@ -25,15 +27,19 @@ export const Dropdown = memo((props: DropdownProps) => {
 
     return (
         <Menu
-            className={classNames(classes.dropdown, {}, [className])}
+            className={classNames(classes.dropdown, {}, [
+                className,
+                popupClasses.popup,
+            ])}
             as="div"
         >
-            <MenuButton className={classes.dropdownTrigger}>
+            <MenuButton className={popupClasses.popupTrigger}>
                 {trigger}
             </MenuButton>
             <MenuItems
                 className={classNames(classes.dropdownMenu, {}, [
-                    classes[direction || 'bottomRight'],
+                    popupClasses.popupMenu,
+                    popupClasses[direction || 'bottomRight'],
                 ])}
             >
                 {items?.map((item, index) => (
@@ -47,8 +53,9 @@ export const Dropdown = memo((props: DropdownProps) => {
                                 className={classNames(
                                     classes.dropdownMenuItem,
                                     {
-                                        [classes.focus]: focus,
+                                        [popupClasses.focus]: focus,
                                     },
+                                    [popupClasses.popupMenuItem],
                                 )}
                                 onClick={item.onClick}
                             >

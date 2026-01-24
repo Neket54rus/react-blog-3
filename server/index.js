@@ -364,6 +364,25 @@ app.post('/comments', async (req, res) => {
     })
 })
 
+app.get('/notifications', (req, res) => {
+    const { userId } = req.query
+
+    if (!userId) {
+        res.status(400).json({
+            message: 'userId is required',
+        })
+    }
+
+    try {
+        const notifications = db.data.notifications.filter(
+            (n) => n.userId === userId,
+        )
+        res.status(200).json(notifications)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
 // === start ===
 app.listen(8000, () => {
     console.log('Express + LowDB server is running on port 8000')
