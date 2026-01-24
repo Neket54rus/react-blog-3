@@ -74,6 +74,7 @@ export const NavbarWithAuthorization = (
                 <Drawer
                     isOpen={isOpenDrawer}
                     onClose={() => setIsOpenDrawer(false)}
+                    lazy
                 >
                     <NotificationsList userId={authData!.username} />
                 </Drawer>
