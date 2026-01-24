@@ -1,4 +1,5 @@
-import { type JSX, useCallback, useMemo } from 'react'
+import { type JSX, useCallback, useMemo, useState } from 'react'
+import { BrowserView, MobileView } from 'react-device-detect'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
@@ -11,6 +12,7 @@ import { classNames } from 'shared/lib/class-names'
 import { RoutePath } from 'shared/routes'
 import { Avatar } from 'shared/ui/avatar'
 import { Button } from 'shared/ui/button'
+import { Drawer } from 'shared/ui/drawer'
 import { Icon } from 'shared/ui/icon'
 import { Link, LinkTheme } from 'shared/ui/link'
 import { Dropdown, Popover } from 'shared/ui/popups'
@@ -52,6 +54,8 @@ export const NavbarWithAuthorization = (
         [isAdmin, logout, navigate, t],
     )
 
+    const [isOpenDrawer, setIsOpenDrawer] = useState(false)
+
     return (
         <Flex
             className={classNames(classes.navbar, {}, [className])}
@@ -63,15 +67,30 @@ export const NavbarWithAuthorization = (
             <Link to={RoutePath.article_create} theme={LinkTheme.SECONDARY}>
                 Создать статью
             </Link>
-            <Popover
-                trigger={
-                    <Button>
-                        <Icon src={NotificationIcon} />
-                    </Button>
-                }
-            >
-                {authData && <NotificationsList userId={authData.username} />}
-            </Popover>
+            <MobileView>
+                <Button onClick={() => setIsOpenDrawer(true)}>
+                    <Icon src={NotificationIcon} />
+                </Button>
+                <Drawer
+                    isOpen={isOpenDrawer}
+                    onClose={() => setIsOpenDrawer(false)}
+                >
+                    <NotificationsList userId={authData!.username} />
+                </Drawer>
+            </MobileView>
+            <BrowserView>
+                <Popover
+                    trigger={
+                        <Button>
+                            <Icon src={NotificationIcon} />
+                        </Button>
+                    }
+                >
+                    {authData && (
+                        <NotificationsList userId={authData.username} />
+                    )}
+                </Popover>
+            </BrowserView>
             <Dropdown
                 trigger={<Avatar src={authData?.avatar} size={30} />}
                 items={dropdownItems}
