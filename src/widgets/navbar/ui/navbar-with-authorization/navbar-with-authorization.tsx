@@ -9,7 +9,6 @@ import { getUserAuthData, isUserAdmin, userActions } from 'entities/user'
 
 import NotificationIcon from 'shared/assets/icons/notification.svg?react'
 import { classNames } from 'shared/lib/class-names'
-import { AnimationProvider } from 'shared/lib/components/animation-provider/animation-provider'
 import { RoutePath } from 'shared/routes'
 import { Avatar } from 'shared/ui/avatar'
 import { Button } from 'shared/ui/button'
@@ -72,15 +71,13 @@ export const NavbarWithAuthorization = (
                 <Button onClick={() => setIsOpenDrawer(true)}>
                     <Icon src={NotificationIcon} />
                 </Button>
-                <AnimationProvider>
-                    <Drawer
-                        isOpen={isOpenDrawer}
-                        onClose={() => setIsOpenDrawer(false)}
-                        lazy
-                    >
-                        <NotificationsList userId={authData!.username} />
-                    </Drawer>
-                </AnimationProvider>
+                <Drawer
+                    isOpen={isOpenDrawer}
+                    onClose={() => setIsOpenDrawer(false)}
+                    lazy
+                >
+                    <NotificationsList userId={authData!.username} />
+                </Drawer>
             </MobileView>
             <BrowserView>
                 <Popover
