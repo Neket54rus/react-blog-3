@@ -4,7 +4,7 @@ import { type Reducer, type JSX } from 'react'
 
 import { StoreProvider } from 'app/providers/store'
 
-import { loginReducer, type LoginSchema } from 'features/login-form'
+import { loginReducer, type LoginSchema } from 'features/login-form/testing'
 
 import { type StateSchema } from 'shared/lib/store/state-schema'
 
