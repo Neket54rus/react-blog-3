@@ -383,6 +383,47 @@ app.get('/notifications', (req, res) => {
     }
 })
 
+app.get('/article-ratings', (req, res) => {
+    const { userId, articleId } = req.query
+
+    try {
+        const articleRatings = db.data['article-ratings'].filter(
+            (r) => r.userId === userId && r.articleId === Number(articleId),
+        )
+        res.status(200).json(articleRatings)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
+app.post('/article-ratings', async (req, res) => {
+    try {
+        const { articleId, userId, rate, feedback } = req.body
+
+        const articleRate = db.data['article-ratings'].find(
+            (a) => a.id === articleId && a.userId === userId,
+        )
+
+        if (articleRate) {
+            res.status(400).json({ message: 'оценка уже поставлена' })
+        }
+
+        const newArticleRate = {
+            id: db.data['article-ratings'].length + 1,
+            rate,
+            feedback,
+            userId,
+            articleId: Number(articleId),
+        }
+
+        db.data['article-ratings'].push(newArticleRate)
+        await db.write()
+        res.status(200)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
 // === start ===
 app.listen(8000, () => {
     console.log('Express + LowDB server is running on port 8000')

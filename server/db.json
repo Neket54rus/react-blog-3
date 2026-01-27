@@ -1560,5 +1560,28 @@
       "description": "Проихошло событие!",
       "userId": "admin"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": 1,
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "admin",
+      "articleId": 1
+    },
+    {
+      "id": 2,
+      "rate": 1,
+      "feedback": "Плохая статья",
+      "userId": "admin",
+      "articleId": 2
+    },
+    {
+      "id": 3,
+      "rate": 3,
+      "feedback": "test",
+      "userId": "admin",
+      "articleId": 3
+    }
   ]
 }

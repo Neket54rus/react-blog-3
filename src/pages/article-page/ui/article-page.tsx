@@ -6,6 +6,7 @@ import { ArticleRecommendationList } from 'widgets/article-recommendation-list'
 import { Page } from 'widgets/page'
 
 import { AddCommentForm } from 'features/add-comment-form'
+import { ArticleRating } from 'features/article-rating'
 
 import {
     ArticleInfo,
@@ -78,6 +79,7 @@ const ArticlePage = memo(() => {
                     loading={isLoadingArticle}
                     error={errorArticle}
                 />
+                <ArticleRating articleId={id} />
                 <ArticleRecommendationList />
                 <Text
                     className={classes.articlePageCommentsListTitle}
