@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "port=3000 vite",
+    "start": "port=3000 mode=development vite",
     "start:dev": "concurrently \"npm start\" \"npm run start:dev:server\"",
     "start:dev:server": "node ./server/index.js",
     "build": "vite build",
@@ -70,6 +70,7 @@
     "lowdb": "^7.0.1",
     "mini-css-extract-plugin": "^2.9.4",
     "prettier": "^3.7.4",
+    "remove-attr": "^0.0.15",
     "sass": "^1.94.2",
     "sass-loader": "^16.0.6",
     "style-loader": "^4.0.0",
