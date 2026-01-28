@@ -1,11 +1,11 @@
 import { type JSX, useCallback, useMemo, useState } from 'react'
 import { BrowserView, MobileView } from 'react-device-detect'
 import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 
 import { NotificationsList } from 'entities/notification'
-import { getUserAuthData, isUserAdmin, userActions } from 'entities/user'
+import { useUserAuthData, isUserAdmin, useUserActions } from 'entities/user'
 
 import NotificationIcon from 'shared/assets/icons/notification.svg?react'
 import { classNames } from 'shared/lib/class-names'
@@ -34,13 +34,14 @@ export const NavbarWithAuthorization = (
 
     const { t } = useTranslation()
     const navigate = useNavigate()
-    const dispatch = useDispatch()
-    const authData = useSelector(getUserAuthData)
+    const authData = useUserAuthData()
     const isAdmin = useSelector(isUserAdmin)
 
-    const logout = useCallback(() => {
-        dispatch(userActions.logout())
-    }, [dispatch])
+    const { logout } = useUserActions()
+
+    const handleLogout = useCallback(() => {
+        logout()
+    }, [logout])
 
     const dropdownItems = useMemo(
         () => [
@@ -52,9 +53,9 @@ export const NavbarWithAuthorization = (
                       },
                   ]
                 : []),
-            { content: t('Выйти'), onClick: logout },
+            { content: t('Выйти'), onClick: handleLogout },
         ],
-        [isAdmin, logout, navigate, t],
+        [isAdmin, handleLogout, navigate, t],
     )
 
     const [isOpenDrawer, setIsOpenDrawer] = useState(false)

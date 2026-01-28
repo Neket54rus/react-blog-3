@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit'
 
-import { getUserAuthData } from 'entities/user'
+import { getUserAuthDataSelector } from 'entities/user'
 
 import AboutIcon from 'shared/assets/icons/about.svg?react'
 import ArticlesIcon from 'shared/assets/icons/articles.svg?react'
@@ -16,7 +16,7 @@ import {
 import type { MainNavigationItem } from '../types/main-navigation.types'
 
 export const getMainNavigationItems = createSelector(
-    getUserAuthData,
+    getUserAuthDataSelector,
     (userData): MainNavigationItem[] => [
         {
             to: getRouteMain(),

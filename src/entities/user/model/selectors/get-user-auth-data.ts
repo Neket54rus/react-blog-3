@@ -1,6 +1,5 @@
-import type { StateSchema } from 'shared/lib/store/state-schema'
+import { buildSelector } from 'shared/lib/store'
 
-import type { User } from '../types/user'
-
-export const getUserAuthData = (state: StateSchema): User | undefined =>
-    state.user.authData
+export const [useUserAuthData, getUserAuthDataSelector] = buildSelector(
+    (state) => state.user.authData,
+)

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 
 import { getArticleState } from 'entities/article'
-import { getUserAuthData } from 'entities/user'
+import { useUserAuthData } from 'entities/user'
 
 import { classNames } from 'shared/lib/class-names'
 import { getRouteArticleEdit } from 'shared/routes/constants'
@@ -20,7 +20,7 @@ export const ArticlePageHeader = memo((props: ArticlePageHeaderProps) => {
 
     const navigate = useNavigate()
 
-    const userData = useSelector(getUserAuthData)
+    const userData = useUserAuthData()
     const { data: articleData } = useSelector(getArticleState)
 
     const canEdit = userData?.username === articleData?.authorUsername

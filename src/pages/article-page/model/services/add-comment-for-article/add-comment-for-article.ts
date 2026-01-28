@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 
 import { getArticleState } from 'entities/article'
 import { fetchCommentsByArticleId, type Comment } from 'entities/comment'
-import { getUserAuthData } from 'entities/user'
+import { useUserAuthData } from 'entities/user'
 
 import { type ThunkConfig } from 'shared/lib/store/state-schema'
 
@@ -13,7 +13,7 @@ export const addCommentForArticle = createAsyncThunk<
 >('article-page/add-comment-for-article', async (text, thunkApi) => {
     const { extra, rejectWithValue, getState, dispatch } = thunkApi
 
-    const authData = getUserAuthData(getState())
+    const authData = useUserAuthData()
     const { data: article } = getArticleState(getState())
 
     if (!authData || !text || !article) {

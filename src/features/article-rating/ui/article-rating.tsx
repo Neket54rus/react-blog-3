@@ -1,8 +1,7 @@
 import { memo, useCallback } from 'react'
-import { useSelector } from 'react-redux'
 
 import { RatingCard } from 'entities/rating'
-import { getUserAuthData } from 'entities/user'
+import { useUserAuthData } from 'entities/user'
 
 import {
     useGetArticleRatingQuery,
@@ -17,7 +16,7 @@ export interface ArticleRatingProps {
 const ArticleRating = memo((props: ArticleRatingProps) => {
     const { className, articleId } = props
 
-    const authData = useSelector(getUserAuthData)
+    const authData = useUserAuthData()
     const { data, isLoading } = useGetArticleRatingQuery({
         articleId,
         userId: authData?.username || '',

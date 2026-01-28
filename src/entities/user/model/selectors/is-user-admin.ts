@@ -2,9 +2,9 @@ import { createSelector } from '@reduxjs/toolkit'
 
 import { UserRole } from '../constants/user.constants'
 
-import { getUserAuthData } from './get-user-auth-data'
+import { getUserAuthDataSelector } from './get-user-auth-data'
 
 export const isUserAdmin = createSelector(
-    getUserAuthData,
+    getUserAuthDataSelector,
     (authData) => authData?.role === UserRole.ADMIN,
 )

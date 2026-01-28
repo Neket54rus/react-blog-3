@@ -2,7 +2,7 @@ import { type JSX } from 'react'
 import { useSelector } from 'react-redux'
 import { Navigate } from 'react-router'
 
-import { getUserAuthData, getUserInited } from 'entities/user'
+import { getUserInited, useUserAuthData } from 'entities/user'
 
 import { getRouteMain } from 'shared/routes/constants'
 
@@ -13,7 +13,7 @@ interface RequireAuthProps {
 export const RequireAuth = (props: RequireAuthProps): JSX.Element | null => {
     const { children } = props
 
-    const authData = useSelector(getUserAuthData)
+    const authData = useUserAuthData()
     const isInited = useSelector(getUserInited)
 
     if (!isInited) {

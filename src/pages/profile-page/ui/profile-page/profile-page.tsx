@@ -1,5 +1,4 @@
 import { memo, useEffect, type JSX } from 'react'
-import { useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 
 import { Page } from 'widgets/page'
@@ -8,7 +7,7 @@ import { ProfileCard } from 'widgets/profile-card'
 import { EditProfileControls, editProfileReducer } from 'features/edit-profile'
 
 import { fetchProfileData, profileReducer } from 'entities/profile'
-import { getUserAuthData } from 'entities/user'
+import { useUserAuthData } from 'entities/user'
 
 import {
     DynamicModuleLoader,
@@ -29,7 +28,7 @@ const ProfilePage = memo((): JSX.Element => {
 
     const { id } = useParams<{ id: string }>()
 
-    const authData = useSelector(getUserAuthData)
+    const authData = useUserAuthData()
 
     useEffect(() => {
         if (id && __PROJECT__ !== 'storybook') {

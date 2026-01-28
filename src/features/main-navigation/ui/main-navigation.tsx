@@ -2,7 +2,7 @@ import { memo, useMemo, type JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
-import { getUserAuthData } from 'entities/user'
+import { useUserAuthData } from 'entities/user'
 
 import { Icon, IconTheme } from 'shared/ui/icon'
 import { Link, LinkTheme } from 'shared/ui/link'
@@ -20,7 +20,7 @@ export const MainNavigation = memo(
         const { className, short } = props
 
         const { t } = useTranslation()
-        const authData = useSelector(getUserAuthData)
+        const authData = useUserAuthData()
         const mainNavigationItems = useSelector(getMainNavigationItems)
 
         const navigationItems = useMemo(
