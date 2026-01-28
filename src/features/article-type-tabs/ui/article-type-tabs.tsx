@@ -7,7 +7,7 @@ import { getArticlesPageState } from 'pages/articles-page/model/seloctors/get-ar
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { type TabItem, Tabs } from 'shared/ui/tabs/tabs'
 
-import { ArticleType } from '../../model/constants/article.constants'
+import { ArticleType } from '../../../entities/article/model/constants/article.constants'
 
 const tabs = Object.values(ArticleType).map((value) => ({
     value,

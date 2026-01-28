@@ -1,10 +1,11 @@
 import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 
+import { ArticleSortSelector } from 'features/article-sort-selector'
+import { ArticleTypeTabs } from 'features/article-type-tabs'
 import { CardViewsSwitcher } from 'features/card-views-switcher'
 
-import { ArticleSortSelector, ArticleView } from 'entities/article'
-import { ArticleTypeTabs } from 'entities/article/ui/article-type-tabs'
+import { ArticleView } from 'entities/article'
 
 import { classNames } from 'shared/lib/class-names'
 import { useDebounce } from 'shared/lib/hooks/use-debounce/use-debounce'

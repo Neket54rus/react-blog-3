@@ -3,7 +3,7 @@ import { memo, type JSX } from 'react'
 import { Select, type SelectOption } from 'shared/ui/select'
 
 interface CurrencySelectProps {
-    options: SelectOption[]
+    options: SelectOption<string>[]
     value?: string
     onChange?: (value: string) => void
     className?: string

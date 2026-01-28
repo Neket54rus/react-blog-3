@@ -7,7 +7,7 @@ import { Country } from 'shared/constants/country'
 import { classNames } from 'shared/lib/class-names'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { Input } from 'shared/ui/input'
-import { ListBox } from 'shared/ui/list-box'
+import { Select } from 'shared/ui/select'
 import { Spinner } from 'shared/ui/spinner'
 import { ColorText, SizeText, Text } from 'shared/ui/text'
 
@@ -197,11 +197,10 @@ export const EditProfileForm = memo(
                     onChange={onChangeCurrency}
                     value={form.currency}
                 />
-                <ListBox
-                    items={country}
+                <Select
+                    options={country}
                     onChange={onChangeCountry}
                     value={form.country}
-                    direction="top right"
                 />
                 <Input
                     value={form.city || ''}
