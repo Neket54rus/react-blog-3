@@ -4,6 +4,7 @@ import { Link, type To } from 'react-router'
 import ViewIcon from 'shared/assets/icons/view.svg?react'
 import { classNames } from 'shared/lib/class-names'
 
+import { AppImage } from '../app-image'
 import { Icon } from '../icon'
 import { Text } from '../text'
 
@@ -46,10 +47,12 @@ export const Card = memo((props: CardProps) => {
         <Tag {...tagProps}>
             <div className={classes.cardHeader}>
                 {image ? (
-                    <img
+                    <AppImage
                         className={classes.cardHeaderImage}
                         src={image}
                         alt="card icon"
+                        fallback="Loading..."
+                        errorFallback="Error"
                     />
                 ) : (
                     <div className={classes.cardHeaderImage}>
