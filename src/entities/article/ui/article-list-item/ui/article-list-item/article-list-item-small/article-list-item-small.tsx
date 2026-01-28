@@ -1,6 +1,6 @@
 import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
-import { RoutePath } from 'shared/routes'
+import { getRouteArticleDetail } from 'shared/routes/constants'
 import { Card } from 'shared/ui/card'
 
 import type { Article } from '../../../../../model/types/article.types'
@@ -23,7 +23,7 @@ export const ArticleListItemSmall = memo((props: ArticleListItemSmallProps) => {
     return (
         <Card
             className={className}
-            to={`${RoutePath.article_detail}${article.id}`}
+            to={getRouteArticleDetail(article.id)}
             createAt={createdAt}
             views={views.toString()}
             title={title}

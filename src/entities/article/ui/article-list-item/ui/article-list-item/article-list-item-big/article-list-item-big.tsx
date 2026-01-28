@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 
 import ViewIcon from 'shared/assets/icons/view.svg?react'
 import { classNames } from 'shared/lib/class-names'
-import { RoutePath } from 'shared/routes'
+import { getRouteArticleDetail } from 'shared/routes/constants'
 import { Avatar } from 'shared/ui/avatar'
 import { Button, ButtonTheme } from 'shared/ui/button'
 import { SizeText, Text } from 'shared/ui/text'
@@ -83,7 +83,7 @@ export const ArticleListItemBig = memo((props: ArticleListItemBigProps) => {
             <div className={classes.articleListItemBigFooter}>
                 <Button theme={ButtonTheme.OUTLINE}>
                     <Link
-                        to={`${RoutePath.article_detail}${article.id}`}
+                        to={getRouteArticleDetail(article.id)}
                         target={target}
                     >
                         Читать далее...

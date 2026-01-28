@@ -4,7 +4,7 @@ import { Navigate } from 'react-router'
 
 import { getUserAuthData, getUserInited } from 'entities/user'
 
-import { RoutePath } from 'shared/routes'
+import { getRouteMain } from 'shared/routes/constants'
 
 interface RequireAuthProps {
     children: JSX.Element
@@ -21,7 +21,7 @@ export const RequireAuth = (props: RequireAuthProps): JSX.Element | null => {
     }
 
     if (!authData) {
-        return <Navigate to={RoutePath.main} replace />
+        return <Navigate to={getRouteMain()} replace />
     }
 
     return children

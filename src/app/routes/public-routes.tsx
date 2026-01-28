@@ -14,7 +14,17 @@ import { ProfilePage } from 'pages/profile-page'
 
 import { PageLayout } from 'widgets/layout'
 
-import { RoutePath } from 'shared/routes'
+import {
+    getRouteAbout,
+    getRouteAdminPanel,
+    getRouteArticleCreate,
+    getRouteArticleDetail,
+    getRouteArticleEdit,
+    getRouteArticles,
+    getRouteMain,
+    getRouteNotFound,
+    getRouteProfile,
+} from 'shared/routes/constants'
 
 export const publicRoutes: RouteObject[] = [
     {
@@ -22,17 +32,17 @@ export const publicRoutes: RouteObject[] = [
         children: [
             // public routes
             {
-                path: RoutePath.main,
+                path: getRouteMain(),
                 index: true,
                 element: <MainPage />,
             },
             {
-                path: RoutePath.about,
+                path: getRouteAbout(),
                 element: <AboutPage />,
             },
             // private routes
             {
-                path: `${RoutePath.profile}:id`,
+                path: getRouteProfile(':id'),
                 element: (
                     <RequireAuth>
                         <ProfilePage />
@@ -40,7 +50,7 @@ export const publicRoutes: RouteObject[] = [
                 ),
             },
             {
-                path: RoutePath.articles,
+                path: getRouteArticles(),
                 element: (
                     <RequireAuth>
                         <ArticlesPage />
@@ -48,7 +58,7 @@ export const publicRoutes: RouteObject[] = [
                 ),
             },
             {
-                path: `${RoutePath.article_detail}:id`,
+                path: getRouteArticleDetail(':id'),
                 element: (
                     <RequireAuth>
                         <ArticlePage />
@@ -56,7 +66,7 @@ export const publicRoutes: RouteObject[] = [
                 ),
             },
             {
-                path: `${RoutePath.article_create}`,
+                path: getRouteArticleCreate(),
                 element: (
                     <RequireAuth>
                         <ArticleCreatePage />
@@ -64,7 +74,7 @@ export const publicRoutes: RouteObject[] = [
                 ),
             },
             {
-                path: `${RoutePath.article_edit}:id/edit`,
+                path: getRouteArticleEdit(':id'),
                 element: (
                     <RequireAuth>
                         <ArticleCreatePage />
@@ -73,7 +83,7 @@ export const publicRoutes: RouteObject[] = [
             },
             // admin routes
             {
-                path: RoutePath.admin_panel,
+                path: getRouteAdminPanel(),
                 element: (
                     <RequireAuth>
                         <RequireAdmin>
@@ -84,7 +94,7 @@ export const publicRoutes: RouteObject[] = [
             },
             // 404
             {
-                path: RoutePath.not_found,
+                path: getRouteNotFound(),
                 element: <NotFoundPage />,
             },
         ],

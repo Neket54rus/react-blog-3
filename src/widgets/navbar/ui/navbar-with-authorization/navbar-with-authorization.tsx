@@ -9,7 +9,10 @@ import { getUserAuthData, isUserAdmin, userActions } from 'entities/user'
 
 import NotificationIcon from 'shared/assets/icons/notification.svg?react'
 import { classNames } from 'shared/lib/class-names'
-import { RoutePath } from 'shared/routes'
+import {
+    getRouteAdminPanel,
+    getRouteArticleCreate,
+} from 'shared/routes/constants'
 import { Avatar } from 'shared/ui/avatar'
 import { Button } from 'shared/ui/button'
 import { Drawer } from 'shared/ui/drawer'
@@ -45,7 +48,7 @@ export const NavbarWithAuthorization = (
                 ? [
                       {
                           content: 'Админка',
-                          onClick: () => navigate(RoutePath.admin_panel),
+                          onClick: () => navigate(getRouteAdminPanel()),
                       },
                   ]
                 : []),
@@ -64,7 +67,7 @@ export const NavbarWithAuthorization = (
             gap={15}
             fullWidth
         >
-            <Link to={RoutePath.article_create} theme={LinkTheme.SECONDARY}>
+            <Link to={getRouteArticleCreate()} theme={LinkTheme.SECONDARY}>
                 Создать статью
             </Link>
             <MobileView>

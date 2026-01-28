@@ -6,7 +6,7 @@ import { getArticleState } from 'entities/article'
 import { getUserAuthData } from 'entities/user'
 
 import { classNames } from 'shared/lib/class-names'
-import { RoutePath } from 'shared/routes'
+import { getRouteArticleEdit } from 'shared/routes/constants'
 import { Button, ButtonTheme } from 'shared/ui/button'
 
 import classes from './article-page-header.module.scss'
@@ -26,8 +26,10 @@ export const ArticlePageHeader = memo((props: ArticlePageHeaderProps) => {
     const canEdit = userData?.username === articleData?.authorUsername
 
     const onEditArticle = useCallback(() => {
-        navigate(`${RoutePath.article_edit}${articleData?.id}/edit`)
-    }, [articleData?.id, navigate])
+        if (articleData) {
+            navigate(getRouteArticleEdit(articleData.id))
+        }
+    }, [articleData, navigate])
 
     return (
         <div className={classNames(classes.articlePageHeader, {}, [className])}>
