@@ -21,8 +21,9 @@ export const userSlice = buildSlice({
 
             if (user) {
                 state.authData = JSON.parse(user)
-                state._inited = true
             }
+
+            state._inited = true
         },
         logout: (state) => {
             state.authData = undefined

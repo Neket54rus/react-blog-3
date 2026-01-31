@@ -38,7 +38,7 @@ const ProfilePage = memo((): JSX.Element => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <Page className={classes.profilePage}>
+            <Page dataTestId="profile-page" className={classes.profilePage}>
                 <div className={classes.profilePageHeader}>
                     <Text size={SizeText.L}>Профиль</Text>
                     {authData?.username === id && <EditProfileControls />}

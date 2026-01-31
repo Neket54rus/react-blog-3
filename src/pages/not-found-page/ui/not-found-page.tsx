@@ -9,7 +9,9 @@ const NotFoundPage = (): JSX.Element => {
     const { t } = useTranslation('not-found')
 
     return (
-        <Page className={classes.notFoundPage}>{t('Страница не найдена')}</Page>
+        <Page dataTestId="not-found-page" className={classes.notFoundPage}>
+            {t('Страница не найдена')}
+        </Page>
     )
 }
 

@@ -17,11 +17,12 @@ import classes from './page.module.scss'
 interface PageProps {
     children?: ReactNode
     className?: string
+    dataTestId?: string
     onScrollEnd?: () => void
 }
 
 export const Page = memo((props: PageProps) => {
-    const { children, className, onScrollEnd } = props
+    const { children, className, dataTestId = 'page', onScrollEnd } = props
 
     const wrapperRef = useRef<HTMLDivElement | null>(null)
     const triggerRef = useRef<HTMLDivElement | null>(null)
@@ -66,6 +67,7 @@ export const Page = memo((props: PageProps) => {
             ref={wrapperRef}
             onScroll={onScroll}
             id="PAGE_ID"
+            data-testid={dataTestId}
         >
             {children}
             {onScrollEnd && (
