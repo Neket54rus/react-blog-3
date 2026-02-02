@@ -1,0 +1,532 @@
+[
+        {
+            "id": "3",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "6",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "9",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "12",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "15",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "18",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "21",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "24",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "27",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        },
+        {
+            "id": "29",
+            "title": "React: современный фронтенд-фреймворк",
+            "subtitle": "Краткий пересказ всего React",
+            "text": "React от Facebook — это библиотека для построения пользовательских интерфейсов с использованием компонентного подхода.",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png",
+            "views": 1567,
+            "createdAt": "01.02.2025",
+            "authorUsername": "user202",
+            "type": [
+                "IT",
+                "React",
+                "Frontend"
+            ],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Компоненты в React",
+                    "paragraphs": [
+                        {
+                            "id": "1",
+                            "text": "React использует декларативный подход: вы описываете, как должен выглядеть UI в разных состояниях, а React сам обновляет DOM при изменении данных."
+                        },
+                        {
+                            "id": "2",
+                            "text": "Компоненты могут быть функциональными или классовыми, но современные приложения преимущественно используют функциональные компоненты с хуками."
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "// Пример React компонента\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>Счетчик: {count}</p>\n      <button onClick={() => setCount(count + 1)}>\n        Увеличить\n      </button>\n    </div>\n  );\n}"
+                },
+                {
+                    "id": "3",
+                    "type": "IMAGE",
+                    "img": "https://miro.medium.com/v2/resize:fit:1400/1*cPh7ujRIfcHAy4kW2ADGOw.png",
+                    "title": "Архитектура React приложения"
+                }
+            ],
+            "author": {
+                "firstName": "Елена",
+                "lastName": "Кузнецова",
+                "age": 29,
+                "currency": "RUB",
+                "country": "Russia",
+                "city": "Novosibirsk",
+                "username": "user202",
+                "avatar": "https://masterpiecer-images.s3.yandex.net/774b8c7e647c11efbd8f8a54364f94d5:upscaled"
+            }
+        }
+    ],

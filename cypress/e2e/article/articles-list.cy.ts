@@ -9,4 +9,10 @@ describe('Пользователь заходит на страницу стат
         cy.getByTestId('article-list').should('exist')
         cy.getByTestId('article-list-item').should('have.length.greaterThan', 3)
     })
+
+    it('На моках', () => {
+        cy.intercept('GET', '**/articles?*', { fixture: 'articles.json' })
+        cy.getByTestId('article-list').should('exist')
+        cy.getByTestId('article-list-item').should('have.length.greaterThan', 3)
+    })
 })
