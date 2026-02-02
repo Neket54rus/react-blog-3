@@ -1,5 +1,4 @@
-import { type HTMLAttributeAnchorTarget, type JSX, memo } from 'react'
-import { List, type ListRowProps, WindowScroller } from 'react-virtualized'
+import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
 
@@ -15,89 +14,13 @@ interface ArticleListProps {
     view?: ArticleView
     className?: string
     target?: HTMLAttributeAnchorTarget
-    virtualized?: boolean
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
-    const {
-        articles,
-        view = ArticleView.SMALL,
-        className,
-        target,
-        virtualized,
-    } = props
+    const { articles, view = ArticleView.SMALL, className, target } = props
 
     if (!articles || !articles.length) {
         return
-    }
-
-    const isBig = view === ArticleView.BIG
-
-    const itemsPerRow = isBig ? 1 : 3
-    const rowCount = isBig
-        ? articles.length
-        : Math.ceil(articles.length / itemsPerRow)
-
-    const rowRender = (props: ListRowProps): JSX.Element => {
-        const { index, key, style } = props
-
-        const items = []
-        const fromIndex = index * itemsPerRow
-        const toIndex = Math.min(fromIndex + itemsPerRow, articles.length)
-
-        for (let index = fromIndex; index < toIndex; index++) {
-            items.push(
-                <ArticleListItem
-                    key={`str${index}`}
-                    article={articles[index]}
-                    view={view}
-                    target={target}
-                />,
-            )
-        }
-
-        return (
-            <div key={key} style={style}>
-                {items}
-            </div>
-        )
-    }
-
-    if (virtualized) {
-        return (
-            <WindowScroller
-                scrollElement={document.getElementById('PAGE_ID') as Element}
-            >
-                {({
-                    width,
-                    height,
-                    registerChild,
-                    scrollTop,
-                    isScrolling,
-                    onChildScroll,
-                }) => (
-                    <div
-                        ref={registerChild}
-                        className={classNames(classes.articleList, {}, [
-                            className,
-                            classes[view],
-                        ])}
-                    >
-                        <List
-                            rowHeight={isBig ? 550 : 360}
-                            rowCount={rowCount}
-                            rowRenderer={rowRender}
-                            width={width ? width - 80 : 700}
-                            height={height ?? 550}
-                            autoHeight
-                            onScroll={onChildScroll}
-                            isScrolling={isScrolling}
-                            scrollTop={scrollTop}
-                        />
-                    </div>
-                )}
-            </WindowScroller>
-        )
     }
 
     return (
@@ -106,6 +29,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                 className,
                 classes[view],
             ])}
+            data-testid="article-list"
         >
             {articles.map((article) => (
                 <ArticleListItem

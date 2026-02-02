@@ -16,7 +16,7 @@ export const ProfileCard = memo((props: ProfileCardProps): JSX.Element => {
     const { readonly } = useSelector(getEditProfileState)
 
     return (
-        <div className={className}>
+        <div data-testid="profile-card" className={className}>
             {readonly ? (
                 <ProfileInfo
                     profile={data}

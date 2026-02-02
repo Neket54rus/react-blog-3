@@ -10,6 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     square?: boolean
     size?: ButtonSize
     active?: boolean
+    dataTestId?: string
 }
 
 export const Button = (props: ButtonProps): JSX.Element => {
@@ -21,11 +22,13 @@ export const Button = (props: ButtonProps): JSX.Element => {
         className,
         disabled = false,
         active = false,
+        dataTestId = 'button',
         ...otherProps
     } = props
 
     return (
         <button
+            data-testid={dataTestId}
             className={classNames(
                 classes.button,
                 {

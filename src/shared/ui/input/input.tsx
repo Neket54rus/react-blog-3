@@ -21,6 +21,7 @@ interface InputProps extends HTMLInputProps {
     value?: string | number
     autofocus?: boolean
     clearTheme?: boolean
+    dataTestId?: string
     onChange?: (value: string) => void
 }
 
@@ -31,6 +32,7 @@ export const Input = memo((props: InputProps): JSX.Element => {
         type = 'text',
         autofocus,
         clearTheme = false,
+        dataTestId = 'input',
         onChange,
         ...otherProps
     } = props
@@ -49,6 +51,7 @@ export const Input = memo((props: InputProps): JSX.Element => {
 
     return (
         <input
+            data-testid={dataTestId}
             className={classNames(
                 classes.input,
                 { [classes.clear]: clearTheme },

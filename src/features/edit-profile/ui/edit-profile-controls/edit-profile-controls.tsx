@@ -52,6 +52,7 @@ export const EditProfileControls = memo(
 
         return readonly ? (
             <Button
+                dataTestId="edit-button"
                 className={className}
                 theme={ButtonTheme.OUTLINE}
                 onClick={onEnableEdit}
@@ -66,6 +67,7 @@ export const EditProfileControls = memo(
                 ])}
             >
                 <Button
+                    dataTestId="save-button"
                     theme={ButtonTheme.OUTLINE}
                     onClick={onSave}
                     disabled={isLoadingUpdateProfileData}

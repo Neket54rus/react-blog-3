@@ -10,6 +10,7 @@ interface TextProps {
     color?: ColorText
     size?: SizeText
     className?: string
+    dataTestId?: string
 }
 
 export const Text = memo((props: TextProps): JSX.Element => {
@@ -18,10 +19,12 @@ export const Text = memo((props: TextProps): JSX.Element => {
         color = ColorText.PRIMARY,
         size = SizeText.M,
         className,
+        dataTestId = 'text',
     } = props
 
     return (
         <p
+            data-testid={dataTestId}
             className={classNames(classes.text, {}, [
                 className,
                 classes[color],

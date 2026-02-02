@@ -65,7 +65,10 @@ export const ProfileInfo = memo((props: ProfileInfoProps): JSX.Element => {
     }
 
     return (
-        <div className={classNames(classes.profileInfo, {}, [className])}>
+        <div
+            data-testid="profile-info"
+            className={classNames(classes.profileInfo, {}, [className])}
+        >
             <Avatar src={profile.avatar} />
             <VStack className={classes.profileInfoFields} gap={10} fullWidth>
                 <div
@@ -73,14 +76,18 @@ export const ProfileInfo = memo((props: ProfileInfoProps): JSX.Element => {
                         [classes.readonly]: readonly,
                     })}
                 >
-                    <Text>{profile.firstName || 'Не установлено'}</Text>
+                    <Text dataTestId="first-name">
+                        {profile.firstName || 'Не установлено'}
+                    </Text>
                 </div>
                 <div
                     className={classNames(classes.profileInfoText, {
                         [classes.readonly]: readonly,
                     })}
                 >
-                    <Text>{profile.lastName || 'Не установлено'}</Text>
+                    <Text dataTestId="last-name">
+                        {profile.lastName || 'Не установлено'}
+                    </Text>
                 </div>
                 <div
                     className={classNames(classes.profileInfoText, {

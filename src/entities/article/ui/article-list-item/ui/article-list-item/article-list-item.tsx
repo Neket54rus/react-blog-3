@@ -26,6 +26,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     if (view === ArticleView.BIG) {
         return (
             <div
+                data-testid="article-list-item"
                 className={classNames(classes.articleListItem, {}, [
                     className,
                     classes[view],
@@ -38,6 +39,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <div
+            data-testid="article-list-item"
             className={classNames(classes.articleListItem, {}, [
                 className,
                 classes[view],

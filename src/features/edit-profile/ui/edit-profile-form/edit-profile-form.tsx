@@ -175,12 +175,14 @@ export const EditProfileForm = memo(
                     </Text>
                 ))}
                 <Input
+                    dataTestId="first-name"
                     value={form.firstName || ''}
                     className={classes.editProfileFormInput}
                     placeholder="Ваше имя"
                     onChange={onChangeFirstName}
                 />
                 <Input
+                    dataTestId="last-name"
                     value={form.lastName || ''}
                     className={classes.editProfileFormInput}
                     placeholder="Ваша фамилия"

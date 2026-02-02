@@ -73,6 +73,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
     return (
         <div
+            data-testid="articles-filters"
             className={classNames(classes.articlesPageFilters, {}, [className])}
         >
             <ArticleSortSelector
