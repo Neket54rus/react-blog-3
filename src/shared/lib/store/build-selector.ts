@@ -10,7 +10,7 @@ export const buildSelector = <T, Args extends any[]>(
     selector: Selector<T, Args>
 ): Result<T, Args> => {
     const useSelectorHook: Hook<T, Args> = (...args: Args): T => {
-        return useSelector((state: StateSchema) => selector(state, ...args))
+        return useSelector((state: StateSchema) => selector(state, ...args)) 
     }
 
     return [useSelectorHook, selector]

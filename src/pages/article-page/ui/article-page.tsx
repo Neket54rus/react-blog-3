@@ -27,6 +27,7 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initial-effect'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { SizeText, Text } from 'shared/ui/text'
+import { getFeatureFlag } from 'shared/lib/features'
 
 import { addCommentForArticle } from '../model/services/add-comment-for-article/add-comment-for-article'
 
@@ -51,6 +52,8 @@ const ArticlePage = memo(() => {
         isLoading: isLoadingComments,
         error: errorComments,
     } = useSelector(getCommentsState)
+
+    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled')
 
     useInitialEffect(() => {
         if (id) {
@@ -79,7 +82,7 @@ const ArticlePage = memo(() => {
                     loading={isLoadingArticle}
                     error={errorArticle}
                 />
-                <ArticleRating articleId={id} />
+                {isArticleRatingEnabled && <ArticleRating articleId={id} />}
                 <ArticleRecommendationList />
                 <Text
                     className={classes.articlePageCommentsListTitle}
