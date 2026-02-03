@@ -27,7 +27,7 @@ import {
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initial-effect'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { SizeText, Text } from 'shared/ui/text'
-import { getFeatureFlag } from 'shared/lib/features'
+import { togglefeatures } from 'shared/lib/features'
 
 import { addCommentForArticle } from '../model/services/add-comment-for-article/add-comment-for-article'
 
@@ -53,8 +53,6 @@ const ArticlePage = memo(() => {
         error: errorComments,
     } = useSelector(getCommentsState)
 
-    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled')
-
     useInitialEffect(() => {
         if (id) {
             dispatch(fetchArticleById(id))
@@ -73,6 +71,12 @@ const ArticlePage = memo(() => {
         return <div>Статья не найдена</div>
     }
 
+    const articleRating = togglefeatures({
+        name: 'isArticleRatingEnabled',
+        on: () => <ArticleRating articleId={id} />,
+        off: () => null,
+    })
+
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page>
@@ -82,7 +86,7 @@ const ArticlePage = memo(() => {
                     loading={isLoadingArticle}
                     error={errorArticle}
                 />
-                {isArticleRatingEnabled && <ArticleRating articleId={id} />}
+                {articleRating}
                 <ArticleRecommendationList />
                 <Text
                     className={classes.articlePageCommentsListTitle}
