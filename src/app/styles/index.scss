@@ -2,13 +2,18 @@
 @use 'variables/global';
 @use 'themes/light';
 @use 'themes/dark';
-@use 'fonts/fonts';
+// @use 'fonts/fonts';
 
 body {
     font: var(--font-m);
 
     background: var(--bg-color);
     color: var(--primary-color);
+
+    &.redesigned {
+        background: var(--bg-redesigned);
+        color: var(--text-redesigned);
+    }
 }
 
 .app {

@@ -44,6 +44,12 @@ const ProfilePage = memo((): JSX.Element => {
                     {authData?.username === id && <EditProfileControls />}
                 </div>
                 <ProfileCard />
+                <ProfileCard />
+                <ProfileCard />
+                <ProfileCard />
+                <ProfileCard />
+                <ProfileCard />
+                <ProfileCard />
             </Page>
         </DynamicModuleLoader>
     )

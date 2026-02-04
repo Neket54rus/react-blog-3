@@ -17,9 +17,10 @@
       "username": "admin",
       "password": "admin",
       "role": "ADMIN",
-      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80"
+      "avatar": "https://img.freepik.com/premium-vector/content-creator_1271422-16038.jpg?semt=ais_hybrid&w=740&q=80",
       "features": {
-          "isArticleRatingEnabled": true
+          "isArticleRatingEnabled": true,
+          "isAppRedesigned": true
       }
     },
     {

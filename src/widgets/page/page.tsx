@@ -5,6 +5,7 @@ import { useLocation } from 'react-router'
 import { UIActions, getUIScrollByPath } from 'features/ui'
 
 import { classNames } from 'shared/lib/class-names'
+import { togglefeatures } from 'shared/lib/features'
 import { useInfiniteScroll } from 'shared/lib/hooks/use-infinite-scroll/use-infinite-scroll'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initial-effect'
 import { useThrottle } from 'shared/lib/hooks/use-throttle/use-throttle'
@@ -63,7 +64,15 @@ export const Page = memo((props: PageProps) => {
 
     return (
         <section
-            className={classNames(classes.page, {}, [className])}
+            className={classNames(
+                togglefeatures({
+                    name: 'isAppRedesigned',
+                    on: () => classes.pageRedesigned,
+                    off: () => classes.page,
+                }),
+                {},
+                [className],
+            )}
             ref={wrapperRef}
             onScroll={onScroll}
             id="PAGE_ID"

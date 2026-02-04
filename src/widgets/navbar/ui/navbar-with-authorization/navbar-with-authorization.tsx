@@ -9,6 +9,7 @@ import { useUserAuthData, isUserAdmin, useUserActions } from 'entities/user'
 
 import NotificationIcon from 'shared/assets/icons/notification.svg?react'
 import { classNames } from 'shared/lib/class-names'
+import { ToggleFeatures } from 'shared/lib/features'
 import {
     getRouteAdminPanel,
     getRouteArticleCreate,
@@ -61,46 +62,96 @@ export const NavbarWithAuthorization = (
     const [isOpenDrawer, setIsOpenDrawer] = useState(false)
 
     return (
-        <Flex
-            className={classNames(classes.navbar, {}, [className])}
-            align={FlexAlign.CENTER}
-            justify={FlexJustify.END}
-            gap={15}
-            fullWidth
-        >
-            <Link to={getRouteArticleCreate()} theme={LinkTheme.SECONDARY}>
-                Создать статью
-            </Link>
-            <MobileView>
-                <Button onClick={() => setIsOpenDrawer(true)}>
-                    <Icon src={NotificationIcon} />
-                </Button>
-                <Drawer
-                    isOpen={isOpenDrawer}
-                    onClose={() => setIsOpenDrawer(false)}
-                    lazy
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <Flex
+                    className={classNames(classes.navbarRedesigned, {}, [
+                        className,
+                    ])}
+                    align={FlexAlign.CENTER}
+                    justify={FlexJustify.END}
+                    gap={16}
+                    fullWidth
                 >
-                    <NotificationsList userId={authData!.username} />
-                </Drawer>
-            </MobileView>
-            <BrowserView>
-                <Popover
-                    trigger={
-                        <Button>
+                    <MobileView>
+                        <Button onClick={() => setIsOpenDrawer(true)}>
                             <Icon src={NotificationIcon} />
                         </Button>
-                    }
+                        <Drawer
+                            isOpen={isOpenDrawer}
+                            onClose={() => setIsOpenDrawer(false)}
+                            lazy
+                        >
+                            <NotificationsList userId={authData!.username} />
+                        </Drawer>
+                    </MobileView>
+                    <BrowserView>
+                        <Popover
+                            trigger={
+                                <Button>
+                                    <Icon src={NotificationIcon} />
+                                </Button>
+                            }
+                        >
+                            {authData && (
+                                <NotificationsList userId={authData.username} />
+                            )}
+                        </Popover>
+                    </BrowserView>
+                    <Dropdown
+                        trigger={<Avatar src={authData?.avatar} size={30} />}
+                        items={dropdownItems}
+                        direction="bottomLeft"
+                    />
+                </Flex>
+            }
+            off={
+                <Flex
+                    className={classNames(classes.navbar, {}, [className])}
+                    align={FlexAlign.CENTER}
+                    justify={FlexJustify.END}
+                    gap={15}
+                    fullWidth
                 >
-                    {authData && (
-                        <NotificationsList userId={authData.username} />
-                    )}
-                </Popover>
-            </BrowserView>
-            <Dropdown
-                trigger={<Avatar src={authData?.avatar} size={30} />}
-                items={dropdownItems}
-                direction="bottomLeft"
-            />
-        </Flex>
+                    <Link
+                        to={getRouteArticleCreate()}
+                        theme={LinkTheme.SECONDARY}
+                    >
+                        Создать статью
+                    </Link>
+                    <MobileView>
+                        <Button onClick={() => setIsOpenDrawer(true)}>
+                            <Icon src={NotificationIcon} />
+                        </Button>
+                        <Drawer
+                            isOpen={isOpenDrawer}
+                            onClose={() => setIsOpenDrawer(false)}
+                            lazy
+                        >
+                            <NotificationsList userId={authData!.username} />
+                        </Drawer>
+                    </MobileView>
+                    <BrowserView>
+                        <Popover
+                            trigger={
+                                <Button>
+                                    <Icon src={NotificationIcon} />
+                                </Button>
+                            }
+                        >
+                            {authData && (
+                                <NotificationsList userId={authData.username} />
+                            )}
+                        </Popover>
+                    </BrowserView>
+                    <Dropdown
+                        trigger={<Avatar src={authData?.avatar} size={30} />}
+                        items={dropdownItems}
+                        direction="bottomLeft"
+                    />
+                </Flex>
+            }
+        />
     )
 }
