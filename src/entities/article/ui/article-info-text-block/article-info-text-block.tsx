@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { SizeText, Text } from 'shared/ui/text'
+import { SizeText, Text } from 'shared/ui/deprecated/text'
 
 import { type ArticleBlockText } from '../../model/types/article.types'
 

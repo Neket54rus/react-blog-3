@@ -1,10 +1,10 @@
 import { memo, type JSX } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { Avatar } from 'shared/ui/avatar'
-import { Spinner } from 'shared/ui/spinner'
-import { VStack } from 'shared/ui/stack'
-import { ColorText, SizeText, Text } from 'shared/ui/text'
+import { Avatar } from 'shared/ui/deprecated/avatar'
+import { Spinner } from 'shared/ui/deprecated/spinner'
+import { VStack } from 'shared/ui/deprecated/stack'
+import { ColorText, SizeText, Text } from 'shared/ui/deprecated/text'
 
 import { type Profile } from '../../model/types/profile'
 

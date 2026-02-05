@@ -1,7 +1,7 @@
 import { type ChangeEvent, type JSX } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { Text } from 'shared/ui/text'
+import { Text } from 'shared/ui/deprecated/text'
 
 import classes from './select.module.scss'
 import { type SelectOption } from './types'

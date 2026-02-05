@@ -1,7 +1,7 @@
 import { memo, type JSX } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { Button, ButtonSize, ButtonTheme } from 'shared/ui/button'
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/deprecated/button'
 
 import classes from './collaps-button.module.scss'
 

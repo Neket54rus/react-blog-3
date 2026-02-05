@@ -2,8 +2,8 @@ import { memo } from 'react'
 
 import { Page } from 'widgets/page'
 
-import { FlexJustify, HStack } from 'shared/ui/stack'
-import { ColorText, SizeText, Text } from 'shared/ui/text'
+import { FlexJustify, HStack } from 'shared/ui/deprecated/stack'
+import { ColorText, SizeText, Text } from 'shared/ui/deprecated/text'
 
 interface ForbiddenPageProps {
     className?: string

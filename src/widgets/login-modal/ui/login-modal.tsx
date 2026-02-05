@@ -2,8 +2,8 @@ import { Suspense, type JSX } from 'react'
 
 import { LoginForm } from 'features/login-form'
 
-import { Modal } from 'shared/ui/modal/modal'
-import { Spinner } from 'shared/ui/spinner'
+import { Modal } from 'shared/ui/deprecated/modal/modal'
+import { Spinner } from 'shared/ui/deprecated/spinner'
 
 interface LoginFormProps {
     isOpen: boolean

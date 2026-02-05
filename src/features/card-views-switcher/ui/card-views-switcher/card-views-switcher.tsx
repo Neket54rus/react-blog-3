@@ -4,9 +4,9 @@ import { ArticleView } from 'entities/article'
 
 import CardViewBig from 'shared/assets/icons/card-view-big.svg?react'
 import CardViewSmall from 'shared/assets/icons/card-view-small.svg?react'
-import { Button } from 'shared/ui/button'
-import { Icon } from 'shared/ui/icon'
-import { Text } from 'shared/ui/text'
+import { Button } from 'shared/ui/deprecated/button'
+import { Icon } from 'shared/ui/deprecated/icon'
+import { Text } from 'shared/ui/deprecated/text'
 
 interface CardViewsSwitcherProps {
     view?: ArticleView

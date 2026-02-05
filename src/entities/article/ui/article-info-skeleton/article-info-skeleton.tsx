@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { Skeleton } from 'shared/ui/skeleton'
+import { Skeleton } from 'shared/ui/deprecated/skeleton'
 
 import classes from './article-info-skeleton.module.scss'
 

@@ -14,13 +14,13 @@ import {
     getRouteAdminPanel,
     getRouteArticleCreate,
 } from 'shared/routes/constants'
-import { Avatar } from 'shared/ui/avatar'
-import { Button } from 'shared/ui/button'
-import { Drawer } from 'shared/ui/drawer'
-import { Icon } from 'shared/ui/icon'
-import { Link, LinkTheme } from 'shared/ui/link'
-import { Dropdown, Popover } from 'shared/ui/popups'
-import { Flex, FlexAlign, FlexJustify } from 'shared/ui/stack'
+import { Avatar } from 'shared/ui/deprecated/avatar'
+import { Button } from 'shared/ui/deprecated/button'
+import { Drawer } from 'shared/ui/deprecated/drawer'
+import { Icon } from 'shared/ui/deprecated/icon'
+import { Link, LinkTheme } from 'shared/ui/deprecated/link'
+import { Dropdown, Popover } from 'shared/ui/deprecated/popups'
+import { Flex, FlexAlign, FlexJustify } from 'shared/ui/deprecated/stack'
 
 import classes from '../navbar.module.scss'
 

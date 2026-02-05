@@ -3,8 +3,8 @@ import { Link } from 'react-router'
 
 import { classNames } from 'shared/lib/class-names'
 import { getRouteProfile } from 'shared/routes/constants'
-import { Avatar } from 'shared/ui/avatar'
-import { Text } from 'shared/ui/text'
+import { Avatar } from 'shared/ui/deprecated/avatar'
+import { Text } from 'shared/ui/deprecated/text'
 
 import { type Comment } from '../../model/types/comment.types'
 

@@ -1,7 +1,7 @@
 import { type HTMLAttributeAnchorTarget, memo } from 'react'
 
 import { getRouteArticleDetail } from 'shared/routes/constants'
-import { Card } from 'shared/ui/card'
+import { Card } from 'shared/ui/deprecated/card'
 
 import type { Article } from '../../../../../model/types/article.types'
 

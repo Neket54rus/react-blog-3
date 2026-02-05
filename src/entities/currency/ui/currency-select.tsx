@@ -1,6 +1,6 @@
 import { memo, type JSX } from 'react'
 
-import { Select, type SelectOption } from 'shared/ui/select'
+import { Select, type SelectOption } from 'shared/ui/deprecated/select'
 
 interface CurrencySelectProps {
     options: SelectOption<string>[]

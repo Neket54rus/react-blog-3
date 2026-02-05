@@ -7,7 +7,7 @@ import { useUserAuthData } from 'entities/user'
 
 import { classNames } from 'shared/lib/class-names'
 import { getRouteArticleEdit } from 'shared/routes/constants'
-import { Button, ButtonTheme } from 'shared/ui/button'
+import { Button, ButtonTheme } from 'shared/ui/deprecated/button'
 
 import classes from './article-page-header.module.scss'
 

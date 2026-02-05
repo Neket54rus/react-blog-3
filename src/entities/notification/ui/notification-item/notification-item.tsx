@@ -1,8 +1,8 @@
 import { memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { VStack } from 'shared/ui/stack'
-import { SizeText, Text } from 'shared/ui/text'
+import { VStack } from 'shared/ui/deprecated/stack'
+import { SizeText, Text } from 'shared/ui/deprecated/text'
 
 import type { Notification } from '../../model/types/notification'
 

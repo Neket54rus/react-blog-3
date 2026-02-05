@@ -11,7 +11,7 @@ import { classNames } from 'shared/lib/class-names'
 import { useDebounce } from 'shared/lib/hooks/use-debounce/use-debounce'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
 import { type SortOrder } from 'shared/types/types'
-import { Input } from 'shared/ui/input'
+import { Input } from 'shared/ui/deprecated/input'
 
 import { type ArticlesSort } from '../../model/constants/articles-page.constants'
 import { getArticlesPageState } from '../../model/seloctors/get-articles-page-state'

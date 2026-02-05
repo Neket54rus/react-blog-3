@@ -6,7 +6,7 @@ import { getProfileState } from 'entities/profile'
 
 import { classNames } from 'shared/lib/class-names'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Button, ButtonTheme } from 'shared/ui/button'
+import { Button, ButtonTheme } from 'shared/ui/deprecated/button'
 
 import { getEditProfileState } from '../../model/selectors/get-readonly/get-edit-profile-state'
 import { updateProfileData } from '../../model/services/update-profile-data/update-profile-data'

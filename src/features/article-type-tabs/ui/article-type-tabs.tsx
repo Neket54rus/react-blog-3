@@ -5,7 +5,7 @@ import { articlesPageActions, fetchArticles } from 'pages/articles-page'
 import { getArticlesPageState } from 'pages/articles-page/model/seloctors/get-articles-page-state'
 
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { type TabItem, Tabs } from 'shared/ui/tabs/tabs'
+import { type TabItem, Tabs } from 'shared/ui/deprecated/tabs/tabs'
 
 import { ArticleType } from '../../../entities/article/model/constants/article.constants'
 

@@ -26,7 +26,7 @@ import {
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initial-effect'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { SizeText, Text } from 'shared/ui/text'
+import { SizeText, Text } from 'shared/ui/deprecated/text'
 import { ToggleFeatures } from 'shared/lib/features'
 
 import { addCommentForArticle } from '../model/services/add-comment-for-article/add-comment-for-article'

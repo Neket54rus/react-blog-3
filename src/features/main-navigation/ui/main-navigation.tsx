@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux'
 
 import { useUserAuthData } from 'entities/user'
 
-import { Icon, IconTheme } from 'shared/ui/icon'
-import { Link, LinkTheme } from 'shared/ui/link'
-import { HStack, VStack } from 'shared/ui/stack'
+import { Icon, IconTheme } from 'shared/ui/deprecated/icon'
+import { Link, LinkTheme } from 'shared/ui/deprecated/link'
+import { HStack, VStack } from 'shared/ui/deprecated/stack'
 
 import { getMainNavigationItems } from '../model/selectors/get-main-navigation-items'
 

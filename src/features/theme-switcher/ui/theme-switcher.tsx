@@ -4,7 +4,7 @@ import darkIcon from 'shared/assets/icons/theme-dark.svg'
 import lightIcon from 'shared/assets/icons/theme-light.svg'
 import { classNames } from 'shared/lib/class-names'
 import { Theme, useTheme } from 'shared/lib/theme'
-import { Button } from 'shared/ui/button'
+import { Button } from 'shared/ui/deprecated/button'
 
 import classes from './theme-switcher.module.scss'
 

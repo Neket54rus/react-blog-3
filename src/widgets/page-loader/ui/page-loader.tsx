@@ -1,7 +1,7 @@
 import { type JSX } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { Spinner } from 'shared/ui/spinner'
+import { Spinner } from 'shared/ui/deprecated/spinner'
 
 import classes from './page-loader.module.scss'
 

@@ -11,7 +11,7 @@ import {
     type ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Spinner } from 'shared/ui/spinner'
+import { Spinner } from 'shared/ui/deprecated/spinner'
 
 import { getArticlesPageState } from '../model/seloctors/get-articles-page-state'
 import { fetchArticlesNextPage } from '../model/services/fetch-articles-next-page'

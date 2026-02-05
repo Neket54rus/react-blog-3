@@ -8,9 +8,9 @@ import {
     type ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Button, ButtonTheme } from 'shared/ui/button'
-import { Input } from 'shared/ui/input'
-import { ColorText, SizeText, Text } from 'shared/ui/text'
+import { Button, ButtonTheme } from 'shared/ui/deprecated/button'
+import { Input } from 'shared/ui/deprecated/input'
+import { ColorText, SizeText, Text } from 'shared/ui/deprecated/text'
 
 import { getLoginState } from '../model/selectors/get-login-state'
 import { loginByUsername } from '../model/services/login-by-username/login-by-username'

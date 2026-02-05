@@ -1,8 +1,8 @@
 import { memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { Skeleton } from 'shared/ui/skeleton'
-import { ColorText, SizeText, Text } from 'shared/ui/text'
+import { Skeleton } from 'shared/ui/deprecated/skeleton'
+import { ColorText, SizeText, Text } from 'shared/ui/deprecated/text'
 
 import type { Comment } from '../../model/types/comment.types'
 import { CommentCard } from '../comment-card/comment-card'

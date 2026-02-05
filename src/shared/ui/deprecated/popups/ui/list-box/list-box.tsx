@@ -8,7 +8,7 @@ import { Fragment, memo, type ReactNode } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
 import type { DropDownDirection } from 'shared/types/types'
-import { Button, ButtonTheme } from 'shared/ui/button'
+import { Button, ButtonTheme } from 'shared/ui/deprecated/button'
 
 import popupClasses from '../../styles/popup.module.scss'
 

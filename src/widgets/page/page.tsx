@@ -11,7 +11,7 @@ import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect/use-initia
 import { useThrottle } from 'shared/lib/hooks/use-throttle/use-throttle'
 import { type StateSchema } from 'shared/lib/store/state-schema'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { ColorText, SizeText, Text } from 'shared/ui/text'
+import { ColorText, SizeText, Text } from 'shared/ui/deprecated/text'
 
 import classes from './page.module.scss'
 

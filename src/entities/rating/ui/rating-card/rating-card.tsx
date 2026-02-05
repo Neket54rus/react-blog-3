@@ -1,12 +1,17 @@
 import { memo, useCallback, useState } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { Button, ButtonTheme } from 'shared/ui/button'
-import { Input } from 'shared/ui/input'
-import { Modal } from 'shared/ui/modal/modal'
-import { FlexAlign, FlexJustify, HStack, VStack } from 'shared/ui/stack'
-import { StarRating } from 'shared/ui/star-rating'
-import { SizeText, Text } from 'shared/ui/text'
+import { Button, ButtonTheme } from 'shared/ui/deprecated/button'
+import { Input } from 'shared/ui/deprecated/input'
+import { Modal } from 'shared/ui/deprecated/modal/modal'
+import {
+    FlexAlign,
+    FlexJustify,
+    HStack,
+    VStack,
+} from 'shared/ui/deprecated/stack'
+import { StarRating } from 'shared/ui/deprecated/star-rating'
+import { SizeText, Text } from 'shared/ui/deprecated/text'
 
 import classes from './rating-card.module.scss'
 

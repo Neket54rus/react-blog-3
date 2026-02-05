@@ -2,7 +2,7 @@ import { memo } from 'react'
 
 import { ArticleList } from 'entities/article'
 
-import { SizeText, Text } from 'shared/ui/text'
+import { SizeText, Text } from 'shared/ui/deprecated/text'
 
 import { useGetArticleRecommendationListQuery } from '../api/article-recommendation-api'
 

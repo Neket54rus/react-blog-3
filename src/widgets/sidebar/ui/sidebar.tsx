@@ -7,7 +7,7 @@ import { ThemeSwitcher } from 'features/theme-switcher'
 
 import { classNames } from 'shared/lib/class-names'
 import { ToggleFeatures } from 'shared/lib/features'
-import { AppLogo } from 'shared/ui/app-logo'
+import { AppLogo } from 'shared/ui/deprecated/app-logo'
 
 import classes from './sidebar.module.scss'
 

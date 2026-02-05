@@ -14,7 +14,7 @@ import {
     type ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Text, SizeText } from 'shared/ui/text'
+import { Text, SizeText } from 'shared/ui/deprecated/text'
 
 import classes from './profile-page.module.scss'
 

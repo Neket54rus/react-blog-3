@@ -5,9 +5,9 @@ import { addCommentFormActions } from 'features/add-comment-form/model/slice/add
 
 import { classNames } from 'shared/lib/class-names'
 import { useAppDispatch } from 'shared/lib/store/use-app-dispatch'
-import { Button, ButtonTheme } from 'shared/ui/button'
-import { Input } from 'shared/ui/input'
-import { Spinner } from 'shared/ui/spinner'
+import { Button, ButtonTheme } from 'shared/ui/deprecated/button'
+import { Input } from 'shared/ui/deprecated/input'
+import { Spinner } from 'shared/ui/deprecated/spinner'
 
 import { getCommentFormState } from '../../model/selectors/get-commetn-form-state'
 

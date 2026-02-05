@@ -1,7 +1,7 @@
 import { memo, type JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { Button } from 'shared/ui/button'
+import { Button } from 'shared/ui/deprecated/button'
 
 interface LangSwitcherProps {
     className?: string

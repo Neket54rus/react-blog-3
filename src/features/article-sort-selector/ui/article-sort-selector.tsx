@@ -4,7 +4,7 @@ import { ArticlesSort } from 'pages/articles-page'
 
 import { classNames } from 'shared/lib/class-names'
 import type { SortOrder } from 'shared/types/types'
-import { Select, type SelectOption } from 'shared/ui/select'
+import { Select, type SelectOption } from 'shared/ui/deprecated/select'
 
 import classes from './article-sort-selector.module.scss'
 
