@@ -11,6 +11,9 @@ interface LinkProps extends ReactRouterLinkProps {
     theme?: LinkTheme
 }
 
+/**
+ * @deprecated
+ */
 export const Link = (props: LinkProps): JSX.Element => {
     const {
         children,

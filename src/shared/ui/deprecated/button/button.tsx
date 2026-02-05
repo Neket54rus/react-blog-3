@@ -13,6 +13,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     dataTestId?: string
 }
 
+/**
+ * @deprecated
+ */
 export const Button = (props: ButtonProps): JSX.Element => {
     const {
         theme = ButtonTheme.CLEAR,

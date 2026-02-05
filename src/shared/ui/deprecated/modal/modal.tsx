@@ -15,6 +15,9 @@ interface ModalProps {
     lazy?: boolean
 }
 
+/**
+ * @deprecated
+ */
 export const Modal = (props: ModalProps): JSX.Element | null => {
     const { children, isOpen = false, onClose, className, lazy } = props
 

@@ -21,6 +21,9 @@ interface DrawerProps {
 
 const height = window.innerHeight - 100
 
+/**
+ * @deprecated
+ */
 export const DrawerContent = memo((props: DrawerProps) => {
     const { className, children, isOpen = false, lazy, onClose } = props
 

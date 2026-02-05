@@ -14,6 +14,9 @@ interface SelectProps<T extends string> {
     className?: string
 }
 
+/**
+ * @deprecated
+ */
 export const Select = <T extends string>(
     props: SelectProps<T>,
 ): JSX.Element => {

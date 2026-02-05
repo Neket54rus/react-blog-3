@@ -29,6 +29,9 @@ interface ListBoxProps {
     onChange?: <T extends string>(value: T) => void
 }
 
+/**
+ * @deprecated
+ */
 export const ListBox = memo((props: ListBoxProps) => {
     const { items, value, defaultValue, className, direction, onChange } = props
 

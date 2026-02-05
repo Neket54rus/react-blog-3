@@ -18,6 +18,9 @@ interface TabsProps<T> {
     className?: string
 }
 
+/**
+ * @deprecated
+ */
 export const Tabs = <T extends string>(props: TabsProps<T>): JSX.Element => {
     const { tabs, value, className, onTabClick } = props
 

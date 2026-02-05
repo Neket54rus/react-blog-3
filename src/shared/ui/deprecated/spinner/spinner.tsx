@@ -8,6 +8,9 @@ interface SpinnerProps {
     className?: string
 }
 
+/**
+ * @deprecated
+ */
 export const Spinner = (props: SpinnerProps): JSX.Element => {
     const { className } = props
 

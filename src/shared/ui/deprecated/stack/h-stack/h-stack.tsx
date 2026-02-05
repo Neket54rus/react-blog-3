@@ -5,6 +5,9 @@ import { FlexDirection } from '../flex/flex.constants'
 
 type HStackProps = Omit<FlexProps, 'direction'>
 
+/**
+ * @deprecated
+ */
 export const HStack = memo((props: HStackProps) => (
     <Flex direction={FlexDirection.ROW} {...props} />
 ))

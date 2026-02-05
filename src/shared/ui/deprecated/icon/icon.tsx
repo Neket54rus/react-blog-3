@@ -24,6 +24,9 @@ type ImgIcon = {
 
 type IconProps = SvgIcon | ImgIcon
 
+/**
+ * @deprecated
+ */
 export const Icon = memo((props: IconProps) => {
     if (typeof props.src === 'string') {
         const { src, className, alt, ...imgProps } = props as ImgIcon

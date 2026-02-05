@@ -22,6 +22,9 @@ interface CardProps {
     target?: HTMLAttributeAnchorTarget
 }
 
+/**
+ * @deprecated
+ */
 export const Card = memo((props: CardProps) => {
     const {
         to,

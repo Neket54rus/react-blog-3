@@ -11,6 +11,9 @@ interface AvatarProps {
     className?: string
 }
 
+/**
+ * @deprecated
+ */
 export const Avatar = memo((props: AvatarProps): JSX.Element => {
     const { src, size = 124, className } = props
 

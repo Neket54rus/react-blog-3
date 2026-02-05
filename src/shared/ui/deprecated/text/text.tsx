@@ -13,6 +13,9 @@ interface TextProps {
     dataTestId?: string
 }
 
+/**
+ * @deprecated
+ */
 export const Text = memo((props: TextProps): JSX.Element => {
     const {
         children,

@@ -22,6 +22,9 @@ interface DropdownProps {
     direction?: DropDownDirection
 }
 
+/**
+ * @deprecated
+ */
 export const Dropdown = memo((props: DropdownProps) => {
     const { className, items, trigger, direction } = props
 

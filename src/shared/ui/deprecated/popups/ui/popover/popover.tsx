@@ -19,6 +19,9 @@ interface PopoverProps {
     children?: ReactNode
 }
 
+/**
+ * @deprecated
+ */
 export const Popover = memo((props: PopoverProps) => {
     const { className, direction, trigger, children } = props
 
