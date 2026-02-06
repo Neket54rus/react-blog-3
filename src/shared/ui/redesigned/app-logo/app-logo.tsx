@@ -9,13 +9,11 @@ import classes from './app-logo.module.scss'
 
 interface AppLogoProps {
     className?: string
+    size?: number
 }
 
-/**
- * @deprecated
- */
 export const AppLogo = memo((props: AppLogoProps) => {
-    const { className } = props
+    const { className, size = 60 } = props
 
     return (
         <HStack
@@ -23,9 +21,9 @@ export const AppLogo = memo((props: AppLogoProps) => {
             fullWidth
             justify="center"
         >
-            <div className={classes.gradientBig} />
-            <div className={classes.gradientSmall} />
-            <AppIcon className={classes.appLogo} />
+            {/* <div className={classes.gradientBig} />
+            <div className={classes.gradientSmall} /> */}
+            <AppIcon className={classes.appLogo} width={size} height={size} />
         </HStack>
     )
 })

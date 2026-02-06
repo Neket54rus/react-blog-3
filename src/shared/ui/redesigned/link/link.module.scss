@@ -1,0 +1,20 @@
+.link {
+    padding: 5px 0;
+
+    &:hover {
+        color: var(--accent-redesigned);
+    }
+
+    &.active {
+        border-left: 2px solid var(--accent-redesigned);
+        background: linear-gradient(89.97deg, rgba(94, 211, 243, 0.3) 1.15%, rgba(94, 211, 243, 0) 99.97%);
+    }
+
+    &.red {
+        color: var(--cancel-redesigned);
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

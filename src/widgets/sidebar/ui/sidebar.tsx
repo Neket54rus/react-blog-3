@@ -1,4 +1,4 @@
-import { type JSX, useCallback, useState } from 'react'
+import { type JSX } from 'react'
 
 import { CollapsButton } from 'features/collaps-button'
 import { LangSwitcher } from 'features/lang-switcher'
@@ -7,22 +7,18 @@ import { ThemeSwitcher } from 'features/theme-switcher'
 
 import { classNames } from 'shared/lib/class-names'
 import { ToggleFeatures } from 'shared/lib/features'
-import { AppLogo } from 'shared/ui/deprecated/app-logo'
+import { AppLogo } from 'shared/ui/redesigned/app-logo'
 
 import classes from './sidebar.module.scss'
 
 interface SidebarProps {
     className?: string
+    collapsed: boolean
+    onToggle: () => void
 }
 
 export const Sidebar = (props: SidebarProps): JSX.Element => {
-    const { className } = props
-
-    const [collapsed, setCollapsed] = useState(false)
-
-    const onToggle = useCallback((): void => {
-        setCollapsed((prev) => !prev)
-    }, [])
+    const { className, collapsed, onToggle } = props
 
     return (
         <ToggleFeatures
@@ -36,9 +32,20 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
                         [className],
                     )}
                 >
-                    <AppLogo className={classes.appLogo} />
-                    <ThemeSwitcher />
-                    <LangSwitcher />
+                    <AppLogo
+                        className={classes.appLogo}
+                        size={collapsed ? 30 : 60}
+                    />
+                    <MainNavigation short={collapsed} />
+                    <CollapsButton onClick={onToggle} collapsed={collapsed} />
+                    <div
+                        className={classNames(classes.switchers, {
+                            [classes.collapsed]: collapsed,
+                        })}
+                    >
+                        <ThemeSwitcher />
+                        <LangSwitcher />
+                    </div>
                 </div>
             }
             off={
@@ -57,6 +64,9 @@ interface DeprecatedSidebarProps {
     collapsed: boolean
     onToggle: () => void
 }
+/**
+ * @deprecated
+ */
 const DeprecatedSidebar = (props: DeprecatedSidebarProps) => (
     <div
         data-testid="sidebar"

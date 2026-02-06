@@ -1,10 +1,13 @@
 import { memo, type JSX } from 'react'
 
-import darkIcon from 'shared/assets/icons/theme-dark.svg'
-import lightIcon from 'shared/assets/icons/theme-light.svg'
+import darkIconDeprecated from 'shared/assets/icons/deprecated/theme-dark.svg'
+import lightIconDeprecated from 'shared/assets/icons/deprecated/theme-light.svg'
+import ThemeIcon from 'shared/assets/icons/theme.svg?react'
 import { classNames } from 'shared/lib/class-names'
+import { ToggleFeatures } from 'shared/lib/features'
 import { Theme, useTheme } from 'shared/lib/theme'
-import { Button } from 'shared/ui/deprecated/button'
+import { Button as ButtonDeprecated } from 'shared/ui/deprecated/button'
+import { Button } from 'shared/ui/redesigned/button'
 
 import classes from './theme-switcher.module.scss'
 
@@ -18,15 +21,32 @@ export const ThemeSwitcher = memo((props: ThemeSwitcherProps): JSX.Element => {
     const { theme, toggleTheme } = useTheme()
 
     return (
-        <Button
-            className={classNames(classes.themeSwitcher, {}, [className])}
-            onClick={toggleTheme}
-        >
-            {theme === Theme.DARK ? (
-                <img src={darkIcon} alt="theme switcher" />
-            ) : (
-                <img src={lightIcon} alt="theme switcher" />
-            )}
-        </Button>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <Button
+                    className={classNames(classes.themeSwitcher, {}, [
+                        className,
+                    ])}
+                    onClick={toggleTheme}
+                >
+                    <ThemeIcon />
+                </Button>
+            }
+            off={
+                <ButtonDeprecated
+                    className={classNames(classes.themeSwitcher, {}, [
+                        className,
+                    ])}
+                    onClick={toggleTheme}
+                >
+                    {theme === Theme.DARK ? (
+                        <img src={darkIconDeprecated} alt="theme switcher" />
+                    ) : (
+                        <img src={lightIconDeprecated} alt="theme switcher" />
+                    )}
+                </ButtonDeprecated>
+            }
+        />
     )
 })

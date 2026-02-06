@@ -1,7 +1,9 @@
 import { memo, type JSX } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { Button } from 'shared/ui/deprecated/button'
+import { ToggleFeatures } from 'shared/lib/features'
+import { Button as ButtonDeprecated } from 'shared/ui/deprecated/button'
+import { Button } from 'shared/ui/redesigned/button'
 
 interface LangSwitcherProps {
     className?: string
@@ -17,8 +19,25 @@ export const LangSwitcher = memo((props: LangSwitcherProps): JSX.Element => {
     }
 
     return (
-        <Button className={className} onClick={onTranslate}>
-            {t('Язык')}
-        </Button>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <Button className={className} onClick={onTranslate}>
+                    <div
+                        style={{
+                            fontWeight: 700,
+                            fontSize: 24,
+                        }}
+                    >
+                        {i18n.language === 'en' ? 'EN' : 'RU'}
+                    </div>
+                </Button>
+            }
+            off={
+                <ButtonDeprecated className={className} onClick={onTranslate}>
+                    {t('Язык')}
+                </ButtonDeprecated>
+            }
+        />
     )
 })

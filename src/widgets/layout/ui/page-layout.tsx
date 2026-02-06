@@ -1,4 +1,4 @@
-import { Suspense, type JSX } from 'react'
+import { Suspense, useCallback, useState, type JSX } from 'react'
 import { useSelector } from 'react-redux'
 import { Outlet } from 'react-router'
 
@@ -15,6 +15,12 @@ import { ToggleFeatures } from 'shared/lib/features'
 
 export const PageLayout = (): JSX.Element => {
     const isInited = useSelector(getUserInited)
+
+    const [collapsed, setCollapsed] = useState(false)
+
+    const onToggle = useCallback((): void => {
+        setCollapsed((prev) => !prev)
+    }, [])
 
     if (!isInited) {
         return <h1>Loading...</h1>
@@ -33,8 +39,14 @@ export const PageLayout = (): JSX.Element => {
                             </Suspense>
                         }
                         header={<Navbar />}
-                        sidebar={<Sidebar />}
+                        sidebar={
+                            <Sidebar
+                                collapsed={collapsed}
+                                onToggle={onToggle}
+                            />
+                        }
                         toolbar={<div>toolbar</div>}
+                        collapsed={collapsed}
                     />
                 </>
             }
@@ -43,7 +55,7 @@ export const PageLayout = (): JSX.Element => {
                     <StoreUpdater />
                     <Navbar />
                     <div className="content-page">
-                        <Sidebar />
+                        <Sidebar collapsed={collapsed} onToggle={onToggle} />
                         <Suspense fallback={<PageLoader />}>
                             <Outlet />
                         </Suspense>
@@ -51,18 +63,5 @@ export const PageLayout = (): JSX.Element => {
                 </>
             }
         />
-    )
-
-    return (
-        <>
-            <StoreUpdater />
-            <Navbar />
-            <div className="content-page">
-                <Sidebar />
-                <Suspense fallback={<PageLoader />}>
-                    <Outlet />
-                </Suspense>
-            </div>
-        </>
     )
 }

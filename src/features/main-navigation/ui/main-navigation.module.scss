@@ -1,7 +1,7 @@
-.mainNavigation {
-    &Item {
-        &Icon {
-            // fill: var(--inverted-secondary-color);
-        }
-    }
+.link {
+    padding-left: 15px;
+
+    &.short {
+        padding-left: 0;
+    };
 }

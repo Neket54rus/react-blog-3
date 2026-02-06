@@ -36,8 +36,28 @@
     border-radius: 32px;
     background-color: var(--light-bg-redesigned);
     height: 100%;
-}
+    padding: 20px 0 40px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 
-.appLogo {
-    padding-top: 20px;
+    &.collapsed {
+        width: 50px;
+    }
+
+    .appLogo {
+        margin-bottom: 40px;
+    }
+
+    .switchers {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        justify-content: center;
+        margin-top: auto;
+
+        &.collapsed {
+            flex-direction: column;
+        }
+    }
 }

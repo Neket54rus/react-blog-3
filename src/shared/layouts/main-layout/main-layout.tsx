@@ -10,13 +10,20 @@ interface MainLayoutProps {
     content?: ReactNode
     sidebar?: ReactNode
     toolbar?: ReactNode
+    collapsed: boolean
 }
 
 export const MainLayout = memo((props: MainLayoutProps) => {
-    const { className, header, content, sidebar, toolbar } = props
+    const { className, header, content, sidebar, toolbar, collapsed } = props
 
     return (
-        <div className={classNames(classes.mainLayout, {}, [className])}>
+        <div
+            className={classNames(
+                classes.mainLayout,
+                { [classes.collapsed]: collapsed },
+                [className],
+            )}
+        >
             <div className={classes.sidebar}>{sidebar}</div>
             <div className={classes.content}>{content}</div>
             <div className={classes.rightbar}>

@@ -2,7 +2,6 @@
 @use 'variables/global';
 @use 'themes/light';
 @use 'themes/dark';
-// @use 'fonts/fonts';
 
 body {
     font: var(--font-m);
@@ -13,6 +12,11 @@ body {
     &.redesigned {
         background: var(--bg-redesigned);
         color: var(--text-redesigned);
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }
 
