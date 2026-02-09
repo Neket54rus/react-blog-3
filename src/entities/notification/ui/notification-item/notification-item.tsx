@@ -1,8 +1,8 @@
 import { memo } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
-import { VStack } from 'shared/ui/deprecated/stack'
-import { SizeText, Text } from 'shared/ui/deprecated/text'
+import { ToggleFeatures } from 'shared/lib/features'
+import { Card } from 'shared/ui/redesigned/card'
 
 import type { Notification } from '../../model/types/notification'
 
@@ -17,11 +17,28 @@ export const NotificationItem = memo((props: NotificationItemProps) => {
     const { className, item } = props
 
     return (
-        <div className={classNames(classes.notificationItem, {}, [className])}>
-            {/* <Text size={SizeText.L}>{item.title}</Text>
-                <Text size={SizeText.M}>{item.descrtiption}</Text> */}
-            <div>{item.title}</div>
-            <div>{item.descrtiption}</div>
-        </div>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <Card
+                    className={classNames(classes.notificationItem, {}, [
+                        className,
+                    ])}
+                >
+                    <div>{item.title}</div>
+                    <div>{item.descrtiption}</div>
+                </Card>
+            }
+            off={
+                <div
+                    className={classNames(classes.notificationItem, {}, [
+                        className,
+                    ])}
+                >
+                    <div>{item.title}</div>
+                    <div>{item.descrtiption}</div>
+                </div>
+            }
+        />
     )
 })

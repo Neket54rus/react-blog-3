@@ -8,6 +8,7 @@ import { ToggleFeatures } from 'shared/lib/features'
 import { Theme, useTheme } from 'shared/lib/theme'
 import { Button as ButtonDeprecated } from 'shared/ui/deprecated/button'
 import { Button } from 'shared/ui/redesigned/button'
+import { Icon } from 'shared/ui/redesigned/icon'
 
 import classes from './theme-switcher.module.scss'
 
@@ -30,7 +31,7 @@ export const ThemeSwitcher = memo((props: ThemeSwitcherProps): JSX.Element => {
                     ])}
                     onClick={toggleTheme}
                 >
-                    <ThemeIcon />
+                    <Icon src={ThemeIcon} />
                 </Button>
             }
             off={

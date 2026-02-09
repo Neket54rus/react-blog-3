@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router'
 import { NotificationsList } from 'entities/notification'
 import { useUserAuthData, isUserAdmin, useUserActions } from 'entities/user'
 
+import NotificationIconDeprecated from 'shared/assets/icons/deprecated/notification.svg'
 import NotificationIcon from 'shared/assets/icons/notification.svg?react'
 import { classNames } from 'shared/lib/class-names'
 import { ToggleFeatures } from 'shared/lib/features'
@@ -14,13 +15,20 @@ import {
     getRouteAdminPanel,
     getRouteArticleCreate,
 } from 'shared/routes/constants'
-import { Avatar } from 'shared/ui/deprecated/avatar'
-import { Button } from 'shared/ui/deprecated/button'
+import { Avatar as AvatarDeprecated } from 'shared/ui/deprecated/avatar'
+import { Button as ButtonDeprecated } from 'shared/ui/deprecated/button'
 import { Drawer } from 'shared/ui/deprecated/drawer'
-import { Icon } from 'shared/ui/deprecated/icon'
-import { Link, LinkTheme } from 'shared/ui/deprecated/link'
-import { Dropdown, Popover } from 'shared/ui/deprecated/popups'
-import { Flex, FlexAlign, FlexJustify } from 'shared/ui/deprecated/stack'
+import { Icon as IconDeprecated } from 'shared/ui/deprecated/icon'
+import { Link as LinkDeprecated, LinkTheme } from 'shared/ui/deprecated/link'
+import {
+    Dropdown as DropdownDeprecated,
+    Popover as PopoverDeprecated,
+} from 'shared/ui/deprecated/popups'
+import { Avatar } from 'shared/ui/redesigned/avatar'
+import { Button } from 'shared/ui/redesigned/button'
+import { Icon } from 'shared/ui/redesigned/icon'
+import { Dropdown, Popover } from 'shared/ui/redesigned/popups'
+import { Flex, FlexAlign, FlexJustify } from 'shared/ui/redesigned/stack'
 
 import classes from '../navbar.module.scss'
 
@@ -94,13 +102,13 @@ export const NavbarWithAuthorization = (
                                 </Button>
                             }
                         >
-                            {authData && (
+                            {/* {authData && (
                                 <NotificationsList userId={authData.username} />
-                            )}
+                            )} */}
                         </Popover>
                     </BrowserView>
                     <Dropdown
-                        trigger={<Avatar src={authData?.avatar} size={30} />}
+                        trigger={<Avatar src={authData?.avatar} size={40} />}
                         items={dropdownItems}
                         direction="bottomLeft"
                     />
@@ -114,16 +122,16 @@ export const NavbarWithAuthorization = (
                     gap={15}
                     fullWidth
                 >
-                    <Link
+                    <LinkDeprecated
                         to={getRouteArticleCreate()}
                         theme={LinkTheme.SECONDARY}
                     >
                         Создать статью
-                    </Link>
+                    </LinkDeprecated>
                     <MobileView>
-                        <Button onClick={() => setIsOpenDrawer(true)}>
-                            <Icon src={NotificationIcon} />
-                        </Button>
+                        <ButtonDeprecated onClick={() => setIsOpenDrawer(true)}>
+                            <IconDeprecated src={NotificationIconDeprecated} />
+                        </ButtonDeprecated>
                         <Drawer
                             isOpen={isOpenDrawer}
                             onClose={() => setIsOpenDrawer(false)}
@@ -133,20 +141,27 @@ export const NavbarWithAuthorization = (
                         </Drawer>
                     </MobileView>
                     <BrowserView>
-                        <Popover
+                        <PopoverDeprecated
                             trigger={
-                                <Button>
-                                    <Icon src={NotificationIcon} />
-                                </Button>
+                                <ButtonDeprecated>
+                                    <IconDeprecated
+                                        src={NotificationIconDeprecated}
+                                    />
+                                </ButtonDeprecated>
                             }
                         >
                             {authData && (
                                 <NotificationsList userId={authData.username} />
                             )}
-                        </Popover>
+                        </PopoverDeprecated>
                     </BrowserView>
-                    <Dropdown
-                        trigger={<Avatar src={authData?.avatar} size={30} />}
+                    <DropdownDeprecated
+                        trigger={
+                            <AvatarDeprecated
+                                src={authData?.avatar}
+                                size={30}
+                            />
+                        }
                         items={dropdownItems}
                         direction="bottomLeft"
                     />

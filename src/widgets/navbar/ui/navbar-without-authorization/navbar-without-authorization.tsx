@@ -8,7 +8,7 @@ import { loginActions } from 'features/login-form'
 
 import { classNames } from 'shared/lib/class-names'
 import { Button, ButtonTheme } from 'shared/ui/deprecated/button'
-import { Flex, FlexAlign, FlexJustify } from 'shared/ui/deprecated/stack'
+import { Flex, FlexAlign, FlexJustify } from 'shared/ui/redesigned/stack'
 
 import classes from '../navbar.module.scss'
 

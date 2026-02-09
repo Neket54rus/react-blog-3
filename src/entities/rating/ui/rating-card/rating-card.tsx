@@ -9,7 +9,7 @@ import {
     FlexJustify,
     HStack,
     VStack,
-} from 'shared/ui/deprecated/stack'
+} from 'shared/ui/redesigned/stack'
 import { StarRating } from 'shared/ui/deprecated/star-rating'
 import { SizeText, Text } from 'shared/ui/deprecated/text'
 

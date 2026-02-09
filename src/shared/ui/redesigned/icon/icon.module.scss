@@ -1,3 +1,7 @@
 .icon {
-    fill: var(--icon-redesigned)
+    color: var(--icon-redesigned);
+
+    &:hover {
+        color: var(--accent-redesigned);
+    }
 }

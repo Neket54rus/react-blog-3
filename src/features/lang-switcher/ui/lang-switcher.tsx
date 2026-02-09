@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ToggleFeatures } from 'shared/lib/features'
 import { Button as ButtonDeprecated } from 'shared/ui/deprecated/button'
 import { Button } from 'shared/ui/redesigned/button'
+import { Text } from 'shared/ui/redesigned/text'
 
 interface LangSwitcherProps {
     className?: string
@@ -23,14 +24,9 @@ export const LangSwitcher = memo((props: LangSwitcherProps): JSX.Element => {
             feature="isAppRedesigned"
             on={
                 <Button className={className} onClick={onTranslate}>
-                    <div
-                        style={{
-                            fontWeight: 700,
-                            fontSize: 24,
-                        }}
-                    >
+                    <Text size="size_l" weight={700}>
                         {i18n.language === 'en' ? 'EN' : 'RU'}
-                    </div>
+                    </Text>
                 </Button>
             }
             off={

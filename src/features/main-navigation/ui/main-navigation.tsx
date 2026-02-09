@@ -8,9 +8,9 @@ import { classNames } from 'shared/lib/class-names'
 import { togglefeatures } from 'shared/lib/features'
 import { Icon as IconDeprecated, IconTheme } from 'shared/ui/deprecated/icon'
 import { Link as LinkDeprecated, LinkTheme } from 'shared/ui/deprecated/link'
-import { HStack, VStack } from 'shared/ui/deprecated/stack'
 import { Icon } from 'shared/ui/redesigned/icon'
 import { Link } from 'shared/ui/redesigned/link'
+import { HStack, VStack } from 'shared/ui/redesigned/stack'
 
 import { getMainNavigationItems } from '../model/selectors/get-main-navigation-items'
 

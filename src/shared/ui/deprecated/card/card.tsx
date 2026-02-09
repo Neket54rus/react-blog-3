@@ -4,7 +4,7 @@ import { Link, type To } from 'react-router'
 import ViewIcon from 'shared/assets/icons/view.svg?react'
 import { classNames } from 'shared/lib/class-names'
 
-import { AppImage } from '../app-image'
+import { AppImage } from '../../redesigned/app-image'
 import { Icon } from '../icon'
 import { Text } from '../text'
 

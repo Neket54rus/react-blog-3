@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { VStack } from 'shared/ui/deprecated/stack'
+import { VStack } from 'shared/ui/redesigned/stack'
 
 import { useGetNotificationsListQuery } from '../../api/notification-api'
 import { NotificationItem } from '../notification-item/notification-item'

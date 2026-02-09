@@ -15,9 +15,6 @@ export interface FlexProps {
     className?: string
 }
 
-/**
- * @deprecated
- */
 export const Flex = (props: FlexProps): JSX.Element => {
     const { children, justify, align, direction, gap, fullWidth, className } =
         props

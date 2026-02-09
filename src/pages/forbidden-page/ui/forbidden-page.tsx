@@ -2,7 +2,7 @@ import { memo } from 'react'
 
 import { Page } from 'widgets/page'
 
-import { FlexJustify, HStack } from 'shared/ui/deprecated/stack'
+import { FlexJustify, HStack } from 'shared/ui/redesigned/stack'
 import { ColorText, SizeText, Text } from 'shared/ui/deprecated/text'
 
 interface ForbiddenPageProps {

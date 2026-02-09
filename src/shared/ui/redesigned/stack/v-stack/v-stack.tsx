@@ -5,9 +5,6 @@ import { FlexDirection } from '../flex/flex.constants'
 
 type VStackProps = Omit<FlexProps, 'direction'>
 
-/**
- * @deprecated
- */
 export const VStack = memo((props: VStackProps) => (
     <Flex direction={FlexDirection.COLUMN} {...props} />
 ))

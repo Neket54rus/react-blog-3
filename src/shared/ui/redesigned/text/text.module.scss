@@ -1,0 +1,21 @@
+.text {
+    &.accent {
+        color: var(--accent-redesigned);
+    }
+
+    &.error {
+        color: var(--cancel-redesigned);
+    }
+
+    &.size_m {
+        font: var(--font-m);
+    }
+
+    &.size_l {
+        font: var(--font-l);
+    }
+
+    &.size_xl {
+        font: var(--font-xl);
+    }
+}
